@@ -1,3 +1,3 @@
 <?php
- include_once ('info.php');//se llama la informacion de la pagina
+ include_once ('recursos/info.php');//se llama la informacion de la pagina
 ?>
