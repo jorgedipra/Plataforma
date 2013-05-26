@@ -1,8 +1,8 @@
 <section id="tabs">
 
    <ul>
-    <li><a href= "#tabs-1" >Nunc tincidunt</a></li>
-    <li><a href= "#tabs-2" >Proin dolor</a></li>
+    <li><a href= "#tabs-1" >Iniciar</a></li>
+    <li><a href= "#tabs-2" >Registrarse</a></li>
   </ul>   
 
  <div class="target">
