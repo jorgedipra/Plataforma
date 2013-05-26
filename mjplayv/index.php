@@ -16,10 +16,6 @@
 <script src="js/jquery-1.9.1.min.js"></script>
 <script src="js/jquery-ui.js"></script>
 <script src="script/script.js"></script>
-<script src="conexion/storage/conexion.js"></script>
-<script type="text/javascript">
-</script>
-
 </head>
 <body>
  <?php

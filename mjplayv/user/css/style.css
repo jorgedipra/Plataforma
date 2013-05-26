@@ -1,0 +1,13 @@
+@import url(../../css/style.css);
+/**/
+.target{
+	bottom  : 10%;
+	height  : 400px;
+	left    : 28%;
+	position: absolute;
+	width   : 500px;
+	z-index : 999;
+}
+/**----------------pestañas--------------*/
+
+/*----------------------------------------*/

@@ -14,4 +14,14 @@ window.onload = function() {
         this.body.style.backgroundPosition = x + 'px ' + y + 'px';
       };
     };
-    
+ /*
+ @bloqueo de boton derecho
+  */
+document.oncontextmenu = function(){return false}   
+/*
+@pestañas
+ */
+ $(function() {
+    $(  "#tabs"  ).tabs();
+ });
+
