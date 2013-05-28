@@ -23,7 +23,7 @@
            <form action="index.php" method="post">             
               <div class="clearfix">
                 <label>Username:</label>
-                <input name="Apodo" type="text" id="firstname" maxlength="7" placeholder="Username" >
+                <input name="Apodo" type="text" id="firstname" maxlength="10" placeholder="Username" >
               </div>
               <div class="clearfix">
                 <label>Password:</label>

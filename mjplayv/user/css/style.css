@@ -4,20 +4,20 @@
 h1{
   color      :rgba(0,0,0,0.5);
   font-family: 'Germania One', cursive;
-  font-size: 50px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin: 60px;
+  font-size  : 50px;
+  left       : 0;
+  margin     : 60px;
+  position   : absolute;
+  top        : 0;
 }
 h2{
   color      :rgba(250,250,250,1);
   font-family: 'Germania One', cursive;
-  font-size: 50px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin: 5px 265px;
+  font-size  : 50px;
+  left       : 0;
+  margin     : 5px 265px;
+  position   : absolute;
+  top        : 0;
   text-shadow: 
   0 0 30px #fff,
    0 0 40px #fff, 
@@ -25,12 +25,12 @@ h2{
    width: 500px;
 }
 .target{
-	top  : 100px;
-	height  : 600px;
-	left    : 300px;
-	position: absolute;
-	width   : 800px;
-	z-index : 999;
+  height  : 600px;
+  left    : 300px;
+  position: absolute;
+  top     : 100px;
+  width   : 800px;
+  z-index : 999;
 }
 /**----------------pestañas--------------*/
 nav ul{
@@ -38,10 +38,10 @@ nav ul{
   padding:0;
 }
 nav ul li{  
-  display: inline-block;
+  display  : inline-block;
   font-size:20px;
-  padding: 0;
-  margin: 0;
+  margin   : 0;
+  padding  : 0;
 }
 nav ul li a:hover{
   border: none;
@@ -57,11 +57,11 @@ nav ul li a:hover{
 }
 
 nav ul li a{
-  color: #FFF;
-  display: block;
-  font-weight:bold;
-  padding: 0;
-  text-align:center;
+  color         : #FFF;
+  display       : block;
+  font-weight   :bold;
+  padding       : 0;
+  text-align    :center;
   text-transform:uppercase;
    text-shadow: 0 0 10px #fff,
    0 0 20px #fff, 
@@ -74,13 +74,8 @@ nav ul li a{
 }
 
 #div-border{ 
-top:100px;
-left: 400px;
-position: absolute;
+background : rgba(250,250,250,0.5);
 border-left: 1px solid rgba(250,250,250,0.5); 
-width:1px;
-height:450px;
-background: rgba(250,250,250,0.5);
 box-shadow:  0 0 10px #fff,
    0 0 20px #fff, 
    0 0 30px #fff,
@@ -89,11 +84,15 @@ box-shadow:  0 0 10px #fff,
      0 0 80px rgba(230, 95, 0,1), 
      0 0 100px rgba(230, 95, 0,0), 
      0 0 150px rgba(230, 95, 0,1);
-
+height     :450px;
+left       : 400px;
+position   : absolute;
+top        :100px;
+width      :1px;
 }
 #INI{
   left    : 0;
-  margin  : 130px 180px;
+  margin  : 130px 190px;
   position: absolute;
   top     :0;
 
@@ -105,18 +104,18 @@ box-shadow:  0 0 10px #fff,
   top     :0;
 }
 #UsuCon{
-  height: 450px;
+  height  : 450px;
   position: absolute;
-  top:100px;
-  width: 395px;
+  top     :100px;
+  width   : 395px;
 }
 #UsuFaTwG{
-  height: 100%;
+  height  : 100%;
+  left    : 430px;
+  margin  : 0;
   position: absolute;
-  left: 430px;
-  top:180px;
-  margin: 0;
-  width: 400px;
+  top     :120px;
+  width   : 400px;
 }
 #UsuFaTwG div{
  -webkit-transform: translate(-1px, 0px) rotate(2deg) skew(-19deg, -3deg) scale(0.9, 0.8); 
@@ -124,14 +123,14 @@ box-shadow:  0 0 10px #fff,
 -o-transform: translate(-1px, 0px) rotate(2deg) skew(-19deg, -3deg) scale(0.9, 0.8); 
 -ms-transform: translate(-1px, 0px) rotate(2deg) skew(-19deg, -3deg) scale(0.9, 0.8); 
 transform: translate(-1px, 0px) rotate(2deg) skew(-19deg, -3deg) scale(0.9, 0.8); 
-  font-family: 'Germania One', cursive;
-  font-size: 35px;
-  height: 50px;
-  margin: 15px 0px;
+  font-family : 'Germania One', cursive;
+  font-size   : 35px;
+  height      : 50px;
+  margin      : 15px 0px;
   padding-left: 5px;
-  position: relative;
-  text-align: left;
-  width: 350px;
+  position    : relative;
+  text-align  : left;
+  width       : 350px;
 
 }
 #UsuFaTwG a{

@@ -48,13 +48,13 @@ body{
 	height: 50px;
 	padding: 0;
 	right: 0;
-	margin-right: 140px;
+	margin-right: 160px;
 	top: 2%;
 	position: absolute;
 }
 #login img{
 	border      : none;
-	margin-right:80px;
+	margin-right:100px;
 	margin-top  : 1%;
 	position    : absolute;
 	right       : 0;
@@ -74,7 +74,7 @@ body{
 	color:rgba(0,0,0,0.5);
 }
 #login hr{
-	width: 35px;
+	width: 60px;
 	color:#fff;
 	position: absolute;
 	right: 0;

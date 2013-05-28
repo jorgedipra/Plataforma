@@ -1,6 +1,6 @@
  <header id="login">
    <a href="#"><img name="user" id="img" src="img/userdefaul.png"/></a>
-   <a href="#"><span>welcome</span><br><sup id="US">Temp</sup><p id="Myuse">User</p><hr></a> 
+   <a href="#"><span>::welcome::</span><br><sup id="US">Temp</sup><p id="Myuse">User</p><hr></a> 
 
 <script>
 if(localStorage.getItem('UEstado')=='On'){
