@@ -10,8 +10,8 @@
 <section id="tabs">
   <nav>
    <ul>
-    <li id="INI"><a href= "#tabs-1" >Iniciar</a></li>
-    <li id="REG"><a href= "#tabs-2" >Registrarse</a></li>
+    <li id="INI"><a href= "#tabs-1" >Log in</a></li>
+    <li id="REG"><a href= "#tabs-2" >Sign up</a></li>
   </ul>   
   </nav>
  <div class="target">
@@ -34,8 +34,11 @@
                </form> 
         </section>
         <section id="div-border"></section>
-        <section id="UsuFaTwG">
-         
+        <section id="UsuFaTwG"> 
+             <div class="btn-facebook "><a  href= "#button" >Sign in with <b>Facebook</b>>></a></div>
+             <div class="btn-twitter "><a  href= "#button" >Sign in with <b>Twitter</b>>></a></div>
+             <div class="btn-google " ><a href= "#button" >Sign in with <b>Google</b>>></a></div>
+             <div class="btn-github "><a  href= "#button" >Sign in with <b>GitHub</b>>></a></div>
         </section>
      </div>   
   <div id="tabs-2">
@@ -49,9 +52,3 @@
 
 </head>
 <body>
- 
-     
-           
-         
-
-

@@ -105,19 +105,54 @@ box-shadow:  0 0 10px #fff,
   top     :0;
 }
 #UsuCon{
-  width: 395px;
   height: 450px;
-  top:100px;
   position: absolute;
+  top:100px;
+  width: 395px;
 }
 #UsuFaTwG{
-  width: 100%;
   height: 100%;
   position: absolute;
-  top:0;
-  right: 0;
+  left: 430px;
+  top:180px;
+  margin: 0;
+  width: 400px;
 }
+#UsuFaTwG div{
+ -webkit-transform: translate(-1px, 0px) rotate(2deg) skew(-19deg, -3deg) scale(0.9, 0.8); 
+-moz-transform: translate(-1px, 0px) rotate(2deg) skew(-19deg, -3deg) scale(0.9, 0.8); 
+-o-transform: translate(-1px, 0px) rotate(2deg) skew(-19deg, -3deg) scale(0.9, 0.8); 
+-ms-transform: translate(-1px, 0px) rotate(2deg) skew(-19deg, -3deg) scale(0.9, 0.8); 
+transform: translate(-1px, 0px) rotate(2deg) skew(-19deg, -3deg) scale(0.9, 0.8); 
+  font-family: 'Germania One', cursive;
+  font-size: 35px;
+  height: 50px;
+  margin: 15px 0px;
+  padding-left: 5px;
+  position: relative;
+  text-align: left;
+  width: 350px;
 
+}
+#UsuFaTwG a{
+color: #fff;
+}
+#UsuFaTwG .btn-facebook{
+  background: rgba(35, 114, 163,0.8);
+}
+#UsuFaTwG .btn-twitter {
+  background: rgba(64,153,255,0.8);
+}
+#UsuFaTwG .btn-google{
+  background: rgba(227, 0, 50,0.8);
+}
+#UsuFaTwG .btn-github{
+  background: rgba(250,250,250,0.8);
+  
+}
+#UsuFaTwG .btn-github a{
+  color: #000;
+}
 .btn {
    background: rgba(0, 0, 0,0.5); 
    -moz-border-radius: 70px; 
