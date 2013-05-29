@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Germania+One);
+@import url(../recursos/fonts/Germania/css.css?family=Germania+One);
 a{
 	text-decoration: none;
 	color:#000;
@@ -6,6 +6,7 @@ a{
 body{
 	background: url(../img/fondo.jpg)fixed;
 	height: 100%;
+	font-family: 'Germania One', cursive;
 	left: 0;
 	margin: 0;
 	padding: 0;
@@ -34,7 +35,6 @@ body{
 }
 #esta{
 	color      :rgba(0,0,0,0.5);
-	font-family: 'Germania One', cursive;
 	left       : 0;
 	margin: 10px;
 	padding-top: 3px;
@@ -70,7 +70,6 @@ body{
 	margin-right:25px;
 	top: 0;
 	margin-top: 10px;
-	font-family: 'Germania One', cursive;
 	color:rgba(0,0,0,0.5);
 }
 #login hr{

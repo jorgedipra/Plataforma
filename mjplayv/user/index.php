@@ -5,6 +5,7 @@
 <script src="../js/jquery-1.9.1.min.js"></script>
 <script src="../js/jquery-ui.js"></script>
 <script src="../script/script.js"></script>
+<script src="script/inputScrtip.js"></script>
 </head>
 <body>
  <?php

@@ -24,4 +24,9 @@ document.oncontextmenu = function(){return false}
  $(function() {
     $(  "#tabs"  ).tabs();
  });
-
+/*
+@calendario
+ */
+$(function() {
+    $(  "#datepicker"  ).datepicker();
+  });
