@@ -24,7 +24,8 @@
            <form action="index.php" method="post">             
               <div class="clearfix">
                 <label>Username:</label>
-                <input name="Apodo" type="text" id="firstname" maxlength="10" placeholder="Username" required>
+                <input name="Apodo" type="text" id="firstname" maxlength="10" placeholder="Username"  
+                 required>
               </div>
               <div class="clearfix">
                 <label>Password:</label>
@@ -44,7 +45,7 @@
      </div>   
   <div id="tabs-2">
     <h2><- Sing Up -></h2>
-    <section id="UsuCon">
+    <section id="UsuConUp">
            <form action="index.php" method="post">             
               <div class="clearfixUP">
                 <label>Username:</label>
@@ -69,6 +70,10 @@
               <div class="clearfixUP">
                 <label>Password:</label>
                 <input name="Password" type="password" placeholder="Password" required>
+              </div>
+              <div class="clearfixUP">
+                <label>Repeat:</label>
+                <input name="RPassword" type="password" placeholder="Repeat Password" required>
               </div>
               <button class="btnUp" type="submit">Sign Up</button>
               <input type="hidden" name="ES" value="Up" />              

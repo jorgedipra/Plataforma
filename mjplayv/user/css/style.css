@@ -103,11 +103,17 @@ width      :1px;
   position: absolute;
   top     :0;
 }
+#UsuConUp,
 #UsuCon{
   height  : 450px;
   position: absolute;
-  top     :100px;
   width   : 395px;
+}
+#UsuConUp{
+  top: 55px;
+}
+#UsuCon{
+top     :100px;
 }
 #UsuFaTwG{
   height  : 100%;
@@ -138,6 +144,7 @@ color: #fff;
 }
 #UsuFaTwG .btn-facebook{
   background: rgba(35, 114, 163,0.8);
+  font-size: 32px;
 }
 #UsuFaTwG .btn-twitter {
   background: rgba(64,153,255,0.8);
@@ -190,9 +197,6 @@ top:80px;
 .btn{
 top:100px;
 }
-
-
-
 .clearfixUP{
   margin: 0px 50px;
 }
