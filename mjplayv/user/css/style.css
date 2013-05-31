@@ -26,7 +26,7 @@ h2{
 }
 .target{
   height  : 600px;
-  left    : 300px;
+  left    : 22%;
   position: absolute;
   top     : 100px;
   width   : 800px;
@@ -479,8 +479,43 @@ transform: translate(-1px, 0px) rotate(2deg) skew(-19deg, -3deg) scale(0.9, 0.8)
   }
 
 }
+@media screen and (max-width: 1111px) {
+  #ESEN{
+  top:0;
+  right: 0;
+  left: 0;
+  margin-top: 350px;
+  margin-right: 0;
+  margin-left: 75px;
+ }
+ #ajaxloader{
+  top:0;
+  right: 0;
+  left: 0;
+  margin-top: 0px;
+  margin-right: 0;
+  margin-left: 0px;
+ }
+#idioma{
+  margin-right: 0;
+  margin-top: 10px;
+  right: 0;
+  left: 0;
+  margin-left:9px;
+  top:0;
+ }
+}
+@media screen and (max-width: 1050px) {
+  .target{
+    left    : 225px;
+    top     : 80px;
+  }
+}
+@media screen and (max-width: 1000px) {
 
- @media screen and (max-height: 870px) { 
+}
+
+@media screen and (max-height: 870px) { 
    #btnUp{
     margin-top: -22px;
   }
@@ -496,6 +531,31 @@ transform: translate(-1px, 0px) rotate(2deg) skew(-19deg, -3deg) scale(0.9, 0.8)
     top     : 80px;
     width   : 750px;
   }
+} 
+@media screen and (max-height: 750px) { 
+#INI{
+  margin-left: 65px;
+  margin-top: 250px;  
+}
+#REG{
+  margin-left: 40px;
+  margin-top: 300px; 
 
+}
+.target{
+    top: 7%;
+  }
+}
+@media screen and (max-height: 620px){ 
+.target{
+    top: 5%;
+  }
+}
+@media screen and (max-height: 600px){ 
+.target{
+    top: 2.5%;
+  }
+}
+@media screen and (max-height: 580px){ 
 
-  } 
+}
