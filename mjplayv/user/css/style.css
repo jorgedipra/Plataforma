@@ -19,9 +19,9 @@ h2{
   position   : absolute;
   top        : 0;
   text-shadow: 
-  0 0 30px #fff,
-   0 0 40px #fff, 
-   0 0 50px #fff;
+  0 0 30px rgba(250,250,250,0.7),
+   0 0 40px rgba(250,250,250,0.7), 
+   0 0 50px rgba(250,250,250,0.7);
    width: 500px;
 }
 .target{
@@ -45,6 +45,7 @@ nav ul li{
 }
 nav ul li a:hover{
   border: none;
+  color     : rgba(250,250,250,0.9);
   text-shadow: 
   0 0 20px #fff,
    0 0 30px #fff, 
@@ -57,20 +58,20 @@ nav ul li a:hover{
 }
 
 nav ul li a{
-  color         : #FFF;
+  color     : rgba(250,250,250,0.9);
   display       : block;
   font-weight   :bold;
   padding       : 0;
   text-align    :center;
   text-transform:uppercase;
-   text-shadow: 0 0 10px #fff,
-   0 0 20px #fff, 
-   0 0 30px #fff,
-    0 0 40px rgba(230, 95, 0,1),
-     0 0 70px rgba(230, 95, 0,1), 
-     0 0 80px rgba(230, 95, 0,1), 
-     0 0 100px rgba(230, 95, 0,1), 
-     0 0 150px rgba(230, 95, 0,1);
+   text-shadow: 0 0 10px rgba(250,250,250,0.5),
+   0 0 20px rgba(250,250,250,0.5), 
+   0 0 30px rgba(250,250,250,0.5),
+    0 0 40px rgba(230, 95, 0,0.7),
+     0 0 70px rgba(230, 95, 0,0.7), 
+     0 0 80px rgba(230, 95, 0,0.7), 
+     0 0 100px rgba(230, 95, 0,0.7), 
+     0 0 150px rgba(230, 95, 0,0.7);
 }
 
 #div-border{ 
@@ -404,3 +405,65 @@ transform: translate(-1px, 0px) rotate(2deg) skew(-19deg, -3deg) scale(0.9, 0.8)
     100%{
       transform: rotate(0deg); }
   }
+  /*-------------circulo en es--------------**/
+  #ajaxloader{
+  
+  width: 30px;
+  height: 30px;
+  margin: 20px auto;
+  border: 8px solid #fff;
+  border-right-color: transparent;
+  border-radius: 50%;
+  box-shadow: 0 0 25px 2px #eee;
+  -webkit-animation: spin 1s linear infinite;
+  -moz-animation: spin 1s linear infinite;
+  -ms-animation: spin 1s linear infinite;
+  -o-animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite;
+}
+
+#ajaxloader
+{
+  border-left-color:rgba(230, 95, 0,1) ;
+}
+
+#ajaxloader::after
+{
+  display: block;
+  content: " ";
+  width: 9px;
+  height: 9px;
+  border: 6px solid transparent;
+  margin: 4px;
+  border-radius: 50%;
+}
+
+#ajaxloader::after
+{
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+#ESEN{
+  position: absolute;
+  top:0;
+  right: 0;
+  margin-top: 5px;
+  margin-right: 25px;
+ }
+ #idioma{
+  font-size: 22px;
+  margin-right: 8px;
+  margin-top: 30px;
+  position: absolute;
+  right: 0;
+  top:0;
+ }
+ /**********---------------redimencion------------------***********/ 
+@media screen and (max-width: 1200px) {
+   
+   
+  }
+ @media screen and (max-height: : 870px) {
+   
+   
+  } 
