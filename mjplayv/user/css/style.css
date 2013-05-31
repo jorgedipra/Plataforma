@@ -450,7 +450,7 @@ transform: translate(-1px, 0px) rotate(2deg) skew(-19deg, -3deg) scale(0.9, 0.8)
   margin-top: 5px;
   margin-right: 25px;
  }
- #idioma{
+#idioma{
   font-size: 22px;
   margin-right: 8px;
   margin-top: 30px;
@@ -459,11 +459,44 @@ transform: translate(-1px, 0px) rotate(2deg) skew(-19deg, -3deg) scale(0.9, 0.8)
   top:0;
  }
  /**********---------------redimencion------------------***********/ 
+
 @media screen and (max-width: 1200px) {
-   
-   
+  #btnUp{
+    margin-top: -22px;
   }
- @media screen and (max-height: : 870px) {
-   
-   
+  #UsuFaTwG div{
+    font-size: 30px;
+    width    : 300px;
+  }
+  #UsuFaTwG .btn-facebook{
+   font-size: 29px;
+  }
+  .target{
+    height  : 550px;
+    left    : 270px;
+    top     : 80px;
+    width   : 750px;
+  }
+
+}
+
+ @media screen and (max-height: 870px) { 
+   #btnUp{
+    margin-top: -22px;
+  }
+  #UsuFaTwG div{
+    font-size: 30px;
+    width    : 300px;
+  }
+  #UsuFaTwG .btn-facebook{
+   font-size: 29px;
+  }
+  .target{
+    height  : 550px;
+    left    : 270px;
+    top     : 80px;
+    width   : 750px;
+  }
+
+
   } 

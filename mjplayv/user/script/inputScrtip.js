@@ -1,6 +1,6 @@
 $(document).ready(function() {
  $stadTab=localStorage.getItem('USEstado');
- alert($stadTab);
+ //alert($stadTab);//temp
 
   if($stadTab=="In"){
    // alert("IN");//temp
