@@ -93,9 +93,9 @@
 </section>
 <script>
 if(localStorage.getItem('USEstado')=='Es'){
-document.write('<a href="#" onclick="ING()" ><article id="ESEN"><div id="ajaxloader"></div><article><div id="idioma">ING<div></a>');
+document.write('<a href="#"  onclick="ING()" ><article id="ESEN"><div id="ajaxloader"></div><article><div id="idioma">ING<div></a>');
 }else{
-document.write('<a href="#" onclick="ESP()" ><article id="ESEN"><div id="ajaxloader"></div><article><div id="idioma">ESP<div></a>');
+document.write('<a href="#"  onclick="ESP()" ><article id="ESEN"><div id="ajaxloader"></div><article><div id="idioma">ESP<div></a>');
 }
 </script>  
 
