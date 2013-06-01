@@ -559,12 +559,12 @@ transform: translate(-1px, 0px) rotate(2deg) skew(-19deg, -3deg) scale(0.9, 0.8)
 }
 @media screen and (max-height: 700px) { 
   #REG{
-    margin-left: -70px;
-    margin-top: 40px;
+    margin-left: -30px;
+    margin-top: 50px;
   }
   #INI{
-    margin-left: -160px;
-    margin-top: 40px;
+    margin-left: -60px;
+    margin-top: 20px;
    }
 }  
 @media screen and (max-height: 650px) { 
