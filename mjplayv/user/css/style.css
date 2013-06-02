@@ -465,6 +465,7 @@ transform: translate(-1px, 0px) rotate(2deg) skew(-19deg, -3deg) scale(0.9, 0.8)
     left    : auto;
     right: 15%;
   }
+  h1,
   #outer-circle{
     position: fixed;
     z-index: 9999;
@@ -500,14 +501,18 @@ transform: translate(-1px, 0px) rotate(2deg) skew(-19deg, -3deg) scale(0.9, 0.8)
   }
 }
 @media screen and (max-width: 800px) {
+  h2{
+  margin     : 5px 345px;
+}
   .target{
     right:0;
   }
 }
 @media screen and (max-width: 750px) {
- .target{
-
- }
+ body{
+  position: absolute;
+  width: 750px   
+  }
 }
  /*height-top-botton*/
 @media screen and (max-height: 950px) { 
@@ -523,12 +528,10 @@ transform: translate(-1px, 0px) rotate(2deg) skew(-19deg, -3deg) scale(0.9, 0.8)
 }
 @media screen and (max-height: 710px) { 
 #ESEN{
-  position: fixed;
   z-index: 999999999;
 }
 }
 @media screen and (max-height: 750px) { 
-  
   #REG,
   #INI{
     top:0;
@@ -586,8 +589,9 @@ transform: translate(-1px, 0px) rotate(2deg) skew(-19deg, -3deg) scale(0.9, 0.8)
 
 }
 @media screen and (max-height: 570px) { 
- .target{    
+ body{
+ position: absolute;
+  height: 570px;    
   }
-
 }
 

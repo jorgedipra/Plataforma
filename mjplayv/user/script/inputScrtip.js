@@ -16,7 +16,7 @@ $(document).ready(function() {
             e.target.setCustomValidity("");
             if (!e.target.validity.valid) {
                 if (e.target.name == "Apodo") {
-                    e.target.setCustomValidity("Apodo Required");
+                    e.target.setCustomValidity("User Required");
                 }
                else if(e.target.name == "Password") {
                    e.target.setCustomValidity("Password Required");
@@ -70,3 +70,103 @@ function ESPUs(){
  $(".User").html('Usuario:');
 
 }
+
+$(document).ready(function(){
+$('#Uipass').keyup(function(){
+      var _this = $('#Uipass');
+      var Uipass = $('#Uipass').val();
+      _this.attr('style', 'background:white');
+      if(Uipass.charAt(0) == ' '){
+        _this.attr('style', 'background:rgba(255,0,0,0.6)');
+      }
+  
+      if(_this.val() == ''){
+        _this.attr('style', 'background:rgba(255,0,0,0.6)');
+      }
+    });
+  
+    $('#Uirepeat').keyup(function(){
+      var Uipass = $('#Uipass').val();
+      var Uirepeat = $('#Uirepeat').val();
+      var _this = $('#Uirepeat');
+      _this.attr('style', 'background:white');
+      if(Uipass != Uirepeat && Uirepeat != ''){
+        _this.attr('style', 'background:rgba(255,0,0,0.6)');
+      }
+    });
+    
+    
+    $('#Uiemail').keyup(function(){
+      var _this = $('#Uiemail');
+      var _email = $('#Uiemail').val();
+  
+      var re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+      var valid = re.test(_email);
+  
+      if(valid){
+        _this.attr('style', 'background:white');
+      } else {
+        _this.attr('style', 'background:rgba(255,0,0,0.6)');
+      }
+    });
+
+    $('#Uiuser').keyup(function(){
+      var _this = $('#Uiuser');
+        _this.attr('style', 'background:white');
+    });
+
+    $('#Uiname').keyup(function(){
+      var _this = $('#Uiname');
+        _this.attr('style', 'background:white');
+    });
+
+    $('#Uilasname').keyup(function(){
+      var _this = $('#Uilasname');
+        _this.attr('style', 'background:white');
+    });
+
+    $('#Uipass').keyup(function(){
+      var _this = $('#Uipass');
+        _this.attr('style', 'background:white');
+    });
+
+
+
+
+
+    $( "#formulario" ).submit(function () { 
+        
+        if($( "#Uiuser" ).val().length < 1) {  
+          var _this = $('#Uiuser');     
+          _this.attr('style', 'background:rgba(255,0,0,0.6)');         
+            return false;  
+        } 
+        if($( "#Uiname" ).val().length < 1 ) {  
+          var _this = $('#Uiname');     
+          _this.attr('style', 'background:rgba(255,0,0,0.6)');            
+            return false;  
+        } 
+        if($( "#Uilasname" ).val().length < 1 ) {  
+          var _this = $('#Uilasname');     
+          _this.attr('style', 'background:rgba(255,0,0,0.6)');            
+            return false;  
+        } 
+        if($( "#Uiemail" ).val().length < 1 ) {  
+          var _this = $('#Uiemail');     
+          _this.attr('style', 'background:rgba(255,0,0,0.6)');            
+            return false;  
+        } 
+        if($( "#Uipass" ).val().length < 1 ) {  
+          var _this = $('#Uipass');     
+          _this.attr('style', 'background:rgba(255,0,0,0.6)');            
+            return false;  
+        } 
+        if($( "#Uirepeat" ).val().length < 1 ) {  
+          var _this = $('#Uirepeat');     
+          _this.attr('style', 'background:rgba(255,0,0,0.6)');            
+            return false;  
+        } 
+
+    });  
+
+});   

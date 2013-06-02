@@ -21,7 +21,7 @@
     <div id="tabs-1">
       <h2 id="LogH2"><- Login  In -></h2>
         <section id="UsuCon">
-           <form action="index.php" method="post">             
+           <form action="index.php" method="POST">             
               <div class="clearfix">
                 <label class="User">Username:</label>
                 <input name="Apodo" type="text" id="firstname" maxlength="10" placeholder="Username"  
@@ -46,34 +46,34 @@
   <div id="tabs-2">
     <h2 id="SinH2"><- Sing Up -></h2>
     <section id="UsuConUp">
-           <form action="index.php" method="post">             
+           <form action="index.php" id="formulario" method="POST">             
               <div class="clearfixUP">
                 <label class="User" >Username:</label>
-                <input name="Apodo" type="text" id="Uiuser" maxlength="10" placeholder="Username" required>
+                <input name="Apodo" type="text" id="Uiuser" maxlength="10" placeholder="Username"  autocomplete="off">
               </div>
               <div class="clearfixUP">
                 <label id="Uname">Name:</label>
-                <input name="Name" type="text" id="Uiname"  placeholder="Name" required>
+                <input name="Name" type="text" id="Uiname"  placeholder="Name" autocomplete="off">
               </div>
               <div class="clearfixUP">
                 <label id="Ulasname" >Last Name:</label>
-                <input name="LName" type="text" id="Uilasname"  placeholder="Last Name" required>
+                <input name="LName" type="text" id="Uilasname"  placeholder="Last Name" autocomplete="off">
               </div>
               <div class="clearfixUP">
                 <label id="Uemail" >Email:</label>
-                <input name="Email" type="email" id="Uiemail"  placeholder="Ejemplo@mj.com" required>
+                <input name="Email" type="email" id="Uiemail"  placeholder="Ejemplo@mj.com" autocomplete="off">
               </div>
               <div class="clearfixUP">
                 <label id="Udate" >Birthdate :</label>
-                <input name="Date" type="text" id="datepicker"  placeholder="dd/mm/aaaa" required>
+                <input name="Date" type="text" id="datepicker"  placeholder="dd/mm/aaaa"  readonly="readonly" >
               </div>
               <div class="clearfixUP">
                 <label id="Upass" >Password:</label>
-                <input name="Password" type="password" id="Uipass" placeholder="Password" required>
+                <input name="Password" type="password" id="Uipass" placeholder="Password" >
               </div>
               <div class="clearfixUP">
                 <label id="Urepeat" >Repeat:</label>
-                <input name="RPassword" type="password" id="Uirepeat" placeholder="Repeat Password" required>
+                <input name="RPassword" type="password" id="Uirepeat" placeholder="Repeat Password" >
               </div>
               <button id="btnUp" class="btnUp" type="submit">Sign Up</button>
               <input type="hidden" name="ES" value="Up" />              
@@ -95,7 +95,7 @@
 if(localStorage.getItem('USEstado')=='Es'){
 document.write('<a href="#"  onclick="ING()" ><article id="ESEN"><div id="ajaxloader"></div><article><div id="idioma">ING<div></a>');
 }else{
-document.write('<a href="#"  onclick="ESP()" ><article id="ESEN"><div id="ajaxloader"></div><article><div id="idioma">ESP<div></a>');
+document.write('<a href="#" onclick="ESP()" ><article id="ESEN"><div id="ajaxloader"></div><article><div id="idioma">ESP<div></a>');
 }
 </script>  
 
