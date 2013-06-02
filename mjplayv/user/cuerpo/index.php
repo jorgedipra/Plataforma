@@ -69,11 +69,11 @@
               </div>
               <div class="clearfixUP">
                 <label id="Upass" >Password:</label>
-                <input name="Password" type="password" id="Uipass" placeholder="Password" >
+                <input name="Password" type="password" maxlength="8" id="Uipass" placeholder="Password" >
               </div>
               <div class="clearfixUP">
                 <label id="Urepeat" >Repeat:</label>
-                <input name="RPassword" type="password" id="Uirepeat" placeholder="Repeat Password" >
+                <input name="RPassword" type="password" maxlength="8" id="Uirepeat" placeholder="Repeat Password" >
               </div>
               <button id="btnUp" class="btnUp" type="submit">Sign Up</button>
               <input type="hidden" name="ES" value="Up" />              
