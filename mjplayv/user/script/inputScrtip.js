@@ -131,9 +131,6 @@ $('#Uipass').keyup(function(){
     });
 
 
-
-
-
     $( "#formulario" ).submit(function () { 
         
         if($( "#Uiuser" ).val().length < 1) {  

@@ -29,7 +29,7 @@
               </div>
               <div class="clearfix">
                 <label id="pass">Password:</label>
-                <input name="Password" type="password" id="ipass" placeholder="Password" required>
+                <input name="Password"  maxlength="10" type="password" id="ipass" placeholder="Password" required>
               </div>
               <button id="btn" class="btn" type="submit">Sign In</button>
               <input type="hidden" name="ES" value="On" />              
