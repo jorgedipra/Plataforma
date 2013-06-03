@@ -24,12 +24,12 @@
            <form action="index.php" method="POST">             
               <div class="clearfix">
                 <label class="User">Username:</label>
-                <input name="Apodo" type="text" id="firstname" maxlength="10" placeholder="Username"  
+                <input name="Apodo1" type="text" id="firstname" maxlength="10" placeholder="Username"  
                  required>
               </div>
               <div class="clearfix">
                 <label id="pass">Password:</label>
-                <input name="Password"  maxlength="10" type="password" id="ipass" placeholder="Password" required>
+                <input name="Password1"  maxlength="10" type="password" id="ipass" placeholder="Password" required>
               </div>
               <button id="btn" class="btn" type="submit">Sign In</button>
               <input type="hidden" name="ES" value="On" />              
