@@ -12,15 +12,7 @@
 <body>
  <?php
 $objoper = new operaciones();
-if(isset($_POST['Apodo1'])){
-  $sql = "SELECT * FROM usuario WHERE UsrAlias =".$_POST['Apodo1']." and UsrClave=".$_POST['Password1']."";
-  $_SESSION['usuario']="";
- 
-}
-
-
-if(isset($_POST['Name'])){
-function encrypt($string, $key) {
+  function encrypt($string, $key) {
    $result = '';
    for($i=0; $i<strlen($string); $i++) {
       $char = substr($string, $i, 1);
@@ -31,11 +23,30 @@ function encrypt($string, $key) {
    return base64_encode($result);
 }
 
+if(isset($_POST['Apodo1'])){
+ 
+  $Password=$_POST['Password1'];
+  $cadena_encriptada = encrypt($Password,"Mjplay");
+
+   $sql = "SELECT * FROM usuario WHERE UsrAlias ='".$_POST['Apodo1']."' and UsrClave=PASSWORD('".$cadena_encriptada."')";
+  $result = $objoper->buscar($sql);
+ while($res = $result->fetch_assoc())
+ {
+      $_SESSION['usuario']=$res['UsrAlias'];
+      $_SESSION['idioma']=$res['IdiomaId'];
+ }
+   
+ 
+}
+
+
+if(isset($_POST['Name'])){
+
 $Password=$_POST['Password'];
 
 $cadena_encriptada = encrypt($Password,"Mjplay");
-
- $sql="INSERT INTO Usuario(UsrNombre,UsrImagen,UsrFechaN,UsrAlias,UsrClave,estado,RolId,IdiomaId)VALUES('".$_POST['Name']."','nada',STR_TO_DATE('".$_POST['Date']."','%m/%d/%Y'),'".$_POST['Apodo']."',PASSWORD('".$Password."'),0,1,'".$_POST['ES']."')";
+ $sql="INSERT INTO Usuario(UsrNombre,UsrImagen,UsrFechaN,UsrAlias,UsrClave,estado,RolId,IdiomaId)VALUES('".$_POST['Name']."','nada',STR_TO_DATE('".$_POST['Date']."','%m/%d/%Y'),'".$_POST['Apodo']."',PASSWORD('".$cadena_encriptada."'),0,1,'".$_POST['ES']."')";
+ echo $sql;
  $objoper->insertar($sql);
 }
 

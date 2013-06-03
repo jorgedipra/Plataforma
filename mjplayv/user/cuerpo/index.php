@@ -76,7 +76,13 @@
                 <input name="RPassword" type="password" maxlength="8" id="Uirepeat" placeholder="Repeat Password" >
               </div>
               <button id="btnUp" class="btnUp" type="submit">Sign Up</button>
-              <input type="hidden" name="ES" value="Up" />              
+              <script >
+                if (localStorage.getItem('USEstado')=="Es") {
+                  document.write('<input type="hidden" name="ES" value="1" /> ');                 
+                }else{
+                  document.write('<input type="hidden" name="ES" value="2" /> ');                                  
+                }
+              </script>            
                </form> 
         </section>
         <section id="div-border"></section>
