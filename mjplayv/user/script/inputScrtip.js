@@ -72,7 +72,7 @@ function ESPUs(){
 }
 
 $(document).ready(function(){
-$('#Uipass').keyup(function(){
+     $('#Uipass').keyup(function(){
       var _this = $('#Uipass');
       var Uipass = $('#Uipass').val();
       _this.attr('style', 'background:white');
@@ -160,10 +160,19 @@ $('#Uipass').keyup(function(){
         } 
         if($( "#Uirepeat" ).val().length < 1 ) {  
           var _this = $('#Uirepeat');     
-          _this.attr('style', 'background:rgba(255,0,0,0.6)');            
+          _this.attr('style', 'background:rgba(255,0,0,0.6)');  
             return false;  
         } 
 
+
+      var Uipass = $('#Uipass').val();
+      var Uirepeat = $('#Uirepeat').val();
+      var _this = $('#Uirepeat');
+      _this.attr('style', 'background:white');
+      if(Uipass != Uirepeat && Uirepeat != ''){
+        _this.attr('style', 'background:rgba(255,0,0,0.6)');
+        return false;
+      }
     });  
 
 });   
