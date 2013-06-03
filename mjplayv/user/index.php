@@ -34,6 +34,21 @@ if(isset($_POST['Apodo1'])){
  {
       $_SESSION['usuario']=$res['UsrAlias'];
       $_SESSION['idioma']=$res['IdiomaId'];
+      echo "
+     <script>  
+         
+            localStorage.setItem('Uapodo', '".$res['UsrAlias']."');             
+            localStorage.setItem('UName', 'Git');          
+            localStorage.setItem('UEstado', 'On');
+            localStorage.setItem('UUrl', 'img/user/010001.jpg'); 
+            localStorage.setItem('Mensaje', 'On'); 
+
+       if(localStorage.getItem('Mensaje')=='On'){
+        location.href='../index.php';
+    }           
+</script>
+"; 
+
  }
    
  
@@ -46,34 +61,18 @@ $Password=$_POST['Password'];
 
 $cadena_encriptada = encrypt($Password,"Mjplay");
  $sql="INSERT INTO Usuario(UsrNombre,UsrImagen,UsrFechaN,UsrAlias,UsrClave,estado,RolId,IdiomaId)VALUES('".$_POST['Name']."','nada',STR_TO_DATE('".$_POST['Date']."','%m/%d/%Y'),'".$_POST['Apodo']."',PASSWORD('".$cadena_encriptada."'),0,1,'".$_POST['ES']."')";
- echo $sql;
  $objoper->insertar($sql);
 }
 
 
 if(isset($_POST['ES'])){
 
-/*if ($_POST['ES']=="On") { 
-
-echo "
-<script>  
-            localStorage.setItem('Ucodigo', 8);
-            localStorage.setItem('Uapodo', '".$_POST['Apodo']."'); 
-            localStorage.setItem('UFechaN', '05/05/2013');
-            localStorage.setItem('UName', 'Git');
-            localStorage.setItem('UCorreo', 'felipe@h.com'); 
-            localStorage.setItem('UEstado', 'On');
-            localStorage.setItem('UUrl', 'img/user/010001.jpg'); 
-            localStorage.setItem('Mensaje', 'On'); 
-
-if(localStorage.getItem('Mensaje')=='On'){
-        location.href='../index.php';
-}           
-</script>
-"; 
+if ($_POST['ES']=="On") { 
 
 
-}*/
+
+
+}
 }
     $view= new stdClass(); 
     $view->disableLayout=false;
