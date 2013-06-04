@@ -24,21 +24,31 @@ $objoper = new operaciones();
 }
 
 if(isset($_POST['Apodo1'])){
- 
+     
   $Password=$_POST['Password1'];
   $cadena_encriptada = encrypt($Password,"Mjplay");
 
    $sql = "SELECT * FROM usuario WHERE UsrAlias ='".$_POST['Apodo1']."' and UsrClave=PASSWORD('".$cadena_encriptada."')";
   $result = $objoper->buscar($sql);
+
+ if ($result) {
+     echo "<script>
+     $(document).ready(function() {
+     $('#err').html('*Usuario o contraseña Incorrectos');
+     });
+     </script>";
+ }
+
  while($res = $result->fetch_assoc())
  {
       $_SESSION['usuario']=$res['UsrAlias'];
       $_SESSION['idioma']=$res['IdiomaId'];
+      $_SESSION['imagen']=$res['UsrImagen'];
       echo "
      <script>  
-         
+         alert('".$_SESSION['imagen']."');
             localStorage.setItem('Uapodo', '".$res['UsrAlias']."');             
-            localStorage.setItem('UName', 'Git');          
+            localStorage.setItem('UName', 'Geek');          
             localStorage.setItem('UEstado', 'On');           
             localStorage.setItem('UUrl', '".$_SESSION['imagen']."'); 
             localStorage.setItem('Mensaje', 'On'); 
@@ -48,31 +58,20 @@ if(isset($_POST['Apodo1'])){
     }           
 </script>
 "; 
-
- }
-   
- 
+ }  
 }
-
 
 if(isset($_POST['Name'])){
 
-$Password=$_POST['Password'];
-
-$cadena_encriptada = encrypt($Password,"Mjplay");
+ $Password=$_POST['Password'];
+ $cadena_encriptada = encrypt($Password,"Mjplay");
  $sql="INSERT INTO Usuario(UsrNombre,UsrImagen,UsrFechaN,UsrAlias,UsrClave,estado,RolId,IdiomaId)VALUES('".$_POST['Name']."','nada',STR_TO_DATE('".$_POST['Date']."','%m/%d/%Y'),'".$_POST['Apodo']."',PASSWORD('".$cadena_encriptada."'),0,1,'".$_POST['ES']."')";
  $objoper->insertar($sql);
 }
 
-
 if(isset($_POST['ES'])){
-
-if ($_POST['ES']=="On") { 
-
-
-
-
-}
+  if ($_POST['ES']=="On") { 
+  }
 }
     $view= new stdClass(); 
     $view->disableLayout=false;

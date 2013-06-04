@@ -32,7 +32,8 @@
                 <input name="Password1"  maxlength="10" type="password" id="ipass" placeholder="Password" required>
               </div>
               <button id="btn" class="btn" type="submit">Sign In</button>
-              <input type="hidden" name="ES" value="On" />              
+              <input type="hidden" name="ES" value="On" />   
+              <div id="err"></div>           
                </form> 
          </section>
         <section id="div-border"></section>

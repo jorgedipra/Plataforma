@@ -6,15 +6,14 @@
           </div>
         </div>
       </div>
-    <a id="h1" href="#">
+    <a id="h1" href="#h">
       <img src="img/h1.png">
       <h1>MJPLay-V</h1>
     </a>  
 </div>  
  <header id="login">
    <a href="#"><img name="user" id="img" src="img/userdefaul.png"/></a>
-   <a href="#"><span>::welcome::</span><br><sup id="US">Temp</sup><p id="Myuse">User</p><hr></a> 
-
+   <a href="#"><span>::welcome::</span><br><sup id="US">Temp</sup><p id="Myuse">User</p><hr></a>
 <script>
 if(localStorage.getItem('UEstado')=='On'){
 document.write('<a href="#" onclick="cerrar()" ><article id="cerrar"><div id="ajaxloader"></div><div id="ajaon"><section id="esta"></section></div><article></a><a id="EditP" href="user/profiles/">Edit Perfile</a>');
@@ -24,14 +23,14 @@ document.write('<a href="user/index.php" onclick="cerrar()" ><article id="cerrar
 </script>
   </header>
   <aside>
-
+    
   </aside>
   <nav>
-    <a id="Port" href="#">Portafolio</a>
-    <a id="Face" href="#">Facebook</a>
-    <a id="Twt" href="#">Twitter</a>
-    <a id="Goo" href="#">Google</a> 
-    <a id="Plus" href="#">Plus</a>   
+    <a id="Port" href="#p">Portafolio</a>
+    <a id="Face" href="#f">Facebook</a>
+    <a id="Twt" href="#t">Twitter</a>
+    <a id="Goo" href="#g">Google</a> 
+    <a id="Plus" href="#pl">Plus</a>   
   </nav>
   <section>
 	<div class="target">

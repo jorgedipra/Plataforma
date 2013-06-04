@@ -17,7 +17,7 @@ window.onload = function() {
  /*
  @bloqueo de boton derecho
   */
-document.oncontextmenu = function(){return false}   
+/////////////////////////////////////document.oncontextmenu = function(){return false}   
 /*
 @pestañas
  */

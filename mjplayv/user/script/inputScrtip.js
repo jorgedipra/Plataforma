@@ -6,7 +6,7 @@ $(document).ready(function() {
    // alert("IN");//temp
   }else if($stadTab=="Es"){
   // alert("Es");//temp
-   ESPUs(); 
+   ESPUs();  
   }else{
    // alert("inicio");//temp
   }    
@@ -27,7 +27,6 @@ $(document).ready(function() {
             }
         };}
 })
-
 
 function ING(){
   localStorage.setItem('USEstado', 'Is');
@@ -130,7 +129,6 @@ $(document).ready(function(){
         _this.attr('style', 'background:white');
     });
 
-
     $( "#formulario" ).submit(function () { 
         
         if($( "#Uiuser" ).val().length < 1) {  
@@ -163,7 +161,6 @@ $(document).ready(function(){
           _this.attr('style', 'background:rgba(255,0,0,0.6)');  
             return false;  
         } 
-
 
       var Uipass = $('#Uipass').val();
       var Uirepeat = $('#Uirepeat').val();

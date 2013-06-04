@@ -16,12 +16,12 @@ $objoper = new operaciones();
 if(isset($_FILES['foto']['tmp_name'])){
  $prefijo = substr(md5(uniqid(rand())),0,6);
     $destino =  "../../img/user/".$prefijo."_".$_FILES['foto']['name'];
-    $destinoF = $prefijo."_".$_FILES['foto']['name'];
+    $destinoF = '/www/Plataforma/mjplayv/img/user/'.$prefijo."_".$_FILES['foto']['name'];
     copy($_FILES['foto']['tmp_name'],$destino);
     $sql = "UPDATE usuario SET UsrImagen = '".$destinoF."' WHERE UsrAlias='". $_SESSION['usuario']."'";
     $objoper->insertar($sql);
     $_SESSION['imagen']= $destinoF;
-    echo "<script>localStorage.setItem('UUrl', '/www/Plataforma/mjplayv/img/user/".$_SESSION['imagen']."');</script>";
+    echo "<script>localStorage.setItem('UUrl', '".$_SESSION['imagen']."');</script>";
 }
  
 echo'<script src="../../conexion/storage/conexion.js"></script>';
