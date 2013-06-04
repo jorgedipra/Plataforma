@@ -21,11 +21,11 @@ document.write('<a href="../../user/index.php" onclick="cerrar()" ><article id="
   <div class="glass"></div>  
         <article class="body">
                 <h2>Examples</h2>
-                  <from action="foto.php" method="post" enctype="multipart/form-data">
+                  <form action="foto.php" method="post" enctype="multipart/form-data">
                   <input name="foto" type="file"  value=""/>
                   <input name="dato" type="text" value=""/>
                   <input value="Subir" type="submit" >
-                </from>
+                </form>
         </article>    
   </div>
   </div>
