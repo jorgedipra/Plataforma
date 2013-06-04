@@ -1,3 +1,16 @@
+<div id="outer-circle">
+        <div id="inner-circle">
+          <div id="center-circle">
+            <div id="content">
+            </div>
+          </div>
+        </div>
+      </div>
+    <a id="h1" href="#">
+      <img src="img/h1.png">
+      <h1>MJPLay-V</h1>
+    </a>  
+</div>  
  <header id="login">
    <a href="#"><img name="user" id="img" src="img/userdefaul.png"/></a>
    <a href="#"><span>::welcome::</span><br><sup id="US">Temp</sup><p id="Myuse">User</p><hr></a> 
@@ -14,7 +27,11 @@ document.write('<a href="user/index.php" onclick="cerrar()" ><article id="cerrar
 
   </aside>
   <nav>
-    navegacion
+    <a id="Port" href="#">Portafolio</a>
+    <a id="Face" href="#">Facebook</a>
+    <a id="Twt" href="#">Twitter</a>
+    <a id="Goo" href="#">Google</a> 
+    <a id="Plus" href="#">Plus</a>   
   </nav>
   <section>
 	<div class="target">

@@ -13,6 +13,7 @@
  include_once ('recursos/info.php');//se llama la informacion de la pagina
 ?>
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/stylehome.css">
 <script src="js/jquery-1.9.1.min.js"></script>
 <script src="js/jquery-ui.js"></script>
 <script src="script/script.js"></script>
