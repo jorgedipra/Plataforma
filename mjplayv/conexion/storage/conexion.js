@@ -1,4 +1,3 @@
-<script>
 $(document).ready(function() {
 
   $stadTab=localStorage.getItem('Mensaje');
@@ -13,7 +12,6 @@ $(document).ready(function() {
   }
 });
 function ClUser(){ 
-  alert(localStorage.getItem('UUrl'));
             document.getElementById('img').src=localStorage.getItem('UUrl'); //img
             document.getElementById('Myuse').innerText = localStorage.getItem('Uapodo');//div
             document.getElementById('esta').innerText =  localStorage.getItem('UEstado');//div
@@ -25,4 +23,3 @@ function cerrar(){
     localStorage.setItem('UEstado', '');
     location.href='index.php';
 }
-</script>

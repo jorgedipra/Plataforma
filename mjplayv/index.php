@@ -21,7 +21,7 @@
 <body>
  <?php
 
-    include "conexion/storage/conexion.php";   
+    echo'<script src="conexion/storage/conexion.js"></script>';  
  
     $view= new stdClass(); 
     $view->disableLayout=false;

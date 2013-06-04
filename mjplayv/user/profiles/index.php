@@ -15,15 +15,17 @@ include_once('../../conexion/php/operacionesSql.php');
 $objoper = new operaciones();
 if(isset($_FILES['foto']['tmp_name'])){
  $prefijo = substr(md5(uniqid(rand())),0,6);
-    $destino =  "C:/xampp/htdocs/www/Plataforma/mjplayv/img/user/".$prefijo."_".$_FILES['foto']['name'];
+    $destino =  "../../img/user/".$prefijo."_".$_FILES['foto']['name'];
+    $destinoF = $prefijo."_".$_FILES['foto']['name'];
     copy($_FILES['foto']['tmp_name'],$destino);
-    $sql = "UPDATE usuario SET UsrImagen = '".$destino."' WHERE UsrAlias='". $_SESSION['usuario']."'";
+    $sql = "UPDATE usuario SET UsrImagen = '".$destinoF."' WHERE UsrAlias='". $_SESSION['usuario']."'";
     $objoper->insertar($sql);
-    $_SESSION['imagen']= $destino;
+    $_SESSION['imagen']= $destinoF;
+    echo "<script>localStorage.setItem('UUrl', '/www/Plataforma/mjplayv/img/user/".$_SESSION['imagen']."');</script>";
 }
  
-  include "../../conexion/storage/conexion.php"; 
-  
+echo'<script src="../../conexion/storage/conexion.js"></script>';
+
     $view= new stdClass(); 
     $view->disableLayout=false;
      /**
