@@ -27,8 +27,23 @@ document.write('<a href="../../user/index.php" onclick="cerrar()" ><article id="
 
                 <h2>Examples</h2>
                   <form action="index.php" method="post" enctype="multipart/form-data">
-                  <input name="foto" type="file"  value=""/>
-                  <input name="dato" type="text" value=""/>
+                 
+                 Nombre:<input name="nombre" type="text" value=""/>
+                  <br>
+                  Elegir una Imagen:<input name="foto" type="file"  value=""/>
+                  <br>
+                 
+                  Direccion Correo Electronico:<input name="correo" type="text" value=""/>
+                  <br>
+                  Idioma:<select name="idioma">
+                  <option value="1">
+                      Ingles
+                  </option>
+                  <option value="2">
+                      Espaniol
+                  </option>
+                  </select>
+                  <br>
                   <input value="Subir" type="submit" >
                 </form>
 

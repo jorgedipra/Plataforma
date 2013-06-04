@@ -11,6 +11,8 @@ session_start();
  <?php
 
 
+
+     
 include_once('../../conexion/php/operacionesSql.php');
 $objoper = new operaciones();
 if(isset($_FILES['foto']['tmp_name'])){
@@ -18,8 +20,8 @@ if(isset($_FILES['foto']['tmp_name'])){
     $destino =  "../../img/user/".$prefijo."_".$_FILES['foto']['name'];
     $destinoF = '/www/Plataforma/mjplayv/img/user/'.$prefijo."_".$_FILES['foto']['name'];
     copy($_FILES['foto']['tmp_name'],$destino);
-    $sql = "UPDATE usuario SET UsrImagen = '".$destinoF."' WHERE UsrAlias='". $_SESSION['usuario']."'";
-    $objoper->insertar($sql);
+    $sql = "UPDATE usuario SET UsrImagen = '".$destinoF."',UsrCorreo='".$_POST['correo']."',IdiomaId='".$_POST['idioma']."',UsrNombre='".$_POST['nombre']."' WHERE UsrAlias='". $_SESSION['usuario']."'";
+   $objoper->insertar($sql);
     $_SESSION['imagen']= $destinoF;
     echo "<script>localStorage.setItem('UUrl', '".$_SESSION['imagen']."');</script>";
 }
