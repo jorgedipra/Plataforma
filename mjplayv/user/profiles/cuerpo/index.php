@@ -1,6 +1,13 @@
- 
-
-
+<div id="outer-circle">
+        <div id="inner-circle">
+          <div id="center-circle">
+            <div id="content">
+            </div>
+          </div>
+        </div>
+      </div>
+      <h1>User</h1>
+</div>  
  <header id="login">
    <a href="#"><img name="user" id="img" src="../../img/userdefaul.png"/></a>
    <a href="#"><span>::welcome::</span><br><sup id="US">Temp</sup><p id="Myuse">User</p><hr></a> 
