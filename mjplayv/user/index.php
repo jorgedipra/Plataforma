@@ -33,8 +33,20 @@ if(isset($_POST['Apodo1'])){
 
  if ($result) {
      echo "<script>
-     $(document).ready(function() {
+     $(document).ready(function() {   
+        if(localStorage.getItem('USEstado')=='In'){        
+         INGe(); 
+        }else if(localStorage.getItem('USEstado')=='Es'){        
+         ESPe();  
+        }else{          
+          INGe();   
+        } 
+      function ESPe(){
      $('#err').html('*Usuario o contraseña Incorrectos');
+      }
+      function INGe(){
+     $('#err').html('*Invalid UserName or Password');
+      }
      });
      </script>";
  }

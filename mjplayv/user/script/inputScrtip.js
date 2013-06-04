@@ -4,21 +4,26 @@ $(document).ready(function() {
 
   if($stadTab=="In"){
    // alert("IN");//temp
+   requie();
   }else if($stadTab=="Es"){
   // alert("Es");//temp
    ESPUs();  
+   requies();
   }else{
    // alert("inicio");//temp
+   requie();
   }    
+
+  function requie(){
    var intputElements = document.getElementsByTagName("INPUT");
     for (var i = 0; i < intputElements.length; i++) {
         intputElements[i].oninvalid = function (e) {
             e.target.setCustomValidity("");
             if (!e.target.validity.valid) {
-                if (e.target.name == "Apodo") {
+                if (e.target.name == "Apodo1") {
                     e.target.setCustomValidity("User Required");
                 }
-               else if(e.target.name == "Password") {
+               else if(e.target.name == "Password1") {
                    e.target.setCustomValidity("Password Required");
                 }
                 else {
@@ -26,6 +31,26 @@ $(document).ready(function() {
                 }
             }
         };}
+      }
+   function requies(){
+   var intputElements = document.getElementsByTagName("INPUT");
+    for (var i = 0; i < intputElements.length; i++) {
+        intputElements[i].oninvalid = function (e) {
+            e.target.setCustomValidity("");
+            if (!e.target.validity.valid) {
+                if (e.target.name == "Apodo1") {
+                    e.target.setCustomValidity("Usuario Requerido");
+                }
+               else if(e.target.name == "Password1") {
+                   e.target.setCustomValidity("Contraseña Requerida");
+                }
+                else {
+                    e.target.setCustomValidity("Espacio Requerido");
+                }
+            }
+        };}
+      }   
+
 })
 
 function ING(){
@@ -67,7 +92,6 @@ function ESPUs(){
  document.getElementById('iGit').innerText="Registro con GitHub>>"; 
 
  $(".User").html('Usuario:');
-
 }
 
 $(document).ready(function(){
