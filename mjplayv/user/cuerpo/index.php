@@ -65,7 +65,7 @@
               </div>
               <div class="clearfixUP">
                 <label id="Udate" >Birthdate :</label>
-                <input name="Date" type="text" id="datepicker"  placeholder="dd/mm/aaaa"  readonly="readonly" >
+                <input name="Date" type="text" id="datepicker"  placeholder="dd/mm/aaaa"  >
               </div>
               <div class="clearfixUP">
                 <label id="Upass" >Password:</label>
