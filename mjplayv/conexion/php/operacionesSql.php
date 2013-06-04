@@ -11,7 +11,7 @@ include_once('conexionphp.php');
       function insertar($sql){
         if($this->conexion->query($sql))
          {
-              echo "<script> alert('insertado correctamente');</script>";
+              //echo "<script> alert('operacion exitosa ');</script>";
           }else{
             
             echo "<script> alert('Error ');</script>";

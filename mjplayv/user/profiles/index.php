@@ -1,4 +1,5 @@
 <?php
+session_start();
  include_once ('../../recursos/info.php');//se llama la informacion de la pagina
 ?>
 <link rel="stylesheet" href="../../css/style.css">
@@ -9,8 +10,20 @@
 <body>
  <?php
 
-    include "../../conexion/storage/conexion.php";   
+
+include_once('../../conexion/php/operacionesSql.php');
+$objoper = new operaciones();
+if(isset($_FILES['foto']['tmp_name'])){
+ $prefijo = substr(md5(uniqid(rand())),0,6);
+    $destino =  "C:/xampp/htdocs/www/Plataforma/mjplayv/img/user/".$prefijo."_".$_FILES['foto']['name'];
+    copy($_FILES['foto']['tmp_name'],$destino);
+    $sql = "UPDATE usuario SET UsrImagen = '".$destino."' WHERE UsrAlias='". $_SESSION['usuario']."'";
+    $objoper->insertar($sql);
+    $_SESSION['imagen']= $destino;
+}
  
+  include "../../conexion/storage/conexion.php"; 
+  
     $view= new stdClass(); 
     $view->disableLayout=false;
      /**

@@ -40,7 +40,7 @@ if(isset($_POST['Apodo1'])){
             localStorage.setItem('Uapodo', '".$res['UsrAlias']."');             
             localStorage.setItem('UName', 'Git');          
             localStorage.setItem('UEstado', 'On');
-            localStorage.setItem('UUrl', 'img/user/010001.jpg'); 
+            localStorage.setItem('UUrl', '".$_SESSION['imagen']."'); 
             localStorage.setItem('Mensaje', 'On'); 
 
        if(localStorage.getItem('Mensaje')=='On'){
