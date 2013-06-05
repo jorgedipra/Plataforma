@@ -25,7 +25,7 @@ if(isset($_FILES['foto']['tmp_name'])){
     echo "<script>localStorage.setItem('UUrl', '".$_SESSION['imagen']."');</script>";
 }
  
-echo'<script src="../../conexion/storage/conexion.js"></script>';
+   include "../../conexion/storage/conexion.php";
 
     $view= new stdClass(); 
     $view->disableLayout=false;

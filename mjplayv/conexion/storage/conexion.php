@@ -1,3 +1,4 @@
+<script>
 $(document).ready(function() {
 
   $stadTab=localStorage.getItem('Mensaje');
@@ -23,3 +24,4 @@ function cerrar(){
     localStorage.setItem('UEstado', '');
     location.href='index.php';
 }
+</script>
