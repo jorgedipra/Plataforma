@@ -37,7 +37,7 @@ document.write('<a href="../../user/index.php" onclick="cerrar()" ><article id="
                  <label id="Limg">Cambiar Imagen:</label> 
                 <div class="styleFileInput">        
                   <input type="button" value="Subir" class="browseButton" />  
-                  <input type="file" size="1" name="foto" class="theFileInput" /> 
+                  <input type="file" size="1" name="foto"  class="theFileInput"  value="" required/>
                 </div>               
         </article>    
   </div>
@@ -63,7 +63,11 @@ document.write('<a href="../../user/index.php" onclick="cerrar()" ><article id="
 <div id="sub" class="target">
   <div class="glass"></div>  
         <article class="body">
-                  <input value="Canbiar" type="submit" >
+         <a href="#" onclick="$(this).closest('form').submit()">
+              <div id="diamond-shield">   
+              <section id="act">Actulizar</section>             
+              </div>
+            </a>    
         </article>    
   </div>
 </div>             
