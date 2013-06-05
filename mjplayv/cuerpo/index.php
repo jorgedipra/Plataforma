@@ -38,9 +38,7 @@ document.write('<a href="user/index.php" onclick="cerrar()" ><article id="cerrar
         <article class="body">
       			<h2>Examples</h2>
         			<div class="examples">
-        				<button rel="1">Background 1</button>
-        				<button rel="2">Background 2</button>
-        				<button rel="3">Background 3</button>
+        				<button rel="1">Boton1</button>        				
         </article>    
   </div>
   </div>

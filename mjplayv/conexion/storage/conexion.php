@@ -22,6 +22,9 @@ function cerrar(){
     localStorage.setItem('Mensaje', 'off');
     location.reload(true); 
     localStorage.setItem('UEstado', '');
+    localStorage.setItem('Uapodo', ' ');             
+    localStorage.setItem('UName', ' ');                            
+    localStorage.setItem('UUrl', ' '); 
     location.href='index.php';
 }
 </script>

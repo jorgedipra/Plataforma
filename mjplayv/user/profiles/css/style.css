@@ -23,6 +23,99 @@ h2{
   width   : 500px;
   z-index : 999;
 }
+#CurF{
+  color: #fff;
+  font-size: 30px;
+  position: absolute;
+}
+
+#Namef{
+  top:0;
+  margin-top: 100px;
+}
+
+#Idiomaf,
+#Aliasf,
+#Apellidof,
+#Diereccionf,
+#Namef{
+left: 0;
+margin-left: 50px;
+}
+
+#CurF input{
+ -webkit-transform: translate(-1px, 0px) rotate(2deg) skew(-19deg, -3deg) scale(0.9, 0.8); 
+-moz-transform: translate(-1px, 0px) rotate(2deg) skew(-19deg, -3deg) scale(0.9, 0.8); 
+-o-transform: translate(-1px, 0px) rotate(2deg) skew(-19deg, -3deg) scale(0.9, 0.8); 
+-ms-transform: translate(-1px, 0px) rotate(2deg) skew(-19deg, -3deg) scale(0.9, 0.8); 
+transform: translate(-1px, 0px) rotate(2deg) skew(-19deg, -3deg) scale(0.9, 0.8); 
+  color: rgba(0,0,0,0.8);
+  font-family: 'Germania One', cursive;
+  margin: 0px 130px;
+  top: 0px; 
+  height: 30px;
+  font-size: 25px;
+  text-align: center;
+  position: relative;
+  width: 250px;
+}
+#CurF select {
+  -webkit-transform: translate(-1px, 0px) rotate(2deg) skew(-19deg, -3deg) scale(0.9, 0.8); 
+  -moz-transform: translate(-1px, 0px) rotate(2deg) skew(-19deg, -3deg) scale(0.9, 0.8); 
+  -o-transform: translate(-1px, 0px) rotate(2deg) skew(-19deg, -3deg) scale(0.9, 0.8); 
+  -ms-transform: translate(-1px, 0px) rotate(2deg) skew(-19deg, -3deg) scale(0.9, 0.8); 
+  transform: translate(-1px, 0px) rotate(2deg) skew(-19deg, -3deg) scale(0.9, 0.8); 
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  
+  border: none;
+  outline: none;
+  background: rgba(250,250,250,0.9);  
+  color: #888;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Germania One', cursive;
+  font-size: 30px;
+  margin-left: 50px;
+  left: 0;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 35px;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    select {padding-right:18px}
+}
+
+#CurF label { position: relative; }
+
+#CurF label:after {
+  color: #aaa;
+  content: '<>';
+  font: 30px 'Consolas', monospace;
+  margin-top: -3px;
+  padding: 0 0 2px;
+  position: absolute;
+  -webkit-transform: rotate(110deg);
+  -moz-transform: rotate(110deg);
+  transform: rotate(110deg);
+  pointer-events: none;
+  right:10px;
+  top: 0px;
+}
+
+#CurF label:before {
+  content: '';
+  display: block;
+  height: 20px;  
+  pointer-events: none;
+  position: absolute;
+  right: 6px;
+  top:0;
+  width: 20px;
+}
+
 #imgC img{
   border: solid rgba(230, 95, 0,0.2);	
   height  : 200px;

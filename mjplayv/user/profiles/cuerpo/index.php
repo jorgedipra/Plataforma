@@ -43,15 +43,28 @@ document.write('<a href="../../user/index.php" onclick="cerrar()" ><article id="
 </div>    
 <div id="Cuer" class="target">
   <div class="glass"></div>  
-        <article class="body">
+        <article id="CurF" class="body">
                  <h2>User</h2>
-
-                  Nombre:
-                  <input name="nombre" type="text" value=""/>
-                  Direccion Correo Electronico:
-                  <input name="correo" type="text" value=""/>
-                  <br>
-                  Idioma:
+                  <div id="Namef">
+                     Nombre:
+                  </div>                 
+                  <input name="nombre" type="text" value="" placeholder="Name"/>
+                  <div id="Apellidof">
+                     Apellido:
+                  </div>                 
+                  <input name="nombre" type="text" value="" placeholder="Last Name"/>
+                  <div id="Aliasf">
+                     Alias:
+                  </div>                 
+                  <input name="nombre" type="text" value="" placeholder="Username"/>
+                  <div id="Diereccionf">
+                    Direccion Correo Electronico:
+                  </div>                   
+                  <input name="correo" type="text" value="" placeholder="Correo"/>
+                  <div id="Idiomaf">
+                   Idioma:
+                  </div> 
+                  <label>                
                   <select name="idioma">
                   <option value="1">
                       Ingles
@@ -60,6 +73,7 @@ document.write('<a href="../../user/index.php" onclick="cerrar()" ><article id="
                       Espaniol
                   </option>
                   </select>
+                </label>
         </article>    
   </div>
 </div>                 
