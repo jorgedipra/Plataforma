@@ -6,6 +6,15 @@ h1{
   margin-top: 60px;
   margin-left: 45px;
 }
+h2{
+  position: absolute;
+  top:0;
+  left: 0;
+  margin-top: 20px;
+  margin-left: 30px;
+  font-size: 40px;
+}
+
 #Cuer{
   height  : 480px;
   left    : 40%;

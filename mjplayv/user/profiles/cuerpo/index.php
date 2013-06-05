@@ -26,8 +26,7 @@ document.write('<a href="../../user/index.php" onclick="cerrar()" ><article id="
     
   </nav>
   <section>
-                  <form action="index.php" method="post" enctype="multipart/form-data">
-                 
+<form   id="formElem" name="formElem"  action="index.php" method="post" enctype="multipart/form-data">
 <div id="Imgen" class="target">
   <div class="glass"></div>  
         <article class="body">
@@ -37,7 +36,7 @@ document.write('<a href="../../user/index.php" onclick="cerrar()" ><article id="
                  <label id="Limg">Cambiar Imagen:</label> 
                 <div class="styleFileInput">        
                   <input type="button" value="Subir" class="browseButton" />  
-                  <input type="file" size="1" name="foto"  class="theFileInput"  value="" required/>
+                  <input type="file" size="1" name="foto"  class="theFileInput"  value="" />
                 </div>               
         </article>    
   </div>
@@ -45,11 +44,15 @@ document.write('<a href="../../user/index.php" onclick="cerrar()" ><article id="
 <div id="Cuer" class="target">
   <div class="glass"></div>  
         <article class="body">
-                 <h2>Examples</h2>
-                  Nombre:<input name="nombre" type="text" value=""/>
-                  Direccion Correo Electronico:<input name="correo" type="text" value=""/>
+                 <h2>User</h2>
+
+                  Nombre:
+                  <input name="nombre" type="text" value=""/>
+                  Direccion Correo Electronico:
+                  <input name="correo" type="text" value=""/>
                   <br>
-                  Idioma:<select name="idioma">
+                  Idioma:
+                  <select name="idioma">
                   <option value="1">
                       Ingles
                   </option>
