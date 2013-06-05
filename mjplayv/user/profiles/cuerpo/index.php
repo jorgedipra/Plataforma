@@ -27,20 +27,6 @@ document.write('<a href="../../user/index.php" onclick="cerrar()" ><article id="
   </nav>
   <section>
 <form   id="formElem" name="formElem"  action="index.php" method="post" enctype="multipart/form-data">
-<div id="Imgen" class="target">
-  <div class="glass"></div>  
-        <article class="body">
-                  <div id="imgC">
-                  <img  id="imgCC" src="../../img/userdefaul.png">
-                  </div>
-                 <label id="Limg">Cambiar Imagen:</label> 
-                <div class="styleFileInput">        
-                  <input type="button" value="Subir" class="browseButton" />  
-                  <input type="file" size="1" name="foto"  class="theFileInput"  value="" />
-                </div>               
-        </article>    
-  </div>
-</div>    
 <div id="Cuer" class="target">
   <div class="glass"></div>  
         <article id="CurF" class="body">
@@ -54,7 +40,7 @@ document.write('<a href="../../user/index.php" onclick="cerrar()" ><article id="
                   </div>                 
                   <input name="Alias" type="text" value="" placeholder="Username"/>
                   <div id="Diereccionf">
-                    Direccion Correo Electronico:
+                    Correo:
                   </div>                   
                   <input name="correo" type="text" value="" placeholder="Correo"/>
                   <div id="passf">
@@ -76,8 +62,21 @@ document.write('<a href="../../user/index.php" onclick="cerrar()" ><article id="
                 </label>
         </article>    
   </div>
-</div>                 
-<div id="sub" class="target">
+</div>      
+
+<div id="Imgen" class="target">
+  <div class="glass"></div>  
+        <article class="body">
+                  <div id="imgC">
+                  <img  id="imgCC" src="../../img/userdefaul.png">
+                  </div>
+                 <label id="Limg">Cambiar Imagen:</label> 
+                <div class="styleFileInput">        
+                  <input type="button" value="Subir" class="browseButton" />  
+                  <input type="file" size="1" name="foto"  class="theFileInput"  value="" />
+                </div>               
+        </article>  
+<div id="sub">
   <div class="glass"></div>  
         <article class="body">
          <a href="#" onclick="$(this).closest('form').submit()">
@@ -87,6 +86,11 @@ document.write('<a href="../../user/index.php" onclick="cerrar()" ><article id="
             </a>    
         </article>    
   </div>
-</div>             
+</div> 
+          
+  </div>
+</div>    
+
+            
                 </form>
   </section>

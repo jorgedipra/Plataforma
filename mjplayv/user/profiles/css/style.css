@@ -138,9 +138,9 @@ transform: translate(-1px, 0px) rotate(2deg) skew(-19deg, -3deg) scale(0.9, 0.8)
 }
 #sub{
   height  : 170px;
-  left    : 20%;
+  left    : 0;
   position: absolute;
-  top     : 50%;
+  top     : 300px;
   width   : 200px;
   z-index : 999;
 }
