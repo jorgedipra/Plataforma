@@ -11,7 +11,6 @@
  <header id="login">
    <a href="#"><img name="user" id="img" src="../../img/userdefaul.png"/></a>
    <a href="#"><span>::welcome::</span><br><sup id="US">Temp</sup><p id="Myuse">User</p><hr></a> 
-
 <script>
 if(localStorage.getItem('UEstado')=='On'){
 document.write('<a href="#" onclick="cerrar()" ><article id="cerrar"><div id="ajaxloader"></div><div id="ajaon"><section id="esta"></section></div><article></a>');
@@ -24,22 +23,30 @@ document.write('<a href="../../user/index.php" onclick="cerrar()" ><article id="
 
   </aside>
   <nav>
-    navegacion
+    
   </nav>
   <section>
-    <div class="target">
-  <div class="glass"></div>  
-        <article class="body">
-
-
-                <h2>Examples</h2>
                   <form action="index.php" method="post" enctype="multipart/form-data">
                  
-                 Nombre:<input name="nombre" type="text" value=""/>
-                  <br>
-                  Elegir una Imagen:<input name="foto" type="file"  value=""/>
-                  <br>
-                 
+<div id="Imgen" class="target">
+  <div class="glass"></div>  
+        <article class="body">
+                  <div id="imgC">
+                  <img  id="imgCC" src="../../img/userdefaul.png">
+                  </div>
+                 <label id="Limg">Cambiar Imagen:</label> 
+                <div class="styleFileInput">        
+                  <input type="button" value="Subir" class="browseButton" />  
+                  <input type="file" size="1" name="foto" class="theFileInput" /> 
+                </div>               
+        </article>    
+  </div>
+</div>    
+<div id="Cuer" class="target">
+  <div class="glass"></div>  
+        <article class="body">
+                 <h2>Examples</h2>
+                  Nombre:<input name="nombre" type="text" value=""/>
                   Direccion Correo Electronico:<input name="correo" type="text" value=""/>
                   <br>
                   Idioma:<select name="idioma">
@@ -50,11 +57,15 @@ document.write('<a href="../../user/index.php" onclick="cerrar()" ><article id="
                       Espaniol
                   </option>
                   </select>
-                  <br>
-                  <input value="Subir" type="submit" >
-                </form>
-
         </article>    
   </div>
+</div>                 
+<div id="sub" class="target">
+  <div class="glass"></div>  
+        <article class="body">
+                  <input value="Canbiar" type="submit" >
+        </article>    
   </div>
+</div>             
+                </form>
   </section>

@@ -58,7 +58,6 @@ if(isset($_POST['Apodo1'])){
       $_SESSION['imagen']=$res['UsrImagen'];
       echo "
      <script>  
-         alert('".$_SESSION['imagen']."');
             localStorage.setItem('Uapodo', '".$res['UsrAlias']."');             
             localStorage.setItem('UName', 'Geek');          
             localStorage.setItem('UEstado', 'On');           
