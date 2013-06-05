@@ -35,12 +35,12 @@ h2{
 }
 
 #Idiomaf,
+#passf,
 #Aliasf,
-#Apellidof,
 #Diereccionf,
 #Namef{
-left: 0;
-margin-left: 50px;
+  left: 0;
+  margin-left: 50px;
 }
 
 #CurF input{

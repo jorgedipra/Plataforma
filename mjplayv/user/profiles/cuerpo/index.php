@@ -48,19 +48,19 @@ document.write('<a href="../../user/index.php" onclick="cerrar()" ><article id="
                   <div id="Namef">
                      Nombre:
                   </div>                 
-                  <input name="nombre" type="text" value="" placeholder="Name"/>
-                  <div id="Apellidof">
-                     Apellido:
-                  </div>                 
-                  <input name="nombre" type="text" value="" placeholder="Last Name"/>
+                  <input name="nombre" type="text" value="" placeholder="Name"/>                  
                   <div id="Aliasf">
                      Alias:
                   </div>                 
-                  <input name="nombre" type="text" value="" placeholder="Username"/>
+                  <input name="Alias" type="text" value="" placeholder="Username"/>
                   <div id="Diereccionf">
                     Direccion Correo Electronico:
                   </div>                   
                   <input name="correo" type="text" value="" placeholder="Correo"/>
+                  <div id="passf">
+                   Contraseña:
+                  </div>                   
+                  <input name="pass" type="password" value="" placeholder="Contraseña"/>
                   <div id="Idiomaf">
                    Idioma:
                   </div> 
