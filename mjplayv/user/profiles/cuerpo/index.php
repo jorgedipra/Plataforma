@@ -37,8 +37,10 @@ document.write('<a href="../../user/index.php" onclick="cerrar()" ><article id="
                   <input name="nombre" type="text" value="" placeholder="Name"/>                  
                   <div id="Aliasf">
                      Alias:
-                  </div>                 
-                  <input name="Alias" type="text" value="" placeholder="Username"/>
+                  </div>  
+                  <div id="inpAlias">                                
+                  <input name="Alias" id="Alias" type="text" value="" placeholder="Username"/>
+                  </div> 
                   <div id="Diereccionf">
                     Correo:
                   </div>                   
@@ -87,7 +89,7 @@ document.write('<a href="../../user/index.php" onclick="cerrar()" ><article id="
         </article>    
   </div>
 </div> 
-          
+
   </div>
 </div>    
 
