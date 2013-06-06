@@ -32,6 +32,7 @@
                 <input name="Password1"  maxlength="10" type="password" id="ipass" placeholder="Password" required>
               </div>
               <button id="btn" class="btn" type="submit">Sign In</button>
+              <a id="Olpass" href="#"><u id="Olpas">*Forgot your password?</u></a>
               <input type="hidden" name="ES" value="On" />   
               <div id="err"></div>           
                </form> 

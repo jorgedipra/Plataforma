@@ -91,6 +91,8 @@ function ESPUs(){
  document.getElementById('iGog').innerText="Registro con Google>>"; 
  document.getElementById('iGit').innerText="Registro con GitHub>>"; 
 
+
+ $("#Olpas").html('*Olvidaste tu contraseña?');
  $(".User").html('Usuario:');
 }
 
