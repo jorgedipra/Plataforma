@@ -170,11 +170,16 @@ input.theFileInput{
 	left     : 45px;    
 	opacity  :0;
 	 -moz-opacity:0;
-    filter:alpha(opacity:0);   
+    filter:alpha(opacity:0);
 	position :absolute;
 	top      :0px;
 	width    :100px;
-	z-index  :2;
+	z-index  :99;
+}
+
+#usum{
+  position: absolute;
+  z-index: 999;
 }
 /*--------------------------------------**/
 #act{

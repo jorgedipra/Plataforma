@@ -81,11 +81,11 @@ document.write('<a href="../../user/index.php" onclick="cerrar()" ><article id="
 <div id="sub">
   <div class="glass"></div>  
         <article class="body">
-         <a href="#" onclick="$(this).closest('form').submit()">
+
+          <input type="submit" id="usum" value="Actualizar"/>        
               <div id="diamond-shield">   
               <section id="act">Actulizar</section>             
               </div>
-            </a>    
         </article>    
   </div>
 </div> 
