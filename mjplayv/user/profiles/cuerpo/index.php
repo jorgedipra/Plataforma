@@ -80,12 +80,8 @@ document.write('<a href="../../user/index.php" onclick="cerrar()" ><article id="
         </article>  
 <div id="sub">
   <div class="glass"></div>  
-        <article class="body">
-
-          <input type="submit" id="usum" value="Actualizar"/>        
-              <div id="diamond-shield">   
-              <section id="act">Actulizar</section>             
-              </div>
+        <article class="body">  
+               <button id="btn" class="btn" type="submit">send</button>
         </article>    
   </div>
 </div> 

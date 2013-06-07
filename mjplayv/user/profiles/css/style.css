@@ -182,36 +182,3 @@ input.theFileInput{
   z-index: 999;
 }
 /*--------------------------------------**/
-#act{
-	color      : #000;
-	font-size  : 25px;
-	left       : 0;
-	margin-left: -40px;
-	margin-top :30px;
-	position   : absolute;
-	top        : 0;
-	z-index    : 999;
-}
-#diamond-shield {
-    width: 0;
-    height: 0;
-    border: 80px solid transparent;
-    border-bottom: 30px solid #f7f7f7;
-    position: relative;
-    opacity: 0.7;
-    top: -60px;
-    margin-left:20px;
-}
-
-#diamond-shield:after {
-    content: '';
-    position: absolute;
-    left: -80px;
-    top: 30px;
-    width: 0;
-    height: 0;
-    border: 80px solid transparent;
-    border-top: 100px solid #f7f7f7;
-}
-
-
