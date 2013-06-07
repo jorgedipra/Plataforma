@@ -10,7 +10,7 @@
 </div>  
  <header id="login">
    <a href="#"><img name="user" id="img" src="../../img/userdefaul.png"/></a>
-   <a href="#"><span>::welcome::</span><br><sup id="US">Temp</sup><p id="Myuse">User</p><hr></a> 
+   <a href="../../"><span>::MJplay::</span><br><sup id="US">Temp</sup><p id="Myuse">User</p><hr></a> 
 <script>
 if(localStorage.getItem('UEstado')=='On'){
 document.write('<a href="#" onclick="cerrar()" ><article id="cerrar"><div id="ajaxloader"></div><div id="ajaon"><section id="esta"></section></div><article></a>');
@@ -27,8 +27,8 @@ document.write('<a href="../../user/index.php" onclick="cerrar()" ><article id="
   </nav>
   <section>
 <form   id="formElem" name="formElem"  action="index.php" method="post" enctype="multipart/form-data">
-<div id="Cuer" class="target">
-  <div class="glass"></div>  
+  <div id="Cuer" class="target">
+   <div class="glass"></div>  
         <article id="CurF" class="body">
                  <h2>User</h2>
                   <div id="Namef">
@@ -64,31 +64,28 @@ document.write('<a href="../../user/index.php" onclick="cerrar()" ><article id="
                 </label>
         </article>    
   </div>
-</div>      
-
-<div id="Imgen" class="target">
-  <div class="glass"></div>  
-        <article class="body">
-                  <div id="imgC">
-                  <img  id="imgCC" src="../../img/userdefaul.png">
-                  </div>
-                 <label id="Limg">Cambiar Imagen:</label> 
-                <div class="styleFileInput">        
-                  <input type="button" value="Subir" class="browseButton" />  
-                  <input type="file" size="1" name="foto"  class="theFileInput"  value="" />
-                </div>               
-        </article>  
-<div id="sub">
-  <div class="glass"></div>  
-        <article class="body">  
-               <button id="btn" class="btn" type="submit">Enviar</button>
-        </article>    
-  </div>
-</div> 
-
-  </div>
-</div>    
-
-            
-                </form>
+</div>     
+  <div id="Imgen" class="target">
+    <div class="glass"></div>  
+          <article class="body">
+                    <div id="imgC">
+                    <img  id="imgCC" src="../../img/userdefaul.png">
+                    </div>
+                   <label id="Limg">Cambiar Imagen:</label> 
+                  <div class="styleFileInput">        
+                    <input type="button" value="Cargar" class="browseButton" />  
+                    <input type="file" size="1" name="foto"  class="theFileInput"  value="" />
+                  </div>               
+          </article>  
+      <div id="sub">
+        <div class="glass"></div>  
+              <article class="body">  
+                     <button id="btn" class="btn" type="submit">Enviar</button>
+                     <input type="hidden" name="RE" value="On" /> 
+              </article>    
+        </div>
+      </div> 
+    </div>
+  </div>           
+</form>
   </section>
