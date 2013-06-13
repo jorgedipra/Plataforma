@@ -46,22 +46,23 @@ document.write('<a href="../../user/index.php" onclick="cerrar()" ><article id="
                   </div>                   
                   <input name="correo" type="text" value="" placeholder="Correo"/>
                   <div id="passf">
-                   Contraseña:
+                   Nueva Contraseña:
                   </div>                   
-                  <input name="pass" type="password" value="" placeholder="Contraseña"/>
-                  <div id="Idiomaf">
-                   Idioma:
-                  </div> 
+                  <input id="pass" name="pass" type="password" value="" placeholder="Contraseña"/>
+                  <input id="passr" name="passr" type="password" value="" placeholder="Repetir"/>
                   <label>                
                   <select name="idioma">
                   <option value="1">
                       Ingles
                   </option>
-                  <option value="2">
+                  <option value="2" selected>
                       Espaniol
                   </option>
                   </select>
                 </label>
+                  <div id="Idiomaf">
+                   Idioma:
+                  </div>                   
         </article>    
   </div>
 </div>     

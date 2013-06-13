@@ -14,6 +14,18 @@ h2{
   margin-left: 30px;
   font-size: 40px;
 }
+input.theFileInput{
+  font-size: 1em;
+  left     : 25px;   
+  height: 30px;
+  opacity  :0;
+   -moz-opacity:0;
+    filter:alpha(opacity:0);
+  position :absolute;
+  top      :2px;
+  width    :150px;
+  z-index  :99;
+}
 #Cuer{
   height  : 480px;
   left    : 40%;
@@ -33,7 +45,11 @@ h2{
   margin-top: 100px;
 }
 
-#Idiomaf,
+#Idiomaf{
+  left: 0;
+  margin-left: 50px;
+  margin-top: -45px;
+}
 #passf,
 #Aliasf,
 #Diereccionf,
@@ -41,6 +57,7 @@ h2{
   left: 0;
   margin-left: 50px;
 }
+
 
 #CurF input{
  -webkit-transform: translate(-1px, 0px) rotate(2deg) skew(-19deg, -3deg) scale(0.9, 0.8); 
@@ -76,8 +93,10 @@ transform: translate(-1px, 0px) rotate(2deg) skew(-19deg, -3deg) scale(0.9, 0.8)
   display: inline-block;
   font-family: 'Germania One', cursive;
   font-size: 30px;
-  margin-left: 50px;
+  margin-left: 150px;
+  margin-top: 5px;
   left: 0;
+  top: 0px;
   padding: 5px;
   padding-left: 10px;
   padding-right: 35px;
@@ -135,6 +154,16 @@ transform: translate(-1px, 0px) rotate(2deg) skew(-19deg, -3deg) scale(0.9, 0.8)
 	color: #fff;
 	padding-left: 10px;
 }
+#pass{
+  position: absolute;
+  top:0;
+  left: 50px;
+}
+#passr{
+  position: absolute;
+  top:0;
+  left: -100px;
+}
 #sub{
   height  : 170px;
   left    : 0;
@@ -147,7 +176,7 @@ transform: translate(-1px, 0px) rotate(2deg) skew(-19deg, -3deg) scale(0.9, 0.8)
   position: absolute;
   z-index : 999;
 }
-/***************************************/
+/*****************boton**********************/
 .styleFileInput{
     position: relative;
 }
@@ -163,19 +192,6 @@ transform: translate(-1px, 0px) rotate(2deg) skew(-19deg, -3deg) scale(0.9, 0.8)
 	position: absolute;
 	width: 150px;
 }
-input.theFileInput{
-	font-size: 1em;
-	left     : 25px;   
-  height: 30px;
-	opacity  :0;
-	 -moz-opacity:0;
-    filter:alpha(opacity:0);
-	position :absolute;
-	top      :2px;
-	width    :150px;
-	z-index  :99;
-}
-
 #usum{
   position: absolute;
   z-index: 999;
