@@ -27,8 +27,9 @@ if(isset($_POST['Apodo1'])){
      
   $Password=$_POST['Password1'];
   $cadena_encriptada = encrypt($Password,"Mjplay");
+  $sql="SELECT UsrNombre,UsrAlias,RolNombre,UsrImagen,UsrCorreo,IdiomaId FROM mjplay.usuario INNER JOIN mjplay.rol WHERE  UsrAlias ='".$_POST['Apodo1']."' and UsrClave=PASSWORD('".$cadena_encriptada."') and rol.RolId = usuario.RolId";
 
-   $sql = "SELECT * FROM usuario WHERE UsrAlias ='".$_POST['Apodo1']."' and UsrClave=PASSWORD('".$cadena_encriptada."')";
+   echo $sql;
   $result = $objoper->buscar($sql);
 
  if ($result) {
@@ -56,10 +57,13 @@ if(isset($_POST['Apodo1'])){
       $_SESSION['usuario']=$res['UsrAlias'];
       $_SESSION['idioma']=$res['IdiomaId'];
       $_SESSION['imagen']=$res['UsrImagen'];
+      $_SESSION['nombre']=$res['UsrNombre'];
+      $_SESSION['superman']=$res['RolTipo'];
       echo "
      <script>  
             localStorage.setItem('Uapodo', '".$res['UsrAlias']."');             
-            localStorage.setItem('UName', 'Geek');          
+            localStorage.setItem('Uidioma', '".$_SESSION['idioma']."');             
+            localStorage.setItem('UName', '".$_SESSION['superman']."');          
             localStorage.setItem('UEstado', 'On');           
             localStorage.setItem('UUrl', '".$_SESSION['imagen']."'); 
             localStorage.setItem('Mensaje', 'On'); 
