@@ -12,7 +12,7 @@
 <?php
  include_once ('recursos/info.php');//se llama la informacion de la pagina
 ?>
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style.css"><!--se llama el stilo-->
 <link rel="stylesheet" href="css/stylehome.css">
 <script src="js/jquery-1.9.1.min.js"></script>
 <script src="js/jquery-ui.js"></script>
@@ -21,7 +21,7 @@
 <body>
  <?php
 
-    include "conexion/storage/conexion.php";
+    include "conexion/storage/conexion.php"; //incluimos el archivo de conexion de storage
  
     $view= new stdClass(); 
     $view->disableLayout=false;

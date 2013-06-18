@@ -30,7 +30,7 @@ if(isset($_POST['Apodo1'])){//confirmamos si el parametro esta de finido
   $cadena_encriptada = encrypt($Password,"Mjplay");//Utilizamos la funcion de encriptado y le pasamos la clave
   $sql="SELECT UsrNombre,UsrAlias,RolNombre,UsrImagen,UsrCorreo,IdiomaId FROM mjplay.usuario INNER JOIN mjplay.rol WHERE  UsrAlias ='".$_POST['Apodo1']."' and UsrClave=PASSWORD('".$cadena_encriptada."') and rol.RolId = usuario.RolId";//cadena de consulta
 
-  echo $sql;
+
 
   $result = $objoper->buscar($sql);
 
@@ -80,10 +80,10 @@ if(isset($_POST['Apodo1'])){//confirmamos si el parametro esta de finido
  }  
 }
 
-if(isset($_POST['Name'])){//se pregunta si la variable nombre esta de finida
+if(isset($_POST['Name'])){
 
  $Password=$_POST['Password'];
- $cadena_encriptada = encrypt($Password,"Mjplay");//encriptamos la contraseña
+ $cadena_encriptada = encrypt($Password,"Mjplay");
  $sql="INSERT INTO Usuario(UsrNombre,UsrImagen,UsrFechaN,UsrAlias,UsrClave,UsrCorreo,estado,RolId,IdiomaId)VALUES(CONCAT('".$_POST['Name']."','".$_POST['Name']."'),'nada',STR_TO_DATE('".$_POST['Date']."','%m/%d/%Y'),'".$_POST['Apodo']."',PASSWORD('".$cadena_encriptada."'),'".$_POST['Email']."',0,1,'".$_POST['ES']."')";
  $objoper->insertar($sql);
 }
