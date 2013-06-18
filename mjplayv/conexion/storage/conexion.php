@@ -12,8 +12,10 @@ $(document).ready(function() {
     //alert("inicio");//temp
   }
 });
-function ClUser(){ 
-            document.getElementById('img').src=localStorage.getItem('UUrl'); //img
+function ClUser(){
+             if (localStorage.getItem('UUrl')!='nada') {
+               document.getElementById('img').src=localStorage.getItem('UUrl'); //img
+             } 
             document.getElementById('Myuse').innerText = localStorage.getItem('Uapodo');//div
             document.getElementById('esta').innerText =  localStorage.getItem('UEstado');//div
             document.getElementById('US').innerText =  localStorage.getItem('UName');//div

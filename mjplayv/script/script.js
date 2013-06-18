@@ -2,7 +2,7 @@
 @movimiento de objeto
  */
 $(function() {
-    $(  ".target"  ).draggable();
+    $(".target").draggable();
   });
 /*
 @movimiento de fondo
@@ -22,11 +22,11 @@ window.onload = function() {
 @pestañas
  */
  $(function() {
-    $(  "#tabs"  ).tabs();
+    $("#tabs").tabs();
  });
 /*
 @calendario
  */
 $(function() {
-    $(  "#datepicker"  ).datepicker();
+    $("#datepicker").datepicker();
   });

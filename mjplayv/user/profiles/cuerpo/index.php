@@ -33,8 +33,8 @@ document.write('<a href="../../user/index.php" onclick="cerrar()" ><article id="
                  <h2>User</h2>
                   <div id="Namef">
                      Nombre:
-                  </div>                 
-                  <input name="nombre" type="text" value="" placeholder="Name"/>                  
+                  </div>                                   
+                  <input name="nombre" id="Nombre" type="text" value="" placeholder="Name"/>                                    
                   <div id="Aliasf">
                      Alias:
                   </div>  
@@ -44,20 +44,23 @@ document.write('<a href="../../user/index.php" onclick="cerrar()" ><article id="
                   <div id="Diereccionf">
                     Correo:
                   </div>                   
-                  <input name="correo" type="text" value="" placeholder="Correo"/>
+                  <input name="correo" id="Correo" type="text" value="" placeholder="Correo"/>
                   <div id="passf">
                    Nueva Contraseña:
                   </div>                   
                   <input id="pass" name="pass" type="password" value="" placeholder="Contraseña"/>
-                  <input id="passr" name="passr" type="password" value="" placeholder="Repetir"/>
-                  <label>                
+                  <input id="passr" name="passr" type="password" value="" placeholder="Repetir"/>              
+                <label>                
                   <select name="idioma">
-                  <option value="1">
-                      Ingles
-                  </option>
-                  <option value="2" selected>
-                      Espaniol
-                  </option>
+                    <script type="text/javascript">
+                    if (localStorage.getItem('Uidioma')=='1') {
+                      document.write("<option value='1'selected>Espa&ntilde;ol</option>");
+                      document.write("<option value='2'>Ingles</option>");
+                    }else{
+                      document.write("<option value='1'selected>English</option>");
+                      document.write("<option value='2'>Spanish</option>");
+                    }
+                    </script>                  
                   </select>
                 </label>
                   <div id="Idiomaf">
@@ -74,7 +77,7 @@ document.write('<a href="../../user/index.php" onclick="cerrar()" ><article id="
                     </div>
                    <label id="Limg">Cambiar Imagen:</label> 
                   <div class="styleFileInput">        
-                    <input type="button" value="Cargar" class="browseButton" />  
+                    <input type="button" id="carg" value="Cargar" class="browseButton" />  
                     <input type="file" size="1" name="foto"  class="theFileInput"  value="" />
                   </div>               
           </article>  

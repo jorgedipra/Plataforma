@@ -12,8 +12,13 @@
 <body>
  <?php
 $objoper = new operaciones();
-
-  function encrypt($string, $key) {//funcion de encriptacion 
+/**
+ * [Funcion de encriptacion]
+ * @param  [type] $string [cadena entrante]
+ * @param  [type] $key    [cadena de encriptacion]
+ * @return [type] $result [retorna la cadena de carecteres encriptada]
+ */
+  function encrypt($string, $key) {
    $result = '';
    for($i=0; $i<strlen($string); $i++) {
       $char = substr($string, $i, 1);
@@ -28,16 +33,12 @@ if(isset($_POST['Apodo1'])){//confirmamos si el parametro esta de finido
      
   $Password=$_POST['Password1'];//igulamos la variable Password1 que llega por metodo post a $Password
   $cadena_encriptada = encrypt($Password,"Mjplay");//Utilizamos la funcion de encriptado y le pasamos la clave
-  $sql="SELECT UsrNombre,UsrAlias,RolNombre,UsrImagen,UsrCorreo,IdiomaId FROM mjplay.usuario INNER JOIN mjplay.rol WHERE  UsrAlias ='".$_POST['Apodo1']."' and UsrClave=PASSWORD('".$cadena_encriptada."') and rol.RolId = usuario.RolId";//cadena de consulta
-
-  echo $sql;
-
+   $sql="SELECT UsrNombre,UsrAlias,RolNombre,UsrImagen,UsrCorreo,IdiomaId FROM mjplay.usuario INNER JOIN mjplay.rol WHERE  UsrAlias ='".$_POST['Apodo1']."' and UsrClave=PASSWORD('".$cadena_encriptada."') and rol.RolId = usuario.RolId";//cadena de consulta
   $result = $objoper->buscar($sql);
 
  if ($result) {
   // creamos el script de js para que leea las variables locas
-
-     echo "<script> 
+     echo "<script>
      $(document).ready(function() {   
         if(localStorage.getItem('USEstado')=='In'){        
          INGe(); 
@@ -56,18 +57,23 @@ if(isset($_POST['Apodo1'])){//confirmamos si el parametro esta de finido
      </script>";
  }
 
- while($res = $result->fetch_assoc())//recorremos el arreglo que obtenenos por la consulta 
+ while($res = $result->fetch_assoc())
  {
-      $_SESSION['usuario']=$res['UsrAlias'];
-      $_SESSION['idioma']=$res['IdiomaId'];
-      $_SESSION['imagen']=$res['UsrImagen'];
-      $_SESSION['nombre']=$res['UsrNombre'];
-      $_SESSION['superman']=$res['RolTipo'];
+      $_SESSION['usuario']  =$res['UsrAlias'];//alias
+      $_SESSION['idioma']   =$res['IdiomaId'];//idioma
+      $_SESSION['imagen']   =$res['UsrImagen'];//urlimagen
+      $_SESSION['nombre']   =$res['UsrNombre'];//nombre & apellido
+      $_SESSION['superman'] =$res['RolNombre'];//rol
+      $_SESSION['correo']   =$res['UsrCorreo'];//correo
+     
+     
       echo "
      <script>  
-            localStorage.setItem('Uapodo', '".$res['UsrAlias']."');             
+            localStorage.setItem('Uapodo', '".$_SESSION['usuario']."'); 
             localStorage.setItem('Uidioma', '".$_SESSION['idioma']."');             
-            localStorage.setItem('UName', '".$_SESSION['superman']."');          
+            localStorage.setItem('UName', '".$_SESSION['superman']."');        
+            localStorage.setItem('UCorre', '".$_SESSION['correo']."');        
+            localStorage.setItem('UNameA', '".$_SESSION['nombre']."');        
             localStorage.setItem('UEstado', 'On');           
             localStorage.setItem('UUrl', '".$_SESSION['imagen']."'); 
             localStorage.setItem('Mensaje', 'On'); 
@@ -77,14 +83,14 @@ if(isset($_POST['Apodo1'])){//confirmamos si el parametro esta de finido
     }           
 </script>
 "; 
- }  
+ }   
 }
 
 if(isset($_POST['Name'])){//se pregunta si la variable nombre esta de finida
 
  $Password=$_POST['Password'];
  $cadena_encriptada = encrypt($Password,"Mjplay");//encriptamos la contraseña
- $sql="INSERT INTO Usuario(UsrNombre,UsrImagen,UsrFechaN,UsrAlias,UsrClave,UsrCorreo,estado,RolId,IdiomaId)VALUES(CONCAT('".$_POST['Name']."','".$_POST['Name']."'),'nada',STR_TO_DATE('".$_POST['Date']."','%m/%d/%Y'),'".$_POST['Apodo']."',PASSWORD('".$cadena_encriptada."'),'".$_POST['Email']."',0,1,'".$_POST['ES']."')";
+ $sql="INSERT INTO Usuario(UsrNombre,UsrImagen,UsrFechaN,UsrAlias,UsrClave,UsrCorreo,estado,RolId,IdiomaId)VALUES(CONCAT('".$_POST['Name']."',' ','".$_POST['LName']."'),'nada',STR_TO_DATE('".$_POST['Date']."','%m/%d/%Y'),'".$_POST['Apodo']."',PASSWORD('".$cadena_encriptada."'),'".$_POST['Email']."',0,1,'".$_POST['ES']."')";
  $objoper->insertar($sql);
 }
 
