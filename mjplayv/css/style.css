@@ -1,3 +1,13 @@
+/*
+>Stylo base
+
+#
+@index.php
+#user
+@user/index.php
+#profiles
+@/user/profiles/index.php
+*/
 @import url(../recursos/fonts/Germania/css.css?family=Germania+One);
 @font-face {
  font-family: MinstrelPosterTwo;
