@@ -12,6 +12,9 @@ $(document).ready(function() {
     //alert("inicio");//temp
   }
 });
+/**
+ * [ClUser datos de carga]
+ */
 function ClUser(){
              if (localStorage.getItem('UUrl')!='nada') {
                document.getElementById('img').src=localStorage.getItem('UUrl'); //img
@@ -20,6 +23,10 @@ function ClUser(){
             document.getElementById('esta').innerText =  localStorage.getItem('UEstado');//div
             document.getElementById('US').innerText =  localStorage.getItem('UName');//div
 }
+/**
+ * [cerrar deja en blanco los datos de tipo local]
+ * @return {[type]} [no retorna nada]
+ */
 function cerrar(){
     localStorage.setItem('Mensaje', 'off');
     location.reload(true); 
@@ -27,6 +34,9 @@ function cerrar(){
     localStorage.setItem('Uapodo', ' ');             
     localStorage.setItem('UName', ' ');                            
     localStorage.setItem('UUrl', ' '); 
+    localStorage.setItem('Uidioma', ' ');                  
+    localStorage.setItem('UCorre', ' ');        
+    localStorage.setItem('UNameA', ' ');               
     location.href='index.php';
 }
 </script>
