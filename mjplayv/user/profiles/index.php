@@ -29,7 +29,7 @@ if($_FILES['foto']['tmp_name']!=""){
     $destinoF = '/www/Plataforma/mjplayv/img/user/'.$prefijo."_".$_FILES['foto']['name'];
 
     copy($_FILES['foto']['tmp_name'],$destino);
-    $sql = "UPDATE usuario SET UsrImagen = '".$destinoF."',UsrNombre='".$_POST['nombre']."',UsrAlias='".$_POST['Alias']."',UsrCorreo='".$_POST['correo']."' UsrClave='".$_POST['pass']."' WHERE UsrAlias='". $_SESSION['usuario']."'";
+    $sql = "UPDATE usuario SET UsrImagen = '".$destinoF."',UsrNombre='".$_POST['nombre']."',UsrAlias='".$_POST['Alias']."',UsrCorreo='".$_POST['correo']."' UsrClave='".$_POST['pass']."', IdiomaId='".$_POST['idioma']."' WHERE UsrAlias='". $_SESSION['usuario']."'";
     $objoper->insertar($sql);
     $_SESSION['imagen']= $destinoF;
     echo "<script>localStorage.setItem('UUrl', '".$_SESSION['imagen']."');</script>";
