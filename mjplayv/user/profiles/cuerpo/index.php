@@ -1,3 +1,8 @@
+<?php 
+session_start();
+if(!$_SESSION['Wusuario']){
+?>
+
 <div id="outer-circle">
         <div id="inner-circle">
           <div id="center-circle">
@@ -92,3 +97,10 @@ document.write('<a href="../../user/index.php" onclick="cerrar()" ><article id="
   </div>           
 </form>
   </section>
+  <?php
+}else{
+
+  header("location: ");
+  exit(0);
+}
+?>

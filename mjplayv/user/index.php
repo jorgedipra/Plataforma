@@ -2,6 +2,8 @@
  session_start();
  include_once ('../recursos/info.php');//se llama la informacion de la pagina
  include_once('../conexion/php/operacionesSql.php');
+
+if($_SESSION['Wusuario']){
 ?>
 <link rel="stylesheet" href="css/style.css">
 <script src="../js/jquery-1.9.1.min.js"></script>
@@ -109,6 +111,13 @@ if(isset($_POST['ES'])){
     {
       include_once ('cuerpo/index.php');//se llama el cuerpo
     }
+}else{
+
+  echo "<script>
+  location.href='/index.php';
+  </script>";
+  exit(0);
+} 
 ?>
 </body>
 </html>
