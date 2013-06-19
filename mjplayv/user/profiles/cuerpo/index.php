@@ -48,8 +48,8 @@ document.write('<a href="../../user/index.php" onclick="cerrar()" ><article id="
                   <div id="passf">
                    Nueva Contraseña:
                   </div>                   
-                  <input id="pass" name="pass" type="password" value="" placeholder="Contraseña"/>
-                  <input id="passr" name="passr" type="password" value="" placeholder="Repetir"/>              
+                 <!-- <input id="pass" name="pass" type="password" value="" placeholder="Contraseña"/>
+                  <input id="passr" name="passr" type="password" value="" placeholder="Repetir"/>-->              
                 <label>                
                   <select name="idioma">
                     <script type="text/javascript">

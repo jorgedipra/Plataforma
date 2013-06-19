@@ -23,7 +23,7 @@ if($_FILES['foto']['tmp_name']!=""){
     $destinoF = '/www/Plataforma/mjplayv/img/user/'.$prefijo."_".$_FILES['foto']['name'];
 
     copy($_FILES['foto']['tmp_name'],$destino);
-    $sql = "UPDATE usuario SET UsrImagen = '".$destinoF."', UsrNombre='".$_POST['nombre']."',UsrAlias='".$_POST['Alias']."',UsrCorreo='".$_POST['correo']."',UsrClave='".$_POST['pass']."', IdiomaId='".$_POST['idioma']."' WHERE UsrId='".$_SESSION['Wusuario']."'";
+    $sql = "UPDATE usuario SET UsrImagen = '".$destinoF."', UsrNombre='".$_POST['nombre']."',UsrAlias='".$_POST['Alias']."',UsrCorreo='".$_POST['correo']."', IdiomaId='".$_POST['idioma']."' WHERE UsrId='".$_SESSION['Wusuario']."'";
   
     $objoper->insertar($sql);
     $_SESSION['imagen']= $destinoF;
@@ -38,7 +38,7 @@ if($_FILES['foto']['tmp_name']!=""){
 if($_POST['nombre']){
 
     if($_POST['pass']){
-         $sql = "UPDATE usuario SET  UsrNombre='".$_POST['nombre']."',UsrAlias='".$_POST['Alias']."',UsrCorreo='".$_POST['correo']."',UsrClave='".$_POST['pass']."', IdiomaId='".$_POST['idioma']."' WHERE UsrId='".$_SESSION['Wusuario']."'";
+         $sql = "UPDATE usuario SET  UsrNombre='".$_POST['nombre']."',UsrAlias='".$_POST['Alias']."',UsrCorreo='".$_POST['correo']."', IdiomaId='".$_POST['idioma']."' WHERE UsrId='".$_SESSION['Wusuario']."'";
   
     $objoper->insertar($sql);
     echo "<script>localStorage.setItem('UUrl', '".$_SESSION['imagen']."');</script>"; 
