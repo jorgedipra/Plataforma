@@ -2,10 +2,10 @@ $(document).ready(function() {
  $stadTab=localStorage.getItem('USEstado');
  //alert($stadTab);//temp
 
-  if($stadTab=="In"){
+  if($stadTab=="In" || localStorage.getItem('Uidioma')=="2"){
    // alert("IN");//temp
    requie();
-  }else if($stadTab=="Es"){
+  }else if($stadTab=="Es" || localStorage.getItem('Uidioma')=="1"){
   // alert("Es");//temp
    ESPUs();  
    requies();
@@ -50,14 +50,11 @@ function ESP(){
   location.href='index.php';
 }
 function ESPUs(){
-
- $("#atraz").html('Back');
+ $("#atraz").html('Atrás');
  $("#btn").html('Enviar');
  $(".Email").html('Correo:');
-
+ $("h2").html('<- olvidaste tu contraseña? ->');
  document.getElementById('Uiemail').placeholder="CorreoElectronico@mj.com"; 
-
-
 }
 
 $(document).ready(function(){   

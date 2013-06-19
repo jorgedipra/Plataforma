@@ -19,7 +19,7 @@ if($_FILES['foto']['tmp_name']!=""){
 
     $prefijo = substr(md5(uniqid(rand())),0,6);
     $destino =  "../../img/user/".$prefijo."_".$_FILES['foto']['name'];
-    $destinoF = '/www/Plataforma/mjplayv/img/user/'.$prefijo."_".$_FILES['foto']['name'];
+    $destinoF = '/img/user/'.$prefijo."_".$_FILES['foto']['name'];
 
     copy($_FILES['foto']['tmp_name'],$destino);
     $sql = "UPDATE usuario SET UsrImagen = '".$destinoF."', UsrNombre='".$_POST['nombre']."',UsrAlias='".$_POST['Alias']."',UsrCorreo='".$_POST['correo']."', IdiomaId='".$_POST['idioma']."' WHERE UsrId='".$_SESSION['Wusuario']."'";

@@ -56,8 +56,8 @@ document.write('<a href="../../user/index.php" onclick="cerrar()" ><article id="
                       document.write("<option value='1'selected>Espa&ntilde;ol</option>");
                       document.write("<option value='2'>Ingles</option>");
                     }else{
-                      document.write("<option value='1'selected>English</option>");
-                      document.write("<option value='2'>Spanish</option>");
+                      document.write("<option value='2'selected>English</option>");
+                      document.write("<option value='1'>Spanish</option>");
                     }
                     </script>                  
                   </select>
