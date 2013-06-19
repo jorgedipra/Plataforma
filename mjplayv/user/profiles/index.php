@@ -17,7 +17,6 @@ $objoper = new operaciones();
 if(isset($_FILES['foto']['tmp_name'])){
 
 if($_FILES['foto']['tmp_name']!=""){
-   echo "hola";
  $prefijo = substr(md5(uniqid(rand())),0,6);
     $destino =  "../../img/user/".$prefijo."_".$_FILES['foto']['name'];
     $destinoF = '/www/Plataforma/mjplayv/img/user/'.$prefijo."_".$_FILES['foto']['name'];
@@ -31,24 +30,23 @@ if($_FILES['foto']['tmp_name']!=""){
     localStorage.setItem('UUrl', '".$_SESSION['imagen']."');
     localStorage.setItem('UNameA', '".$_POST['nombre']."'); 
     localStorage.setItem('Uapodo', '".$_POST['Alias']."'); 
+    localStorage.setItem('UCorre', '".$_POST['correo']."');      
+    localStorage.setItem('Uidioma', '".$_POST['idioma']."');            
     </script>";
 
   }  
 } 
-if($_POST['nombre']){
+if(isset($_POST['nombre'])){
 
-    if($_POST['pass']){
-         $sql = "UPDATE usuario SET  UsrNombre='".$_POST['nombre']."',UsrAlias='".$_POST['Alias']."',UsrCorreo='".$_POST['correo']."', IdiomaId='".$_POST['idioma']."' WHERE UsrId='".$_SESSION['Wusuario']."'";
-  
-    $objoper->insertar($sql);
-    echo "<script>localStorage.setItem('UUrl', '".$_SESSION['imagen']."');</script>"; 
-    }else{
-            $sql = "UPDATE usuario SET  UsrNombre='".$_POST['nombre']."',UsrAlias='".$_POST['Alias']."',UsrCorreo='".$_POST['correo']."', IdiomaId='".$_POST['idioma']."' WHERE UsrId='".$_SESSION['Wusuario']."'";
+     $sql = "UPDATE usuario SET  UsrNombre='".$_POST['nombre']."',UsrAlias='".$_POST['Alias']."',UsrCorreo='".$_POST['correo']."', IdiomaId='".$_POST['idioma']."' WHERE UsrId='".$_SESSION['Wusuario']."'";
          
           $objoper->insertar($sql);
-          echo "<script>localStorage.setItem('UUrl', '".$_SESSION['imagen']."');</script>"; 
-    }
-
+          echo "<script>  
+    localStorage.setItem('UNameA', '".$_POST['nombre']."'); 
+    localStorage.setItem('Uapodo', '".$_POST['Alias']."'); 
+    localStorage.setItem('UCorre', '".$_POST['correo']."');       
+    localStorage.setItem('Uidioma', '".$_POST['idioma']."');             
+    </script>"; 
   
 }
 

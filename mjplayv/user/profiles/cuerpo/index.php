@@ -48,9 +48,8 @@ document.write('<a href="../../user/index.php" onclick="cerrar()" ><article id="
                   <div id="passf">
                    Nueva Contraseña:
                   </div>                   
-                 <!-- <input id="pass" name="pass" type="password" value="" placeholder="Contraseña"/>
-                  <input id="passr" name="passr" type="password" value="" placeholder="Repetir"/>-->              
-                <label>                
+                 <input id="pass" name="pass" type="button" value="Cambiar contraseña" onclick=" location.href='../system/' "/>     
+                 <label>                
                   <select name="idioma">
                     <script type="text/javascript">
                     if (localStorage.getItem('Uidioma')=='1') {
