@@ -33,7 +33,7 @@ if(isset($_POST['Apodo1'])){//confirmamos si el parametro esta de finido
      
   $Password=$_POST['Password1'];//igulamos la variable Password1 que llega por metodo post a $Password
   $cadena_encriptada = encrypt($Password,"Mjplay");//Utilizamos la funcion de encriptado y le pasamos la clave
-   $sql="SELECT UsrNombre,UsrAlias,RolNombre,UsrImagen,UsrCorreo,IdiomaId FROM mjplay.usuario INNER JOIN mjplay.rol WHERE  UsrAlias ='".$_POST['Apodo1']."' and UsrClave=PASSWORD('".$cadena_encriptada."') and rol.RolId = usuario.RolId";//cadena de consulta
+   $sql="SELECT UsrId,UsrNombre,UsrAlias,RolNombre,UsrImagen,UsrCorreo,IdiomaId FROM mjplay.usuario INNER JOIN mjplay.rol WHERE  UsrAlias ='".$_POST['Apodo1']."' and UsrClave=PASSWORD('".$cadena_encriptada."') and rol.RolId = usuario.RolId";//cadena de consulta
   $result = $objoper->buscar($sql);
 
  if ($result) {
@@ -58,13 +58,14 @@ if(isset($_POST['Apodo1'])){//confirmamos si el parametro esta de finido
  }
 
  while($res = $result->fetch_assoc())
- {
+ {    $_SESSION['Wusuario']=$res['UsrId'];
       $_SESSION['usuario']  =$res['UsrAlias'];//alias
       $_SESSION['idioma']   =$res['IdiomaId'];//idioma
       $_SESSION['imagen']   =$res['UsrImagen'];//urlimagen
       $_SESSION['nombre']   =$res['UsrNombre'];//nombre & apellido
       $_SESSION['superman'] =$res['RolNombre'];//rol
       $_SESSION['correo']   =$res['UsrCorreo'];//correo
+
      
      
       echo "
