@@ -23,9 +23,10 @@ $(document).ready(function() {
 	$('#Diereccionf').html("Email:");
 	$('#passf').html("New password:");
 	$('#Idiomaf').html("Idiom:");
-	$('#Limg').html("change image:");
+	$('#Limg').html("Change image:");
 	$('#carg').val("Upload");
 	$('#btn').html("Send");
+	$("#pass").val("Change Pass");
  }
 }
 

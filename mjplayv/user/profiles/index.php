@@ -15,9 +15,9 @@ session_start();
 include_once('../../conexion/php/operacionesSql.php');
 $objoper = new operaciones();
 if(isset($_FILES['foto']['tmp_name'])){
-
 if($_FILES['foto']['tmp_name']!=""){
- $prefijo = substr(md5(uniqid(rand())),0,6);
+
+    $prefijo = substr(md5(uniqid(rand())),0,6);
     $destino =  "../../img/user/".$prefijo."_".$_FILES['foto']['name'];
     $destinoF = '/www/Plataforma/mjplayv/img/user/'.$prefijo."_".$_FILES['foto']['name'];
 
