@@ -27,6 +27,10 @@ $(document).ready(function() {
 	$('#carg').val("Upload");
 	$('#btn').html("Send");
 	$("#pass").val("Change Pass");
+	$('#Port').html("Learning");
+	$('#Face').html("Multimedia");
+	$('#Twt').html("News");
+	$('#Goo').html("Game");
  }
 }
 
