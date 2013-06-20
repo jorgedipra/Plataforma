@@ -1,9 +1,4 @@
-<?php 
-session_start();
-if(!$_SESSION['Wusuario']){
-?>
-
-<div id="outer-circle">
+    <div id="outer-circle">
         <div id="inner-circle">
           <div id="center-circle">
             <div id="content">
@@ -16,13 +11,16 @@ if(!$_SESSION['Wusuario']){
  <header id="login">
    <a href="#"><img name="user" id="img" src="../../img/userdefaul.png"/></a>
    <a href="../../"><span>::MJplay::</span><br><sup id="US">Temp</sup><p id="Myuse">User</p><hr></a> 
+<form  name="onf" action="index.php" method="post">   
+<input type="hidden" name="temp" value="On" /> 
 <script>
 if(localStorage.getItem('UEstado')=='On'){
-document.write('<a href="#" onclick="cerrar()" ><article id="cerrar"><div id="ajaxloader"></div><div id="ajaon"><section id="esta"></section></div><article></a>');
+document.write('<a href="javascript:document.onf.submit();" onclick="cerrar()" ><article id="cerrar"><div id="ajaxloader"></div><div id="ajaon"><section id="esta"></section></div><article></a>');
 }else{
 document.write('<a href="../../user/index.php" onclick="cerrar()" ><article id="cerrar"><div id="ajaxloader"></div><div id="ajaon"><section id="esta">log</section></div><article></a>');
 }
 </script>
+</from>
   </header>
   <aside>
 
@@ -96,11 +94,4 @@ document.write('<a href="../../user/index.php" onclick="cerrar()" ><article id="
     </div>
   </div>           
 </form>
-  </section>
-  <?php
-}else{
-
-  header("location: ");
-  exit(0);
-}
-?>
+  </section> 

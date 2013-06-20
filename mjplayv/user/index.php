@@ -2,8 +2,6 @@
  session_start();
  include_once ('../recursos/info.php');//se llama la informacion de la pagina
  include_once('../conexion/php/operacionesSql.php');
-
-if($_SESSION['Wusuario']){
 ?>
 <link rel="stylesheet" href="css/style.css">
 <script src="../js/jquery-1.9.1.min.js"></script>
@@ -35,7 +33,7 @@ if(isset($_POST['Apodo1'])){//confirmamos si el parametro esta de finido
      
   $Password=$_POST['Password1'];//igulamos la variable Password1 que llega por metodo post a $Password
   $cadena_encriptada = encrypt($Password,"Mjplay");//Utilizamos la funcion de encriptado y le pasamos la clave
-   $sql="SELECT UsrId,UsrNombre,UsrAlias,RolNombre,UsrImagen,UsrCorreo,IdiomaId FROM mjplay.usuario INNER JOIN mjplay.rol WHERE  UsrAlias ='".$_POST['Apodo1']."' and UsrClave=PASSWORD('".$cadena_encriptada."') and rol.RolId = usuario.RolId";//cadena de consulta
+   $sql="SELECT UsrId,UsrNombre,UsrAlias,RolNombre,UsrImagen,UsrCorreo,IdiomaId FROM usuario INNER JOIN rol WHERE  UsrAlias ='".$_POST['Apodo1']."' and UsrClave=PASSWORD('".$cadena_encriptada."') and rol.RolId = usuario.RolId";//cadena de consulta
   $result = $objoper->buscar($sql);
 
  if ($result) {
@@ -111,13 +109,6 @@ if(isset($_POST['ES'])){
     {
       include_once ('cuerpo/index.php');//se llama el cuerpo
     }
-}else{
-
-  echo "<script>
-  location.href='/index.php';
-  </script>";
-  exit(0);
-} 
 ?>
 </body>
 </html>

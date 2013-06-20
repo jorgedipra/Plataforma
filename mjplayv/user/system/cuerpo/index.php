@@ -9,13 +9,13 @@
       <h1>sys</h1>
 </div>   
   <nav>
-    <a id="atraz" href= "../" >Back</a> 
+    <a id="atraz" href= "../" >Atrás</a> 
   </nav>
  <div class="target" >
   <div class="glass"></div>  
     <article  class="body" >
     <div id="tabs-1">
-      <h2 id="LogH2"><- Forgot your password? -></h2>
+      <h2 id="LogH2"><- Forgot your password -></h2>
         <section id="UsuCon">
            <form action="index.php" method="POST"> 
               <div class="clearfix">

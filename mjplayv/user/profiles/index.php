@@ -1,6 +1,7 @@
 <?php
 session_start();
  include_once ('../../recursos/info.php');//se llama la informacion de la pagina
+ if (isset($_SESSION['Wusuario'])) {
 ?>
 <link rel="stylesheet" href="../../css/style.css">
 <link rel="stylesheet" href="css/style.css">
@@ -62,6 +63,9 @@ if(isset($_POST['nombre'])){
     {
       include_once ('cuerpo/index.php');//se llama el cuerpo
     }
+ }else{
+    header('Location: ../../index.php');
+ }      
 ?>
 </body>
 </html>

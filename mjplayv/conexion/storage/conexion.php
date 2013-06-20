@@ -36,7 +36,14 @@ function cerrar(){
     localStorage.setItem('UUrl', ' '); 
     localStorage.setItem('Uidioma', ' ');                  
     localStorage.setItem('UCorre', ' ');        
-    localStorage.setItem('UNameA', ' ');               
-    location.href='index.php';
+    localStorage.setItem('UNameA', ' '); 
 }
 </script>
+<?php 
+
+if(isset($_POST['temp'])){
+  $location = "location: /index.php";
+  session_destroy();
+  header($location);
+}
+?>
