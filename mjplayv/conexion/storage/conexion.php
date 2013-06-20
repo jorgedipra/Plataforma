@@ -40,7 +40,9 @@ function cerrar(){
 }
 </script>
 <?php 
-
+/**
+ * [condicional destruye la session]
+ */
 if(isset($_POST['temp'])){
   $location = "location: /index.php";
   session_destroy();

@@ -12,7 +12,6 @@ session_start();
 </head>
 <body>
  <?php
-
 include_once('../../conexion/php/operacionesSql.php');
 $objoper = new operaciones();
 if(isset($_FILES['foto']['tmp_name'])){
@@ -34,7 +33,6 @@ if($_FILES['foto']['tmp_name']!=""){
     localStorage.setItem('UCorre', '".$_POST['correo']."');      
     localStorage.setItem('Uidioma', '".$_POST['idioma']."');            
     </script>";
-
   }  
 } 
 if(isset($_POST['nombre'])){
@@ -48,9 +46,7 @@ if(isset($_POST['nombre'])){
     localStorage.setItem('UCorre', '".$_POST['correo']."');       
     localStorage.setItem('Uidioma', '".$_POST['idioma']."');             
     </script>"; 
-  
 }
-
    include "../../conexion/storage/conexion.php";
 
     $view= new stdClass(); 
