@@ -26,7 +26,11 @@ document.write('<a href="../../user/index.php" onclick="cerrar()" ><article id="
 
   </aside>
   <nav>
-    
+    <a id="Port" href="#p">Aprendizaje</a>
+    <a id="Face" href="#f">Multimedia</a>
+    <a id="Twt" href="#t">Noticias</a>
+    <a id="Goo" href="#g">Juegos</a> 
+    <a id="Plus" href="../../index.php">Home</a>   
   </nav>
   <section>
 <form   id="formElem" name="formElem"  action="index.php" method="post" enctype="multipart/form-data">

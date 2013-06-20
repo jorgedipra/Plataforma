@@ -225,3 +225,51 @@ transform: translate(-1px, 0px) rotate(2deg) skew(-19deg, -3deg) scale(0.9, 0.8)
      0 0 150px rgba(230, 95, 0,0.5); 
      top:5px;   
 }
+/*****************accesos de esfera**********/
+nav a{    
+  color     : rgba(250,250,250,1);
+  font-size: 30px;
+  left: 0; 
+  opacity: 0.7;
+  position: absolute; 
+  text-shadow: 
+  -1px 0 rgba(0,0,0,0.5), 
+  0 1px rgba(0,0,0,0.5), 
+  1px 0 rgba(0,0,0,0.5),
+  0 -1px rgba(0,0,0,0.5);
+    top:0;
+  z-index: 999999999999;  
+}
+nav a:hover{
+  color     : rgba(250,250,250,0.7);
+  opacity: 0.9;
+  text-shadow: 
+    0 0 20px #fff,
+    0 0 30px #fff, 
+    0 0 40px #fff,
+    0 0 50px rgba(230, 95, 0,1),
+    0 0 80px rgba(230, 95, 0,1), 
+    0 0 90px rgba(230, 95, 0,1), 
+    0 0 120px rgba(230, 95, 0,1), 
+    0 0 160px rgba(230, 95, 0,1);
+}
+#Port{
+  margin-left: 190px;
+  margin-top : 25px;
+}
+#Face{
+  margin-left: 177px;
+  margin-top : 65px;
+}
+#Twt{
+  margin-left: 162px;
+  margin-top : 105px;
+}
+#Goo{
+  margin-left: 147px;
+  margin-top : 145px;
+}
+#Plus{
+  margin-left: 122px;
+  margin-top : 185px; 
+}
