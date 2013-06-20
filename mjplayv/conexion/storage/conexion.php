@@ -44,8 +44,10 @@ function cerrar(){
  * [condicional destruye la session]
  */
 if(isset($_POST['temp'])){
+if (!isset($_POST['sub2'])) {
   $location = "location: /index.php";
   session_destroy();
   header($location);
+}
 }
 ?>

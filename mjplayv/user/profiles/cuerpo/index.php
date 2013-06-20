@@ -86,7 +86,7 @@ document.write('<a href="../../user/index.php" onclick="cerrar()" ><article id="
       <div id="sub">
         <div class="glass"></div>  
               <article class="body">  
-                     <button id="btn" class="btn" type="submit">Enviar</button>
+                     <button id="btn" class="btn" name="sub2" value="0" type="submit">Enviar</button>
                      <input type="hidden" name="RE" value="On" /> 
               </article>    
         </div>
