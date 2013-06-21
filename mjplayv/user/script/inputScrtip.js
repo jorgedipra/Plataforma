@@ -1,66 +1,64 @@
+/**
+ * [ready funcion de arranque de la pagina]
+ * @return {[type]} [No tiene retorno de datos(ajax)]
+ */
 $(document).ready(function() {
  $stadTab=localStorage.getItem('USEstado');
- //alert($stadTab);//temp
-
-  if($stadTab=="In"){
-   // alert("IN");//temp
-   requie();
-  }else if($stadTab=="Es"){
-  // alert("Es");//temp
-   ESPUs();  
-   requies();
-  }else{
-   // alert("inicio");//temp
-   requie();
-  }    
-
+   if($stadTab=="In"){ requie();
+    }else if($stadTab=="Es"){ ESPUs(); requies();
+    }else{ requie();}    
+  /**
+   * [requie requiered de contraseñas]
+   * #ingles
+   * @return {[type]} [mensaje personalizado de contraseña required]
+   */
   function requie(){
    var intputElements = document.getElementsByTagName("INPUT");
     for (var i = 0; i < intputElements.length; i++) {
-        intputElements[i].oninvalid = function (e) {
-            e.target.setCustomValidity("");
-            if (!e.target.validity.valid) {
-                if (e.target.name == "Apodo1") {
-                    e.target.setCustomValidity("User Required");
-                }
-               else if(e.target.name == "Password1") {
-                   e.target.setCustomValidity("Password Required");
-                }
-                else {
-                    e.target.setCustomValidity("Space Required");
-                }
+      intputElements[i].oninvalid = function (e) {
+        e.target.setCustomValidity("");
+        if (!e.target.validity.valid) {
+          if (e.target.name == "Apodo1") { e.target.setCustomValidity("User Required");}
+            else if(e.target.name == "Password1") { e.target.setCustomValidity("Password Required");}
+            else { e.target.setCustomValidity("Space Required");}
             }
         };}
       }
+  /**
+   * [requie requiered de contraseñas]
+   * #español
+   * @return {[type]} [mensaje personalizado de contraseña required]
+   */
    function requies(){
    var intputElements = document.getElementsByTagName("INPUT");
     for (var i = 0; i < intputElements.length; i++) {
-        intputElements[i].oninvalid = function (e) {
-            e.target.setCustomValidity("");
-            if (!e.target.validity.valid) {
-                if (e.target.name == "Apodo1") {
-                    e.target.setCustomValidity("Usuario Requerido");
-                }
-               else if(e.target.name == "Password1") {
-                   e.target.setCustomValidity("Contraseña Requerida");
-                }
-                else {
-                    e.target.setCustomValidity("Espacio Requerido");
-                }
+      intputElements[i].oninvalid = function (e) {
+        e.target.setCustomValidity("");
+        if (!e.target.validity.valid) {
+          if (e.target.name == "Apodo1") { e.target.setCustomValidity("Usuario Requerido");}
+            else if(e.target.name == "Password1") {e.target.setCustomValidity("Contraseña Requerida");}
+            else {e.target.setCustomValidity("Espacio Requerido");}
             }
         };}
       }   
-
 })
-
+/**
+ * [ING control de idioma en ingles]
+ */
 function ING(){
   localStorage.setItem('USEstado', 'Is');
   location.href='index.php';
 }
+/**
+ * [ESP control de idioma en español]
+ */
 function ESP(){
   localStorage.setItem('USEstado', 'Es');
   location.href='index.php';
 }
+/**
+ * [ESPUs Español-ingles(ajax)]
+ */
 function ESPUs(){
  document.getElementById('Log').innerText="Entrar"; 
  document.getElementById('LogH2').innerText="<- Entrar ->"; 
@@ -90,49 +88,46 @@ function ESPUs(){
  document.getElementById('iTwt').innerText="Registro con Twitter>>"; 
  document.getElementById('iGog').innerText="Registro con Google>>"; 
  document.getElementById('iGit').innerText="Registro con GitHub>>"; 
-
-
  $("#Olpas").html('*Olvidaste tu contraseña?');
  $(".User").html('Usuario:');
 }
-
+/**
+ * [requiered]
+ * @return {[type]} [mensaje o color si es correcto o no]
+ */
 $(document).ready(function(){
-     $('#Uipass').keyup(function(){
-      var _this = $('#Uipass');
-      var Uipass = $('#Uipass').val();
+   $('#Uipass').keyup(function(){
+    var _this = $('#Uipass');
+    var Uipass = $('#Uipass').val();
+    _this.attr('style', 'background:white');
+    if(Uipass.charAt(0) == ' '){
+      _this.attr('style', 'background:rgba(255,0,0,0.6)');
+    }
+    if(_this.val() == ''){
+      _this.attr('style', 'background:rgba(255,0,0,0.6)');
+    }
+  });
+
+  $('#Uirepeat').keyup(function(){
+    var Uipass = $('#Uipass').val();
+    var Uirepeat = $('#Uirepeat').val();
+    var _this = $('#Uirepeat');
+    _this.attr('style', 'background:white');
+    if(Uipass != Uirepeat && Uirepeat != ''){
+      _this.attr('style', 'background:rgba(255,0,0,0.6)');
+    }
+  });
+  
+  $('#Uiemail').keyup(function(){
+    var _this = $('#Uiemail');
+    var _email = $('#Uiemail').val();
+    var re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    var valid = re.test(_email);
+    if(valid){
       _this.attr('style', 'background:white');
-      if(Uipass.charAt(0) == ' '){
-        _this.attr('style', 'background:rgba(255,0,0,0.6)');
-      }
-  
-      if(_this.val() == ''){
-        _this.attr('style', 'background:rgba(255,0,0,0.6)');
-      }
-    });
-  
-    $('#Uirepeat').keyup(function(){
-      var Uipass = $('#Uipass').val();
-      var Uirepeat = $('#Uirepeat').val();
-      var _this = $('#Uirepeat');
-      _this.attr('style', 'background:white');
-      if(Uipass != Uirepeat && Uirepeat != ''){
-        _this.attr('style', 'background:rgba(255,0,0,0.6)');
-      }
-    });
-    
-    
-    $('#Uiemail').keyup(function(){
-      var _this = $('#Uiemail');
-      var _email = $('#Uiemail').val();
-  
-      var re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-      var valid = re.test(_email);
-  
-      if(valid){
-        _this.attr('style', 'background:white');
-      } else {
-        _this.attr('style', 'background:rgba(255,0,0,0.6)');
-      }
+    } else {
+      _this.attr('style', 'background:rgba(255,0,0,0.6)');
+    }
     });
 
     $('#Uiuser').keyup(function(){
@@ -155,47 +150,45 @@ $(document).ready(function(){
         _this.attr('style', 'background:white');
     });
 
-    $( "#formulario" ).submit(function () { 
-        
-        if($( "#Uiuser" ).val().length < 1) {  
-          var _this = $('#Uiuser');     
-          _this.attr('style', 'background:rgba(255,0,0,0.6)');         
-            return false;  
-        } 
-        if($( "#Uiname" ).val().length < 1 ) {  
-          var _this = $('#Uiname');     
-          _this.attr('style', 'background:rgba(255,0,0,0.6)');            
-            return false;  
-        } 
-        if($( "#Uilasname" ).val().length < 1 ) {  
-          var _this = $('#Uilasname');     
-          _this.attr('style', 'background:rgba(255,0,0,0.6)');            
-            return false;  
-        } 
-        if($( "#Uiemail" ).val().length < 1 ) {  
-          var _this = $('#Uiemail');     
-          _this.attr('style', 'background:rgba(255,0,0,0.6)');            
-            return false;  
-        } 
-        if($( "#Uipass" ).val().length < 1 ) {  
-          var _this = $('#Uipass');     
-          _this.attr('style', 'background:rgba(255,0,0,0.6)');            
-            return false;  
-        } 
-        if($( "#Uirepeat" ).val().length < 1 ) {  
-          var _this = $('#Uirepeat');     
-          _this.attr('style', 'background:rgba(255,0,0,0.6)');  
-            return false;  
-        } 
-
-      var Uipass = $('#Uipass').val();
-      var Uirepeat = $('#Uirepeat').val();
-      var _this = $('#Uirepeat');
-      _this.attr('style', 'background:white');
-      if(Uipass != Uirepeat && Uirepeat != ''){
-        _this.attr('style', 'background:rgba(255,0,0,0.6)');
-        return false;
-      }
-    });  
+    $( "#formulario" ).submit(function () {         
+    if($( "#Uiuser" ).val().length < 1) {  
+      var _this = $('#Uiuser');     
+      _this.attr('style', 'background:rgba(255,0,0,0.6)');         
+        return false;  
+    } 
+    if($( "#Uiname" ).val().length < 1 ) {  
+      var _this = $('#Uiname');     
+      _this.attr('style', 'background:rgba(255,0,0,0.6)');            
+        return false;  
+    } 
+    if($( "#Uilasname" ).val().length < 1 ) {  
+      var _this = $('#Uilasname');     
+      _this.attr('style', 'background:rgba(255,0,0,0.6)');            
+        return false;  
+    } 
+    if($( "#Uiemail" ).val().length < 1 ) {  
+      var _this = $('#Uiemail');     
+      _this.attr('style', 'background:rgba(255,0,0,0.6)');            
+        return false;  
+    } 
+    if($( "#Uipass" ).val().length < 1 ) {  
+      var _this = $('#Uipass');     
+      _this.attr('style', 'background:rgba(255,0,0,0.6)');            
+        return false;  
+    } 
+    if($( "#Uirepeat" ).val().length < 1 ) {  
+      var _this = $('#Uirepeat');     
+      _this.attr('style', 'background:rgba(255,0,0,0.6)');  
+        return false;  
+    } 
+    var Uipass = $('#Uipass').val();
+    var Uirepeat = $('#Uirepeat').val();
+    var _this = $('#Uirepeat');
+    _this.attr('style', 'background:white');
+    if(Uipass != Uirepeat && Uirepeat != ''){
+      _this.attr('style', 'background:rgba(255,0,0,0.6)');
+      return false;
+    }
+  });  
 
 });   

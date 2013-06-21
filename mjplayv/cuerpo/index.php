@@ -1,17 +1,17 @@
 <div id="outer-circle">
-        <div id="inner-circle">
-          <div id="center-circle">
-            <div id="content">
-            </div>
-          </div>
-        </div>
+  <div id="inner-circle">
+    <div id="center-circle">
+      <div id="content">
       </div>
-    <a id="h1" href="#h">
-      <img src="img/h1.png">
-      <h1>MJPLay-V</h1>
-    </a>  
+    </div>
+  </div>
+</div>
+  <a id="h1" href="#h">
+    <img src="img/h1.png">
+    <h1>MJPLay-V</h1>
+  </a>  
 </div>  
- <header id="login">
+<header id="login">
    <a href="#"><img name="user" id="img" src="img/userdefaul.png"/></a>
    <a href="#"><span>::welcome::</span><br><sup id="US">Temp</sup><p id="Myuse">User</p><hr></a>
 <form  name="onf" action="index.php" method="post">   
@@ -25,24 +25,24 @@ document.write('<a href="user/index.php" onclick="cerrar()" ><article id="cerrar
 </script>
 </from>
   </header>
-  <aside>
-    
-  </aside>
-  <nav>
-    <a id="Port" href="#p">Portafolio</a>
-    <a id="Face" href="#f">Facebook</a>
-    <a id="Twt" href="#t">Twitter</a>
-    <a id="Goo" href="#g">Google</a> 
-    <a id="Plus" href="#pl">Plus</a>   
-  </nav>
-  <section>
-	<div class="target">
-  <div class="glass"></div>  
-        <article class="body">
-      			<h2>Examples</h2>
-        			<div class="examples">
-        				<button rel="1">Boton1</button>        				
-        </article>    
-  </div>
-  </div>
-  </section>
+<aside>    
+</aside>
+<nav>
+  <a id="Port" href="#p">Portafolio</a>
+  <a id="Face" href="#f">Facebook</a>
+  <a id="Twt" href="#t">Twitter</a>
+  <a id="Goo" href="#g">Google</a> 
+  <a id="Plus" href="#pl">Plus</a>   
+</nav>
+<section>
+<div class="target">
+<div class="glass"></div>  
+      <article class="body">
+    			<h2>Examples</h2>
+      			<div class="examples">
+      				<button rel="1">Boton1</button> 
+            </div>          				
+      </article>    
+</div>
+</div>
+</section>

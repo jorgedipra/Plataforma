@@ -8,11 +8,9 @@
 <script src="../../js/jquery-ui.js"></script>
 <script src="../../script/script.js"></script>
 <script src="script/script.js"></script>
-
 </head>
 <body>
- <?php
- 
+ <?php 
     $view= new stdClass(); 
     $view->disableLayout=false;
      /**
@@ -21,7 +19,7 @@
      */
     if ($view->disableLayout==false)
     {
-      include_once ('cuerpo/index.php');//se llama el cuerpo
+    include_once ('cuerpo/index.php');//se llama el cuerpo
     }
 ?>
 </body>

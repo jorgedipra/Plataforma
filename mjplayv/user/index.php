@@ -10,7 +10,7 @@
 <script src="script/inputScrtip.js"></script>
 </head>
 <body>
- <?php
+<?php
 $objoper = new operaciones();
 /**
  * [Funcion de encriptacion]
@@ -18,7 +18,7 @@ $objoper = new operaciones();
  * @param  [type] $key    [cadena de encriptacion]
  * @return [type] $result [retorna la cadena de carecteres encriptada]
  */
-  function encrypt($string, $key) {
+function encrypt($string, $key) {
    $result = '';
    for($i=0; $i<strlen($string); $i++) {
       $char = substr($string, $i, 1);
@@ -28,35 +28,23 @@ $objoper = new operaciones();
    }
    return base64_encode($result);
 }
-
-if(isset($_POST['Apodo1'])){//confirmamos si el parametro esta de finido
-     
+if(isset($_POST['Apodo1'])){//confirmamos si el parametro esta de finido     
   $Password=$_POST['Password1'];//igulamos la variable Password1 que llega por metodo post a $Password
   $cadena_encriptada = encrypt($Password,"Mjplay");//Utilizamos la funcion de encriptado y le pasamos la clave
    $sql="SELECT UsrId,UsrNombre,UsrAlias,RolNombre,UsrImagen,UsrCorreo,IdiomaId FROM usuario INNER JOIN rol WHERE  UsrAlias ='".$_POST['Apodo1']."' and UsrClave=PASSWORD('".$cadena_encriptada."') and rol.RolId = usuario.RolId";//cadena de consulta
   $result = $objoper->buscar($sql);
-
  if ($result) {
   // creamos el script de js para que leea las variables locas
-     echo "<script>
-     $(document).ready(function() {   
-        if(localStorage.getItem('USEstado')=='In'){        
-         INGe(); 
-        }else if(localStorage.getItem('USEstado')=='Es'){        
-         ESPe();  
-        }else{          
-          INGe();   
-        } 
-      function ESPe(){
-     $('#err').html('*Usuario o contraseña Incorrectos');
-      }
-      function INGe(){
-     $('#err').html('*Invalid UserName or Password');
-      }
-     });
-     </script>";
+   echo "<script>
+   $(document).ready(function() {   
+      if(localStorage.getItem('USEstado')=='In'){ INGe(); 
+      }else if(localStorage.getItem('USEstado')=='Es'){ ESPe();  
+      }else{ INGe(); } 
+    function ESPe(){ $('#err').html('*Usuario o contraseña Incorrectos'); }
+    function INGe(){ $('#err').html('*Invalid UserName or Password');  }
+   });
+   </script>";
  }
-
  while($res = $result->fetch_assoc())
  {    $_SESSION['Wusuario']=$res['UsrId'];
       $_SESSION['usuario']  =$res['UsrAlias'];//alias
@@ -65,36 +53,27 @@ if(isset($_POST['Apodo1'])){//confirmamos si el parametro esta de finido
       $_SESSION['nombre']   =$res['UsrNombre'];//nombre & apellido
       $_SESSION['superman'] =$res['RolNombre'];//rol
       $_SESSION['correo']   =$res['UsrCorreo'];//correo
-
-     
-     
-      echo "
-     <script>  
-            localStorage.setItem('Uapodo', '".$_SESSION['usuario']."'); 
-            localStorage.setItem('Uidioma', '".$_SESSION['idioma']."');             
-            localStorage.setItem('UName', '".$_SESSION['superman']."');        
-            localStorage.setItem('UCorre', '".$_SESSION['correo']."');        
-            localStorage.setItem('UNameA', '".$_SESSION['nombre']."');        
-            localStorage.setItem('UEstado', 'On');           
-            localStorage.setItem('UUrl', '".$_SESSION['imagen']."'); 
-            localStorage.setItem('Mensaje', 'On'); 
-
-       if(localStorage.getItem('Mensaje')=='On'){
-        location.href='../index.php';
-    }           
-</script>
-"; 
+  echo "
+  <script>  
+    localStorage.setItem('Uapodo', '".$_SESSION['usuario']."'); 
+    localStorage.setItem('Uidioma', '".$_SESSION['idioma']."');             
+    localStorage.setItem('UName', '".$_SESSION['superman']."');        
+    localStorage.setItem('UCorre', '".$_SESSION['correo']."');        
+    localStorage.setItem('UNameA', '".$_SESSION['nombre']."');        
+    localStorage.setItem('UEstado', 'On');           
+    localStorage.setItem('UUrl', '".$_SESSION['imagen']."'); 
+    localStorage.setItem('Mensaje', 'On'); 
+    if(localStorage.getItem('Mensaje')=='On'){ location.href='../index.php'; }           
+  </script>
+  "; 
  }   
 }
-
 if(isset($_POST['Name'])){//se pregunta si la variable nombre esta de finida
-
  $Password=$_POST['Password'];
  $cadena_encriptada = encrypt($Password,"Mjplay");//encriptamos la contraseña
  $sql="INSERT INTO Usuario(UsrNombre,UsrImagen,UsrFechaN,UsrAlias,UsrClave,UsrCorreo,estado,RolId,IdiomaId)VALUES(CONCAT('".$_POST['Name']."',' ','".$_POST['LName']."'),'nada',STR_TO_DATE('".$_POST['Date']."','%m/%d/%Y'),'".$_POST['Apodo']."',PASSWORD('".$cadena_encriptada."'),'".$_POST['Email']."',0,1,'".$_POST['ES']."')";
  $objoper->insertar($sql);
 }
-
 if(isset($_POST['ES'])){
   if ($_POST['ES']=="On") { 
   }
@@ -107,7 +86,7 @@ if(isset($_POST['ES'])){
      */
     if ($view->disableLayout==false)
     {
-      include_once ('cuerpo/index.php');//se llama el cuerpo
+    include_once ('cuerpo/index.php');//se llama el cuerpo
     }
 ?>
 </body>

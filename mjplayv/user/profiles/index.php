@@ -16,14 +16,11 @@ include_once('../../conexion/php/operacionesSql.php');
 $objoper = new operaciones();
 if(isset($_FILES['foto']['tmp_name'])){
 if($_FILES['foto']['tmp_name']!=""){
-
     $prefijo = substr(md5(uniqid(rand())),0,6);
     $destino =  "../../img/user/".$prefijo."_".$_FILES['foto']['name'];
     $destinoF = '/img/user/'.$prefijo."_".$_FILES['foto']['name'];
-
     copy($_FILES['foto']['tmp_name'],$destino);
-    $sql = "UPDATE usuario SET UsrImagen = '".$destinoF."', UsrNombre='".$_POST['nombre']."',UsrAlias='".$_POST['Alias']."',UsrCorreo='".$_POST['correo']."', IdiomaId='".$_POST['idioma']."' WHERE UsrId='".$_SESSION['Wusuario']."'";
-  
+    $sql = "UPDATE usuario SET UsrImagen = '".$destinoF."', UsrNombre='".$_POST['nombre']."',UsrAlias='".$_POST['Alias']."',UsrCorreo='".$_POST['correo']."', IdiomaId='".$_POST['idioma']."' WHERE UsrId='".$_SESSION['Wusuario']."'";  
     $objoper->insertar($sql);
     $_SESSION['imagen']= $destinoF;
    echo "<script>
@@ -36,11 +33,9 @@ if($_FILES['foto']['tmp_name']!=""){
   }  
 } 
 if(isset($_POST['nombre'])){
-
-     $sql = "UPDATE usuario SET  UsrNombre='".$_POST['nombre']."',UsrAlias='".$_POST['Alias']."',UsrCorreo='".$_POST['correo']."', IdiomaId='".$_POST['idioma']."' WHERE UsrId='".$_SESSION['Wusuario']."'";
-         
-          $objoper->insertar($sql);
-          echo "<script>  
+    $sql = "UPDATE usuario SET  UsrNombre='".$_POST['nombre']."',UsrAlias='".$_POST['Alias']."',UsrCorreo='".$_POST['correo']."', IdiomaId='".$_POST['idioma']."' WHERE UsrId='".$_SESSION['Wusuario']."'";         
+    $objoper->insertar($sql);
+    echo "<script>  
     localStorage.setItem('UNameA', '".$_POST['nombre']."'); 
     localStorage.setItem('Uapodo', '".$_POST['Alias']."'); 
     localStorage.setItem('UCorre', '".$_POST['correo']."');       
@@ -48,7 +43,6 @@ if(isset($_POST['nombre'])){
     </script>"; 
 }
    include "../../conexion/storage/conexion.php";
-
     $view= new stdClass(); 
     $view->disableLayout=false;
      /**

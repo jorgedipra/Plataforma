@@ -29,4 +29,4 @@ window.onload = function() {
  */
 $(function() {
     $("#datepicker").datepicker();
-  });
+});

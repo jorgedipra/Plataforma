@@ -7,7 +7,6 @@
 |   LICENSE : open                                                   |
 |     EMAIL : majovideoplay@gmail.com                                |
 |____________________________________________________________________|
-
 -->
 <?php
  include_once ('recursos/info.php');//se llama la informacion de la pagina
@@ -22,9 +21,7 @@
 </head>
 <body>
  <?php
-
-    include "conexion/storage/conexion.php"; //incluimos el archivo de conexion de storage
- 
+   include "conexion/storage/conexion.php"; //incluimos el archivo de conexion de storage
     $view= new stdClass(); 
     $view->disableLayout=false;
      /**
