@@ -3,7 +3,6 @@
  include_once ('../recursos/info.php');//se llama la informacion de la pagina
 ?>
 <link rel="stylesheet" href="../css/style.css"><!--se llama el stilo-->
-<link rel="stylesheet" href="../css/jquery-ui.css" /><!--se llama el stilo ui-->
 <link rel="stylesheet" href="../css/stylehome.css">
 <link rel="stylesheet" href="css/sytileNoticias.css">
 <script src="../js/jquery-1.9.1.min.js"></script>

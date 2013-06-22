@@ -6,7 +6,7 @@
  */
 @import url(../recursos/fonts/Germania/css.css?family=Germania+One);
 body{
-	height: 1000px;
+	height: 1200px;
 	position: absolute;
 }
 h2{
@@ -155,4 +155,8 @@ h4{
 	top     :auto;
 	width   : auto;
 	z-index : 999;
+}
+/***temp******/
+.temp{
+background:rgba(255, 255, 255, 0.7);
 }

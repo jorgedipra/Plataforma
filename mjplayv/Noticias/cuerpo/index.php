@@ -37,8 +37,8 @@ document.write('<a href="user/index.php" onclick="cerrar()" ><article id="cerrar
 </nav>
 <section>
 <div id="noticia" class="target">
-  <div class="glass"></div>  
-    <article class="body ui-widget-header"  id="droppable">
+  <div class="glass droppable"></div>  
+    <article class="body" >
 
      <div>13/14/2013</div>
       <h3>google glass <h3>
