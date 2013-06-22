@@ -23,8 +23,18 @@ $(function() {
         $( this )
           .addClass( "temp" )
           .find( "p" )
-          	.html( "probando!" );
-        $("#hola").val($("#nombre").val());  		
+          	.html($(".NTexto").val());
+          $("#Nottit").html($(".NTitulo").val()); 
+
+          $("#Notimg").attr({
+ 			 src: "../img/noticias/GoogleGlass_15.jpg",
+ 			 title: "titulo",
+  				alt: "Alt de posicionamineto"
+		  }); 
+
+          $('.draggable').hide("fast", arguments.callee);      	
+        //$(".hola").val($(".texto").val());  	
+
       }
     });
   });   

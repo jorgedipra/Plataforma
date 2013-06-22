@@ -34,7 +34,8 @@ h4{
 	font-size : 26px;
 	margin    : 10px auto;
 	text-align: center;
-	width     : 90%;
+	width     : 322px;
+	margin-left: 13px;
 
 }
 #baner{
@@ -44,6 +45,7 @@ h4{
 	width  : 350px;
 	z-index: 999;
 }
+/******************notocias**************/
 #noticia{
 	bottom : : 10px;
 	height : 800px;
@@ -53,6 +55,22 @@ h4{
 	z-index: 999;
 
 }
+#Nottit{
+	font-family: 'Germania One', cursive;
+	left       : 20px;
+	margin     : 0;
+	padding    : 0;
+	position: relative;
+}
+#Nottithr{
+	width: 90%;
+	height: 2px;
+}
+#Notimg{
+	width: 50%;
+
+}
+/******************mininotocias**************/
 .miniNot{
 	border    : solid #ccc 1px;
 	font-size : 26px;

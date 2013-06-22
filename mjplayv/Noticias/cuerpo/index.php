@@ -40,34 +40,36 @@ document.write('<a href="user/index.php" onclick="cerrar()" ><article id="cerrar
   <div class="glass droppable"> 
     <article class="body" >
 
-      <input id="hola" type="text" value="hola"/>
-  
-     
-
-     <div>13/14/2013</div>
-      <h3>google glass <h3>
+        <h2 id="Nottit">Titulo</h2>      
+        <hr id="Nottithr">
+        <figure>
+          <img  id="Notimg" src="http://www.enter.co/custom/uploads/2012/08/cook_660-300x225.jpg">
+        <figure>
         <img src="../img/userdefaul.png">
         <label>Roberto</label>
-      <figure>
-          <img width="250px" src="../img/noticias/GoogleGlass_15.jpg">
-      <figure>
+      
       <p>
-        Tras los recelos levantados por una posible vulneración de la privacidad, Google no permitirá el uso de aplicaciones con reconocimiento facial en Google Glass. La compañía ha actualizado las políticas de desarrollo para sus gafas.
+        texto texto texto texto texto texto texto texto texto texto
+        texto texto texto texto texto texto texto texto texto texto
+        texto texto texto texto texto texto texto texto texto texto
+        texto texto texto texto texto texto texto texto texto texto
+        texto texto texto texto texto texto texto texto texto texto
       </p>
       <a href="#">vermas</a>  
       <div>contenido<div>
       <div>Referencias</div>
-
+      <div>13/14/2013</div>
     </article>  
     </div>   
   </div>
 </div>
+
 <div id="baner" class="target">
   <div class="glass"></div>  
     <article class="body">
       <h4>Ultimas Noticias</h4>
 
-      <?php for ($i=0; $i < 4; $i++) { 
+      <?php for ($i=0; $i < 1; $i++) { 
       ?>
       <section class="miniNot draggable">
         <div class="minNotfech">13/14/2013</div>
@@ -77,13 +79,19 @@ document.write('<a href="user/index.php" onclick="cerrar()" ><article id="cerrar
         <figure>
         <div class="minNotTex">
           <p>Tras los recelos levantados por una posible vulneración de la privacidad, Google no...
-            <input id="nombre" type="text" value="PRUEB" />
           </p>
+
           <a class="minNotMas" href="#">SaberMas+</a>
         </div>
         <article class="miniNotRed"> face  plus tw</article>
         <label class="miniNotNam">Roberto</label>
         <div class="minNotser"><img src="../img/userdefaul.png"></div>
+        <div id="inputcont">
+          <input style="display: none;" class="NTitulo" type="text" value="google glass"/>
+          <input style="display: none;" class="NTexto" type="text" value="
+            Tras los recelos levantados por una posible vulneración de la privacidad, Google no permitirá el uso de aplicaciones con reconocimiento facial en Google Glass. La compañía ha actualizado las políticas de desarrollo para sus gafas.
+            " />            
+        </div>
       </section>
        <?php 
         } 
