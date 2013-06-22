@@ -121,6 +121,11 @@ h4{
 	color    : rgba(250,250,250,0.8);
 	font-size:  25px;
 }
+.NotRed{
+	position: absolute;
+	top: 10px;
+	right: 50px;
+}
 /******************mininotocias**************/
 .miniNot{
 	border    : solid #ccc 1px;
@@ -155,6 +160,7 @@ h4{
 .minNotFig img{
 	width: 100%;
 	position: absolute;
+	height: 80px;
 }
 .miniNotNam{
 	color    : #fff;
@@ -217,6 +223,7 @@ h4{
 	position: relative;
 	top     : -90px;
 	width   : 35px;
+	height: 35px;
 }
 .target{
 	height  : auto;

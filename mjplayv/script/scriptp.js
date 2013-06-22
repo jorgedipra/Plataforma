@@ -17,7 +17,10 @@ window.onload = function() {
  * @return {[type]} [description]
  */
 $(function() {
-    $( ".draggable" ).draggable();
+    $( ".p1" ).draggable();
+    $( ".p2" ).draggable();
+
+
     $( ".droppable" ).droppable({
       drop: function( event, ui ) {
         $( this )
@@ -38,9 +41,7 @@ $(function() {
  			 title: $(".miniNotNam").val(),
   				alt: $(".miniNotNam").val()
 		  }); 
-          $('.draggable').hide();      	
-        //$(".hola").val($(".texto").val());  	
-
+          $('.p1').hide();      	
       }
     });
   });   

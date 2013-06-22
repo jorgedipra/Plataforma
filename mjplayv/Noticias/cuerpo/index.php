@@ -43,6 +43,7 @@ document.write('<a href="user/index.php" onclick="cerrar()" ><article id="cerrar
         <h2 id="Nottit">Titulo</h2>      
         <hr id="Nottithr">
         <section id="Nociart">
+          <article class="NotRed"> face  plus tw</article>
         <figure>
           <img  id="Notimg" src="http://www.enter.co/custom/uploads/2012/08/cook_660-300x225.jpg">
         <figure>
@@ -78,7 +79,7 @@ document.write('<a href="user/index.php" onclick="cerrar()" ><article id="cerrar
 
       <?php for ($i=0; $i < 1; $i++) { 
       ?>
-      <section class="miniNot draggable">
+      <section class="miniNot draggable p1">
         <div class="minNotfech">13/14/2013</div>
         <div class="minNotTi"><h3>Google glass<h3></div>
         <figure class="minNotFig">
@@ -114,6 +115,23 @@ Además, no se permitirá a los desarrolladores desactivar la pantalla de Google
        <?php 
         } 
        ?>
+       <!-- prueba de disminuir-->
+       <section class="miniNot draggable p2">
+        <div class="minNotfech">13/14/2013</div>
+        <div class="minNotTi"><h3>prueba<h3></div>
+        <figure class="minNotFig">
+          <img src="http://www.enter.co/custom/uploads/2012/08/cook_660-300x225.jpg">
+        <figure>
+        <div class="minNotTex">
+          <p>este no se asimila...
+          </p>  
+
+          <a class="minNotMas" href="#">SaberMas+</a>
+        </div>
+        <article class="miniNotRed"> face  plus tw</article>
+        <label class="miniNotNam">Roberto</label>
+        <div class="minNotser"><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash4/211171_227376447368257_1323865542_q.jpg"></div>
+      </section>
     </article>    
 </div>
 </div>
