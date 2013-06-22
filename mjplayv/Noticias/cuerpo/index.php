@@ -37,49 +37,41 @@ document.write('<a href="user/index.php" onclick="cerrar()" ><article id="cerrar
 </nav>
 <section>
 <div id="noticia" class="target">
-<div class="glass"></div>  
-      <article class="body">
+  <div class="glass"></div>  
+    <article class="body ui-widget-header"  id="droppable">
 
-   <div>13/14/2013</div>
-    <h3>google glass <h3>
-    <article>
-      <img src="../img/userdefaul.png">
-      <label>Roberto</label>
-    </article>
-    <figure>
-        <img width="250px" src="../img/noticias/GoogleGlass_15.jpg">
-    <figure>
-    <section>
-    <article>
-    <div>
-      Tras los recelos levantados por una posible vulneración de la privacidad, Google no permitirá el uso de aplicaciones con reconocimiento facial en Google Glass. La compañía ha actualizado las políticas de desarrollo para sus gafas.
-    </div>
-  <a href="#">vermas</a>
- <article>
+     <div>13/14/2013</div>
+      <h3>google glass <h3>
+        <img src="../img/userdefaul.png">
+        <label>Roberto</label>
+      <figure>
+          <img width="250px" src="../img/noticias/GoogleGlass_15.jpg">
+      <figure>
+      <div>
+        Tras los recelos levantados por una posible vulneración de la privacidad, Google no permitirá el uso de aplicaciones con reconocimiento facial en Google Glass. La compañía ha actualizado las políticas de desarrollo para sus gafas.
+      </div>
+      <a href="#">vermas</a>  
+      <div>contenido<div>
+      <div>Referencias</div>
 
-<article>contenido<article>
-  <div>Referencias</div>
-<section>
-
-
-      </article>    
-</div>
+    </article>    
+  </div>
 </div>
 <div id="baner" class="target">
   <div class="glass"></div>  
     <article class="body">
-      <h4>Mas Noticias</h4>
+      <h4>Ultimas Noticias</h4>
 
       <?php for ($i=0; $i < 4; $i++) { 
       ?>
-      <section class="miniNot">
+      <section class="miniNot draggable">
         <div class="minNotfech">13/14/2013</div>
         <div class="minNotTi"><h3>google glass<h3></div>
         <figure class="minNotFig">
           <img src="../img/noticias/GoogleGlass_15.jpg">
         <figure>
         <div class="minNotTex">
-          <p>Tras los recelos levantados por una posible vulneración de la privacidad, Google no...</p><a class="minNotMas" href="#">vermas+</a>
+          <p>Tras los recelos levantados por una posible vulneración de la privacidad, Google no...</p><a class="minNotMas" href="#">SaberMas+</a>
         </div>
         <article class="miniNotRed"> face  plus tw</article>
         <label class="miniNotNam">Roberto</label>
@@ -92,6 +84,4 @@ document.write('<a href="user/index.php" onclick="cerrar()" ><article id="cerrar
 </div>
 </div>
 
-
-
-</section>
+</section>  
