@@ -23,7 +23,8 @@ $(function() {
         $( this )
           .addClass( "temp" )
           .find( "p" )
-          .html( "Dropped!" );
+          	.html( "probando!" );
+        $("#hola").val($("#nombre").val());  		
       }
     });
   });   

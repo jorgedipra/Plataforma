@@ -37,8 +37,12 @@ document.write('<a href="user/index.php" onclick="cerrar()" ><article id="cerrar
 </nav>
 <section>
 <div id="noticia" class="target">
-  <div class="glass droppable"></div>  
+  <div class="glass droppable"> 
     <article class="body" >
+
+      <input id="hola" type="text" value="hola"/>
+  
+     
 
      <div>13/14/2013</div>
       <h3>google glass <h3>
@@ -47,14 +51,15 @@ document.write('<a href="user/index.php" onclick="cerrar()" ><article id="cerrar
       <figure>
           <img width="250px" src="../img/noticias/GoogleGlass_15.jpg">
       <figure>
-      <div>
+      <p>
         Tras los recelos levantados por una posible vulneración de la privacidad, Google no permitirá el uso de aplicaciones con reconocimiento facial en Google Glass. La compañía ha actualizado las políticas de desarrollo para sus gafas.
-      </div>
+      </p>
       <a href="#">vermas</a>  
       <div>contenido<div>
       <div>Referencias</div>
 
-    </article>    
+    </article>  
+    </div>   
   </div>
 </div>
 <div id="baner" class="target">
@@ -71,7 +76,10 @@ document.write('<a href="user/index.php" onclick="cerrar()" ><article id="cerrar
           <img src="../img/noticias/GoogleGlass_15.jpg">
         <figure>
         <div class="minNotTex">
-          <p>Tras los recelos levantados por una posible vulneración de la privacidad, Google no...</p><a class="minNotMas" href="#">SaberMas+</a>
+          <p>Tras los recelos levantados por una posible vulneración de la privacidad, Google no...
+            <input id="nombre" type="text" value="PRUEB" />
+          </p>
+          <a class="minNotMas" href="#">SaberMas+</a>
         </div>
         <article class="miniNotRed"> face  plus tw</article>
         <label class="miniNotNam">Roberto</label>
