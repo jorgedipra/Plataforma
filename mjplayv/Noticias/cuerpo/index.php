@@ -61,8 +61,8 @@ document.write('<a href="user/index.php" onclick="cerrar()" ><article id="cerrar
         texto texto texto texto texto texto texto texto texto texto
        </p>
        <div id="Notuser">
-        <div id="Notfecha">13/14/2013</div>
-        <a href="#" id="NotuserNo">Roberto</a>
+        <div id="Notfecha">fecha</div>
+        <a href="#" id="NotuserNo">nombre</a>
         <a href="#" ><img id="Notuserimg" src="../img/userdefaul.png"></a>
        </div>
       </section>
@@ -86,16 +86,20 @@ document.write('<a href="user/index.php" onclick="cerrar()" ><article id="cerrar
         <figure>
         <div class="minNotTex">
           <p>Tras los recelos levantados por una posible vulneración de la privacidad, Google no...
-          </p>
+          </p>  
 
           <a class="minNotMas" href="#">SaberMas+</a>
         </div>
         <article class="miniNotRed"> face  plus tw</article>
         <label class="miniNotNam">Roberto</label>
         <div class="minNotser"><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash4/211171_227376447368257_1323865542_q.jpg"></div>
+
         <div id="inputcont">
           <input style="display: none;" class="NTitulo" type="text" value="Google glass"/>
-          <input style="display: none;" class="NImg" type="text" value="../img/noticias/GoogleGlass_15.jpg"/>          
+          <input style="display: none;" class="NImg" type="text" value="../img/noticias/GoogleGlass_15.jpg"/> 
+
+          <input style="display: none;" class="NIusermg" type="text" value="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash4/211171_227376447368257_1323865542_q.jpg"/>    
+
           <input style="display: none;" class="NTexto" type="text" value="
             Tras los recelos levantados por una posible vulneración de la privacidad, Google no permitirá el uso de aplicaciones con reconocimiento facial en Google Glass. La compañía ha actualizado las políticas de desarrollo para sus gafas.
             " />           

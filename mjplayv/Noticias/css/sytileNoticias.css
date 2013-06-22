@@ -124,13 +124,14 @@ h4{
 /******************mininotocias**************/
 .miniNot{
 	border    : solid #ccc 1px;
+	cursor    : crosshair;
 	font-size : 26px;
 	height    : 150px;
+	left      : 0px;
 	margin    : 10px 13px;
+	padding   : 0px;
 	text-align: center;
 	width     : 320px;
-	padding: 0px;
-	left: 0px;
 
 }
 
@@ -166,7 +167,7 @@ h4{
 }
 .minNotMas{
 	bottom       : 0;
-	color        : red;
+	color        : yellow;
 	margin-bottom: 0px;
 	margin-right : 5px;
 	position     : absolute;

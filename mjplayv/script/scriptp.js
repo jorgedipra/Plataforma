@@ -25,15 +25,19 @@ $(function() {
           .find( "p" )
           	.html($(".NTexto").val());
           $("#Nottit").html($(".NTitulo").val()); 
-
           $("#NotPt").html($(".NTextoT").val()); 
-
+ 		  $("#Notfecha").html($(".minNotfech").html()); 
+		  $("#NotuserNo").html($(".miniNotNam").html()); 
           $("#Notimg").attr({
  			 src: $(".NImg").val(),
  			 title: $(".NTitulo").val(),
   				alt: $(".NTitulo").val()
 		  }); 
-
+          $("#Notuserimg").attr({
+ 			 src: $(".NIusermg").val(),
+ 			 title: $(".miniNotNam").val(),
+  				alt: $(".miniNotNam").val()
+		  }); 
           $('.draggable').hide();      	
         //$(".hola").val($(".texto").val());  	
 
