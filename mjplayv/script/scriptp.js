@@ -26,13 +26,15 @@ $(function() {
           	.html($(".NTexto").val());
           $("#Nottit").html($(".NTitulo").val()); 
 
+          $("#NotPt").html($(".NTextoT").val()); 
+
           $("#Notimg").attr({
- 			 src: "../img/noticias/GoogleGlass_15.jpg",
- 			 title: "titulo",
-  				alt: "Alt de posicionamineto"
+ 			 src: $(".NImg").val(),
+ 			 title: $(".NTitulo").val(),
+  				alt: $(".NTitulo").val()
 		  }); 
 
-          $('.draggable').hide("fast", arguments.callee);      	
+          $('.draggable').hide();      	
         //$(".hola").val($(".texto").val());  	
 
       }

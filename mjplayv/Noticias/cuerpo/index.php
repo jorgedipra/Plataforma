@@ -42,23 +42,30 @@ document.write('<a href="user/index.php" onclick="cerrar()" ><article id="cerrar
 
         <h2 id="Nottit">Titulo</h2>      
         <hr id="Nottithr">
+        <section id="Nociart">
         <figure>
           <img  id="Notimg" src="http://www.enter.co/custom/uploads/2012/08/cook_660-300x225.jpg">
         <figure>
-        <img src="../img/userdefaul.png">
-        <label>Roberto</label>
-      
-      <p>
+        <p id="NotPP">texto1 idea principal
         texto texto texto texto texto texto texto texto texto texto
         texto texto texto texto texto texto texto texto texto texto
         texto texto texto texto texto texto texto texto texto texto
         texto texto texto texto texto texto texto texto texto texto
         texto texto texto texto texto texto texto texto texto texto
-      </p>
-      <a href="#">vermas</a>  
-      <div>contenido<div>
-      <div>Referencias</div>
-      <div>13/14/2013</div>
+       </p>
+       <p id="NotPt">texto2
+        texto texto texto texto texto texto texto texto texto texto
+        texto texto texto texto texto texto texto texto texto texto
+        texto texto texto texto texto texto texto texto texto texto
+        texto texto texto texto texto texto texto texto texto texto
+        texto texto texto texto texto texto texto texto texto texto
+       </p>
+       <div id="Notuser">
+        <div id="Notfecha">13/14/2013</div>
+        <a href="#" id="NotuserNo">Roberto</a>
+        <a href="#" ><img id="Notuserimg" src="../img/userdefaul.png"></a>
+       </div>
+      </section>
     </article>  
     </div>   
   </div>
@@ -73,7 +80,7 @@ document.write('<a href="user/index.php" onclick="cerrar()" ><article id="cerrar
       ?>
       <section class="miniNot draggable">
         <div class="minNotfech">13/14/2013</div>
-        <div class="minNotTi"><h3>google glass<h3></div>
+        <div class="minNotTi"><h3>Google glass<h3></div>
         <figure class="minNotFig">
           <img src="../img/noticias/GoogleGlass_15.jpg">
         <figure>
@@ -85,12 +92,19 @@ document.write('<a href="user/index.php" onclick="cerrar()" ><article id="cerrar
         </div>
         <article class="miniNotRed"> face  plus tw</article>
         <label class="miniNotNam">Roberto</label>
-        <div class="minNotser"><img src="../img/userdefaul.png"></div>
+        <div class="minNotser"><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash4/211171_227376447368257_1323865542_q.jpg"></div>
         <div id="inputcont">
-          <input style="display: none;" class="NTitulo" type="text" value="google glass"/>
+          <input style="display: none;" class="NTitulo" type="text" value="Google glass"/>
+          <input style="display: none;" class="NImg" type="text" value="../img/noticias/GoogleGlass_15.jpg"/>          
           <input style="display: none;" class="NTexto" type="text" value="
             Tras los recelos levantados por una posible vulneración de la privacidad, Google no permitirá el uso de aplicaciones con reconocimiento facial en Google Glass. La compañía ha actualizado las políticas de desarrollo para sus gafas.
-            " />            
+            " />           
+          <input style="display: none;" class="NTextoT" type="text" value='"Como hemos avisado desde hace varios años, no vamos a añadir funciones de reconocimiento facial en nuestros productos sin tener fuertes protecciones de privacidad.  Con esto en mente, no aprobaremos ningun Glassware de reconocimiento facial en este momento", ha dicho la compañía en un comunicado.
+  
+Además, no se permitirá a los desarrolladores desactivar la pantalla de Google Glass mientras se graba en video o se realizan fotografías. Esto surge en respuesta a la preocupación de que alguien con unas Google Glass pueda grabar o hacer fotos sin que nadie se dé cuenta.
+
+"Nuestro Explorer program hace que los usuarios participen activamente en la evolución del dispositivo Glass antes de un lanzamiento general para consumidores. Por ello, hemos actualizado nuestras políticas de desarrollo. Esperamos aprender más de nuestros usuarios, y evolucionar con nuestras políticas en las próximas semanas y meses"' /> 
+             
         </div>
       </section>
        <?php 
