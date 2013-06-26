@@ -12,36 +12,3 @@ window.onload = function() {
  @bloqueo de boton derecho
   */
 /////////////////////////////////////document.oncontextmenu = function(){return false}   
-/**
- * [movimiento de objeto con accion]
- * @return {[type]} [description]
- */
-$(function() {
-    $( ".p1" ).draggable();
-    $( ".p2" ).draggable();
-
-
-    $( ".droppable" ).droppable({
-      drop: function( event, ui ) {
-        $( this )
-          .addClass( "temp" )
-          .find( "p" )
-          	.html($(".NTexto").val());
-          $("#Nottit").html($(".NTitulo").val()); 
-          $("#NotPt").html($(".NTextoT").val()); 
- 		  $("#Notfecha").html($(".minNotfech").html()); 
-		  $("#NotuserNo").html($(".miniNotNam").html()); 
-          $("#Notimg").attr({
- 			 src: $(".NImg").val(),
- 			 title: $(".NTitulo").val(),
-  				alt: $(".NTitulo").val()
-		  }); 
-          $("#Notuserimg").attr({
- 			 src: $(".NIusermg").val(),
- 			 title: $(".miniNotNam").val(),
-  				alt: $(".miniNotNam").val()
-		  }); 
-          $('.p1').hide();      	
-      }
-    });
-  });   

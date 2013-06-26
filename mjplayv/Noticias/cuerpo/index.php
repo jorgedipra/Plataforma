@@ -1,3 +1,4 @@
+
 <div id="outer-circle">
   <div id="inner-circle">
     <div id="center-circle">
@@ -35,6 +36,7 @@ document.write('<a href="user/index.php" onclick="cerrar()" ><article id="cerrar
   <a id="Goo" href="#g">Juegos</a> 
   <a id="Plus" href="../">Home</a> 
 </nav>
+
 <section>
 <div id="noticia" class="target">
   <div class="glass droppable"> 
@@ -76,64 +78,58 @@ document.write('<a href="user/index.php" onclick="cerrar()" ><article id="cerrar
   <div class="glass"></div>  
     <article class="body">
       <h4>Ultimas Noticias</h4>
+    <?php 
 
-      <?php for ($i=0; $i < 1; $i++) { 
-      ?>
-      <section class="miniNot draggable p1">
-        <div class="minNotfech">13/14/2013</div>
-        <div class="minNotTi"><h3>Google glass<h3></div>
-        <figure class="minNotFig">
-          <img src="../img/noticias/GoogleGlass_15.jpg">
-        <figure>
-        <div class="minNotTex">
-          <p>Tras los recelos levantados por una posible vulneración de la privacidad, Google no...
-          </p>  
-
-          <a class="minNotMas" href="#">SaberMas+</a>
-        </div>
-        <article class="miniNotRed"> face  plus tw</article>
-        <label class="miniNotNam">Roberto</label>
-        <div class="minNotser"><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash4/211171_227376447368257_1323865542_q.jpg"></div>
-
-        <div id="inputcont">
-          <input style="display: none;" class="NTitulo" type="text" value="Google glass"/>
-          <input style="display: none;" class="NImg" type="text" value="../img/noticias/GoogleGlass_15.jpg"/> 
-
-          <input style="display: none;" class="NIusermg" type="text" value="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash4/211171_227376447368257_1323865542_q.jpg"/>    
-
-          <input style="display: none;" class="NTexto" type="text" value="
-            Tras los recelos levantados por una posible vulneración de la privacidad, Google no permitirá el uso de aplicaciones con reconocimiento facial en Google Glass. La compañía ha actualizado las políticas de desarrollo para sus gafas.
-            " />           
-          <input style="display: none;" class="NTextoT" type="text" value='"Como hemos avisado desde hace varios años, no vamos a añadir funciones de reconocimiento facial en nuestros productos sin tener fuertes protecciones de privacidad.  Con esto en mente, no aprobaremos ningun Glassware de reconocimiento facial en este momento", ha dicho la compañía en un comunicado.
+$TextoT='"Como hemos avisado desde hace varios años, no vamos a añadir funciones de reconocimiento facial en nuestros productos sin tener fuertes protecciones de privacidad.  Con esto en mente, no aprobaremos ningun Glassware de reconocimiento facial en este momento", ha dicho la compañía en un comunicado.
   
 Además, no se permitirá a los desarrolladores desactivar la pantalla de Google Glass mientras se graba en video o se realizan fotografías. Esto surge en respuesta a la preocupación de que alguien con unas Google Glass pueda grabar o hacer fotos sin que nadie se dé cuenta.
 
-"Nuestro Explorer program hace que los usuarios participen activamente en la evolución del dispositivo Glass antes de un lanzamiento general para consumidores. Por ello, hemos actualizado nuestras políticas de desarrollo. Esperamos aprender más de nuestros usuarios, y evolucionar con nuestras políticas en las próximas semanas y meses"' /> 
+"Nuestro Explorer program hace que los usuarios participen activamente en la evolución del dispositivo Glass antes de un lanzamiento general para consumidores. Por ello, hemos actualizado nuestras políticas de desarrollo. Esperamos aprender más de nuestros usuarios, y evolucionar con nuestras políticas en las próximas semanas y meses"';
+
+$Texto="Tras los recelos levantados por una posible vulneración de la privacidad, Google no permitirá el uso de aplicaciones con reconocimiento facial en Google Glass. La compañía ha actualizado las políticas de desarrollo para sus gafas.";
+
+$Iusermg="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash4/211171_227376447368257_1323865542_q.jpg";
+
+$Img="../img/noticias/GoogleGlass_15.jpg";
+$Titulo="Google glass";
+$miniNotNam="Roberto";
+$minNotfech="13/14/2013";
+$minNotTex="Tras los recelos levantados por una posible vulneración de la privacidad, Google no...";
+$minURL="#";
+
+      for ($i=1; $i < 5; $i++) { 
+      ?>
+      <section class="miniNot draggable" id="p<?php echo$i; ?>">
+        <div class="minNotfech" id="minNotfech<?php echo$i; ?>">
+          <?php echo$minNotfech; ?>
+        </div>
+        <div class="minNotTi"><h3><?php echo$Titulo; echo$i;/*<--temp*/ ?><h3></div>
+        <figure class="minNotFig">
+          <img src="<?php echo$Img; ?>">
+        <figure>
+        <div class="minNotTex">
+          <p><?php echo$minNotTex; ?></p>  
+          <a class="minNotMas" href="<?php echo$minURL; ?>">SaberMas+</a>
+        </div>
+        <article class="miniNotRed"> face  plus tw</article>
+        <label class="miniNotNam" id="miniNotNam<?php echo$i; ?>"><?php echo$miniNotNam; ?></label>
+        <div class="minNotser">
+          <img src="<?php echo$Iusermg; ?>">
+        </div>
+        <div id="inputcont">
+          <input style="display: none;" class="NTitulo<?php echo$i; ?>" type="text" value="<?php echo$Titulo; echo$i;/*<--temp*/ ?>"/>
+          <input style="display: none;" class="NImg<?php echo$i; ?>" type="text" value="<?php echo$Img; ?>"/> 
+          <input style="display: none;" class="NIusermg<?php echo$i; ?>" type="text" value="<?php echo$Iusermg; ?>"/>   
+          <input style="display: none;" class="NTexto<?php echo$i; ?>" type="text" value="
+            <?php echo$Texto; ?>" />           
+          <input style="display: none;" class="NTextoT<?php echo$i; ?>" type="text" value='<?php echo$TextoT; ?>' /> 
              
         </div>
       </section>
        <?php 
         } 
        ?>
-       <!-- prueba de disminuir-->
-       <section class="miniNot draggable p2">
-        <div class="minNotfech">13/14/2013</div>
-        <div class="minNotTi"><h3>prueba<h3></div>
-        <figure class="minNotFig">
-          <img src="http://www.enter.co/custom/uploads/2012/08/cook_660-300x225.jpg">
-        <figure>
-        <div class="minNotTex">
-          <p>este no se asimila...
-          </p>  
-
-          <a class="minNotMas" href="#">SaberMas+</a>
-        </div>
-        <article class="miniNotRed"> face  plus tw</article>
-        <label class="miniNotNam">Roberto</label>
-        <div class="minNotser"><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash4/211171_227376447368257_1323865542_q.jpg"></div>
-      </section>
     </article>    
 </div>
 </div>
-
-</section>  
+</section> 

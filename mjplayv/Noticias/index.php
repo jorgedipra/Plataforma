@@ -13,6 +13,7 @@
 <body>
  <?php
    include "../conexion/storage/conexion.php"; //incluimos el archivo de conexion de storage
+   include "script/script.php";
     $view= new stdClass(); 
     $view->disableLayout=false;
      /**
