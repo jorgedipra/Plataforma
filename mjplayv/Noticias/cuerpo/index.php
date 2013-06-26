@@ -91,30 +91,31 @@ $Texto="Tras los recelos levantados por una posible vulneración de la privacida
 $Iusermg="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash4/211171_227376447368257_1323865542_q.jpg";
 
 $Img="../img/noticias/GoogleGlass_15.jpg";
-$Titulo="Google glass";
+$Titulo="Google glats";
 $miniNotNam="Roberto";
 $minNotfech="13/14/2013";
 $minNotTex="Tras los recelos levantados por una posible vulneración de la privacidad, Google no...";
 $minURL="#";
 
-      for ($i=1; $i < 5; $i++) { 
-      ?>
-      <section class="miniNot draggable" id="p<?php echo$i; ?>">
+
+      while($res =  $resultado->fetch_assoc()){
+         ?>
+            <section class="miniNot draggable" id="p<?php echo$i; ?>">
         <div class="minNotfech" id="minNotfech<?php echo$i; ?>">
-          <?php echo$minNotfech; ?>
+          <?php echo $res['ArtFecha']; ?>
         </div>
-        <div class="minNotTi"><h3><?php echo$Titulo; echo$i;/*<--temp*/ ?><h3></div>
+        <div class="minNotTi"><h3><?php echo $res['ArtNombre'];?><h3></div>
         <figure class="minNotFig">
-          <img src="<?php echo$Img; ?>">
+          <img src="<?php echo $res['ArtImagen']; ?>">
         <figure>
         <div class="minNotTex">
-          <p><?php echo$minNotTex; ?></p>  
-          <a class="minNotMas" href="<?php echo$minURL; ?>">SaberMas+</a>
+          <p><?php echo $res['ArtResumen']; ?></p>  
+          <a class="minNotMas" href="<?php echo $res['ArtReferencias']; ?>">SaberMas+</a>
         </div>
         <article class="miniNotRed"> face  plus tw</article>
-        <label class="miniNotNam" id="miniNotNam<?php echo$i; ?>"><?php echo$miniNotNam; ?></label>
+        <label class="miniNotNam" id="miniNotNam<?php echo$i; ?>"><?php echo $res['UsrAlias']; ?></label>
         <div class="minNotser">
-          <img src="<?php echo$Iusermg; ?>">
+          <img src="<?php echo $res['UsrImagen']; ?>">
         </div>
         <div id="inputcont">
           <input style="display: none;" class="NTitulo<?php echo$i; ?>" type="text" value="<?php echo$Titulo; echo$i;/*<--temp*/ ?>"/>
@@ -126,9 +127,11 @@ $minURL="#";
              
         </div>
       </section>
-       <?php 
-        } 
-       ?>
+         <?php
+
+      }
+      ?>
+     
     </article>    
 </div>
 </div>

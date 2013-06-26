@@ -13,6 +13,7 @@
 <body>
  <?php
    include "../conexion/storage/conexion.php"; //incluimos el archivo de conexion de storage
+   include "../conexion/php/operacionesSql.php";
    include "script/script.php";
     $view= new stdClass(); 
     $view->disableLayout=false;
@@ -20,6 +21,9 @@
      * [$view->objeto de validación]
      * @var boolean
      */
+     $consulta = "SELECT ArtNombre,ArtResumen,ArtContenido,ArtFecha,ArtReferencias,ArtImagen,UsrAlias,UsrImagen FROM (articulo INNER JOIN artcolaborador)INNER JOIN usuario WHERE articulo.ArtId = artcolaborador.ArtId and artcolaborador.UsrId = usuario.UsrId ORDER BY(ArtFecha)desc";
+     $objopera = new  operaciones();
+     $resultado = $objopera->buscar($consulta);
     if ($view->disableLayout==false)
     {
       include_once ('cuerpo/index.php');//se llama el cuerpo
