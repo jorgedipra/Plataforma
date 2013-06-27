@@ -1,4 +1,4 @@
-
+<body>
 <div id="outer-circle">
   <div id="inner-circle">
     <div id="center-circle">
@@ -86,16 +86,16 @@ $i=1;
         <div class="minNotfech" id="minNotfech<?php echo$i; ?>">
           <?php echo $res['ArtFecha']; ?>
         </div>
-        <div class="minNotTi"><h3><?php echo $res['ArtNombre'];?><h3></div>
+        <div class="minNotTi"><h3><?php echo utf8_encode($res['ArtNombre']);?><h3></div>
         <figure class="minNotFig">
           <img src="<?php echo $res['ArtImagen']; ?>">
         <figure>
         <div class="minNotTex">
-          <p><?php echo $res['ArtResumen']; ?></p>  
+          <p><?php echo utf8_encode($res['ArtResumen']); ?></p>  
           <a class="minNotMas" href="<?php echo $res['ArtReferencias']; ?>">SaberMas+</a>
         </div>
         <article class="miniNotRed"> face  plus tw</article>
-        <label class="miniNotNam" id="miniNotNam<?php echo$i; ?>"><?php echo $res['UsrAlias']; ?></label>
+        <label class="miniNotNam" id="miniNotNam<?php echo$i; ?>"><?php echo  utf8_encode($res['UsrAlias']); ?></label>
         <div class="minNotser">
           <img src="<?php echo $res['UsrImagen']; ?>">
         </div>
@@ -104,8 +104,8 @@ $i=1;
           <input style="display: none;" class="NImg<?php echo$i; ?>" type="text" value="<?php echo $res['ArtImagen']; ?>"/> 
           <input style="display: none;" class="NIusermg<?php echo$i; ?>" type="text" value="<?php echo$res['UsrImagen']; ?>"/>   
           <input style="display: none;" class="NTexto<?php echo$i; ?>" type="text" value="
-            <?php echo$res['ArtContenido']; ?>" />           
-          <input style="display: none;" class="NTextoT<?php echo$i; ?>" type="text" value='<?php echo$res['ArtContenido']; ?>' /> 
+            <?php echo utf8_encode($res['ArtContenido']); ?>" />           
+          <input style="display: none;" class="NTextoT<?php echo$i; ?>" type="text" value='<?php echoutf8_encode($res['ArtContenido']); ?>' /> 
              
         </div>
       </section>
@@ -118,3 +118,5 @@ $i=1;
 </div>
 </div>
 </section> 
+</body>
+</html>
