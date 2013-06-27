@@ -38,6 +38,11 @@ $( "#p<?php echo$i; ?>" ).draggable();
          <?php for ($j=1; $j < 5; $j++) { 
       ?>
         $('#p<?php echo$j; ?>').show(); 
+        $('#p<?php echo$j; ?>').css({ top: '0px',
+         left: '0px',
+           margin: '10px 13px'
+
+      });
       <?php 
         } 
       ?>
