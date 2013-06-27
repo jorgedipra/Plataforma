@@ -79,25 +79,7 @@ document.write('<a href="user/index.php" onclick="cerrar()" ><article id="cerrar
     <article class="body">
       <h4>Ultimas Noticias</h4>
     <?php 
-
-$TextoT='"Como hemos avisado desde hace varios años, no vamos a añadir funciones de reconocimiento facial en nuestros productos sin tener fuertes protecciones de privacidad.  Con esto en mente, no aprobaremos ningun Glassware de reconocimiento facial en este momento", ha dicho la compañía en un comunicado.
-  
-Además, no se permitirá a los desarrolladores desactivar la pantalla de Google Glass mientras se graba en video o se realizan fotografías. Esto surge en respuesta a la preocupación de que alguien con unas Google Glass pueda grabar o hacer fotos sin que nadie se dé cuenta.
-
-"Nuestro Explorer program hace que los usuarios participen activamente en la evolución del dispositivo Glass antes de un lanzamiento general para consumidores. Por ello, hemos actualizado nuestras políticas de desarrollo. Esperamos aprender más de nuestros usuarios, y evolucionar con nuestras políticas en las próximas semanas y meses"';
-
-$Texto="Tras los recelos levantados por una posible vulneración de la privacidad, Google no permitirá el uso de aplicaciones con reconocimiento facial en Google Glass. La compañía ha actualizado las políticas de desarrollo para sus gafas.";
-
-$Iusermg="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash4/211171_227376447368257_1323865542_q.jpg";
-
-$Img="../img/noticias/GoogleGlass_15.jpg";
-$Titulo="Google glats";
-$miniNotNam="Roberto";
-$minNotfech="13/14/2013";
-$minNotTex="Tras los recelos levantados por una posible vulneración de la privacidad, Google no...";
-$minURL="#";
-
-
+$i=1;      
       while($res =  $resultado->fetch_assoc()){
          ?>
             <section class="miniNot draggable" id="p<?php echo$i; ?>">
@@ -118,17 +100,17 @@ $minURL="#";
           <img src="<?php echo $res['UsrImagen']; ?>">
         </div>
         <div id="inputcont">
-          <input style="display: none;" class="NTitulo<?php echo$i; ?>" type="text" value="<?php echo$Titulo; echo$i;/*<--temp*/ ?>"/>
-          <input style="display: none;" class="NImg<?php echo$i; ?>" type="text" value="<?php echo$Img; ?>"/> 
-          <input style="display: none;" class="NIusermg<?php echo$i; ?>" type="text" value="<?php echo$Iusermg; ?>"/>   
+          <input style="display: none;" class="NTitulo<?php echo$i; ?>" type="text" value="<?php echo$res['ArtNombre'];?>"/>
+          <input style="display: none;" class="NImg<?php echo$i; ?>" type="text" value="<?php echo $res['ArtImagen']; ?>"/> 
+          <input style="display: none;" class="NIusermg<?php echo$i; ?>" type="text" value="<?php echo$res['UsrImagen']; ?>"/>   
           <input style="display: none;" class="NTexto<?php echo$i; ?>" type="text" value="
-            <?php echo$Texto; ?>" />           
-          <input style="display: none;" class="NTextoT<?php echo$i; ?>" type="text" value='<?php echo$TextoT; ?>' /> 
+            <?php echo$res['ArtContenido']; ?>" />           
+          <input style="display: none;" class="NTextoT<?php echo$i; ?>" type="text" value='<?php echo$res['ArtContenido']; ?>' /> 
              
         </div>
       </section>
          <?php
-
+          $i++;
       }
       ?>
      
