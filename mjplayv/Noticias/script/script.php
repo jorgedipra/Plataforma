@@ -35,7 +35,15 @@ $( "#p<?php echo$i; ?>" ).draggable();
  			 title: $("#miniNotNam<?php echo$i; ?>").val(),
   				alt: $("#miniNotNam<?php echo$i; ?>").val()
 		  }); 
-         $('#p<?php echo$i; ?>').hide();      
+         <?php for ($j=1; $j < 5; $j++) { 
+      ?>
+        $('#p<?php echo$j; ?>').show(); 
+      <?php 
+        } 
+      ?>
+         $('#p<?php echo$i; ?>').hide(); 
+        
+
       }
 <?php 
 } 
