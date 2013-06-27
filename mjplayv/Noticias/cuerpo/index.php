@@ -104,8 +104,8 @@ $i=1;
           <input style="display: none;" class="NImg<?php echo$i; ?>" type="text" value="<?php echo $res['ArtImagen']; ?>"/> 
           <input style="display: none;" class="NIusermg<?php echo$i; ?>" type="text" value="<?php echo$res['UsrImagen']; ?>"/>   
           <input style="display: none;" class="NTexto<?php echo$i; ?>" type="text" value="
-            <?php echo utf8_encode($res['ArtContenido']); ?>" />           
-          <input style="display: none;" class="NTextoT<?php echo$i; ?>" type="text" value='<?php echoutf8_encode($res['ArtContenido']); ?>' /> 
+            <?php echo$res['ArtContenido']; ?>" />           
+          <input style="display: none;" class="NTextoT<?php echo$i; ?>" type="text" value='<?php echo  utf8_encode($res['ArtContenido']); ?>' /> 
              
         </div>
       </section>
