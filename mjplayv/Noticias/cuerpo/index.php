@@ -65,7 +65,15 @@ document.write('<div id="barr" class="target">'+
 '</div>');  
     }
 </script>
-<article class="NotRed">   
+<div id='NotRed'>
+  <img src="../img/social/fond.jpg" width="100px">
+  <img src="../img/social/socialF.png">
+  <img src="../img/social/socialG.png">
+  <img src="../img/social/socialT.png">
+  <img src="../img/social/fond1.jpg" width="100px">
+</div>  
+
+<article class="NotRed">    
         <ul> 
         <li>   
            <span id="faces" class='st_fblike_hcount' displayText='Facebook Like'></span> 
