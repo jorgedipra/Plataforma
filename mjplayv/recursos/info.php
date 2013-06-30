@@ -12,7 +12,4 @@
 <meta property="og:url" content="http://mjplay-v.hol.es/"/>
 <meta property="og:image" content="/img/h1.png" />
 <meta property="og:site_name" content="mjplay-v.hol.es/" />
-<title>MJplayV</title>
 <link rel="shortcut icon" href="/img/h1.ico" />
-</head>
-<!--script src="http://contadores.miarroba.es/ver.php?id=667398"></script-->

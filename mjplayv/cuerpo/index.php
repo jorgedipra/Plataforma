@@ -38,10 +38,11 @@ document.write('<a href="user/index.php" onclick="cerrar()" ><article id="cerrar
 <div class="target">
 <div class="glass"></div>  
       <article class="body">
-    			<h2>Examples</h2>
-      			<div class="examples">
-      				<button rel="1">Boton1</button> 
-            </div>          				
+        <center>    		 
+              <article class="body" style="left: 0px; margin: 150px; position: absolute; top: 0px;">
+  <button onclick="location='http://mjplayv.hol.es/'" class="btn" id="btn" name="sub2" style="background-color: rgba(0, 0, 0, 0.498039); border-width: 4px 30px; border-style: solid; border-color: rgb(230, 95, 0) rgb(230, 95, 0) rgba(250, 250, 250, 0.498039) rgba(250, 250, 250, 0.498039); border-top-left-radius: 0px; border-top-right-radius: 120px; border-bottom-right-radius: 0px; border-bottom-left-radius: 120px; color: rgb(250, 250, 250); cursor: pointer; font-size: 30px; left: 20px; position: relative; width: 160px; height: 160px; font-weight: bold; line-height: 180px; text-shadow: rgba(250, 250, 250, 0.498039) 0px 0px 10px, rgba(250, 250, 250, 0.498039) 0px 0px 20px, rgba(250, 250, 250, 0.498039) 0px 0px 30px, rgba(230, 95, 0, 0.498039) 0px 0px 40px, rgba(230, 95, 0, 0.498039) 0px 0px 70px, rgba(230, 95, 0, 0.498039) 0px 0px 80px, rgba(230, 95, 0, 0.498039) 0px 0px 100px, rgba(230, 95, 0, 0.498039) 0px 0px 150px; top: 5px;" type="button" >Entrar</button>
+</article>
+       </center>       				
       </article>    
 </div>
 </div>

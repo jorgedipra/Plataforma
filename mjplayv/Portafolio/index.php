@@ -4,6 +4,7 @@
 <script src="js/jquery.js"></script>
 <script src="script/scriptPortafolio.js"></script>
 <link href="css/sytilePortafolio.css" rel="stylesheet" />
+<title>MJplayV</title>
 </script>
 </head>
 <body>

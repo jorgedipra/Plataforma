@@ -22,7 +22,7 @@
 if(localStorage.getItem('UEstado')=='On'){
 document.write('<a href="javascript:document.onf.submit();" onclick="cerrar()" ><article id="cerrar"><div id="ajaxloader"></div><div id="ajaon"><section id="esta"></section></div><article></a><a id="EditP" href="../user/profiles/">::Editar:: Perfil</a>');
 }else{
-document.write('<a href="user/index.php" onclick="cerrar()" ><article id="cerrar"><div id="ajaxloader"></div><div id="ajaon"><section id="esta">log</section></div><article></a>');
+document.write('<a href="../user/index.php" onclick="cerrar()" ><article id="cerrar"><div id="ajaxloader"></div><div id="ajaon"><section id="esta">log</section></div><article></a>');
 }
 </script>
 </from>
@@ -36,8 +36,51 @@ document.write('<a href="user/index.php" onclick="cerrar()" ><article id="cerrar
   <a id="Goo" href="#g">Juegos</a> 
   <a id="Plus" href="../">Home</a> 
 </nav>
-
 <section>
+<script>
+if(localStorage.getItem('UEstado')=='On'){
+document.write('<div id="barr" class="target">'+
+  '<div class="glass droppable">'+ 
+   '<article class="body" id="barrico" >'+
+   '<a href="#"><img src="../img/ico/Tag.png" title="Tag" alter="Tag" id="Tag" /></a>'+
+   '<a href="new.php"><img src="../img/ico/Add.png" title="New" alter="New" id="new" /></a>'+
+   '<a href="#"><img src="../img/ico/Edit.png" title="Edit" alter="Edit" id="Edit" /></a>'+
+   '<a href="#"><img src="../img/ico/Drafts.png" title="Drafts" alter="Drafts" id="Drafts" /></a>'+
+   '<a href="#"><img src="../img/ico/Books.png" title="Books" alter="Books" id="Books" /></a>'+
+   '<a href="#"><img src="../img/ico/Search.png" title="Search" alter="Search" id="Search" /></a>'+
+   '<a href="#"><img src="../img/ico/Favorites.png" title="Favorites" alter="Favorites" id="Favorites" /></a>'+
+   '</article>'+   
+  '</div>'+
+'</div>');
+  }else{
+    document.write('<div id="barr" class="target">'+
+  '<div class="glass droppable">'+ 
+   '<article class="body" id="barrico" >'+
+   '<a href="#"><img src="../img/ico/Tag.png" title="Tag" alter="Tag" id="Tag" /></a>'+
+   '<a href="#"><img src="../img/ico/Books.png" title="Books" alter="Books" id="Books" /></a>'+
+   '<a href="#"><img src="../img/ico/Search.png" title="Search" alter="Search" id="Search" /></a>'+
+   '<a href="#"><img src="../img/ico/Favorites.png" title="Favorites" alter="Favorites" id="Favorites" /></a>'+
+   '</article>'+   
+  '</div>'+
+'</div>');  
+    }
+</script>
+<article class="NotRed">   
+        <ul> 
+        <li>   
+           <span id="faces" class='st_fblike_hcount' displayText='Facebook Like'></span> 
+        </li> 
+        <li> 
+           <span id="goos" class='st_plusone_hcount' displayText='Google +1'></span> 
+        </li> 
+        <li>          
+           <span id="tws">
+             <a href="https://twitter.com/share" class="twitter-share-button" data-via="Mjplayv" data-lang="es">Twittear</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+           </span>
+       </li>
+      </ul>  
+</article>
 <div id="noticia" class="target">
   <div class="glass droppable"> 
     <article class="body" >
@@ -45,7 +88,6 @@ document.write('<a href="user/index.php" onclick="cerrar()" ><article id="cerrar
         <h2 id="Nottit">Titulo</h2>      
         <hr id="Nottithr">
         <section id="Nociart">
-          <article class="NotRed"> face  plus tw</article>
         <figure>
           <img  id="Notimg" src="http://www.enter.co/custom/uploads/2012/08/cook_660-300x225.jpg">
         <figure>
@@ -109,11 +151,10 @@ $i=1;
              
         </div>
       </section>
-         <?php
+      <?php
           $i++;
       }
-      ?>
-     
+      ?> 
     </article>    
 </div>
 </div>

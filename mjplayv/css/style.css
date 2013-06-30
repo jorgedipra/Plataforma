@@ -39,6 +39,9 @@ h1{
 	z-index  : 4;
 
 }
+ul{
+  list-style:none;
+  }
 #h1 h1{
   color    :rgba(230, 95, 0,0.9);
 	font-family:'MinstrelPosterTwo', georgia, serif;

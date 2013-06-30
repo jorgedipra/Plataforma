@@ -9,6 +9,10 @@
 <script src="../js/jquery-ui.js"></script>
 <script src="../script/scriptp.js"></script>
 <script src="../script/scriptpins.js"></script>
+<script src="http://w.sharethis.com/button/buttons.js"> </script> 
+<script>stLight.options ({editor: "98a0c813-783d-461a-A536-cc46a03f65ee", doNotHash: false, DoNotCopy: false, hashAddressBar: false}); 
+</script>
+<title>MJplayV Noticias</title>
 </head>
 <body>
  <?php

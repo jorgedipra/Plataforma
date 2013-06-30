@@ -8,6 +8,7 @@
 <script src="../js/jquery-ui.js"></script>
 <script src="../script/script.js"></script>
 <script src="script/inputScrtip.js"></script>
+<title>MJplayV</title>
 </head>
 <body>
 <?php
