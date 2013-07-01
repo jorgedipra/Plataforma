@@ -30,16 +30,29 @@
     $destino =  "../../img/user/".$prefijo."_".$_FILES['artimagen']['name'];
     $destinoF = '/img/noticias/'.$prefijo."_".$_FILES['artimagen']['name'];
     copy($_FILES['artimagen']['tmp_name'],$destino);  }
+    ///////////////////////////////////////////////////////////////////////////////
 
         $maxid ="SELECT MAX(ArtId) FROM articulo";
+
          $query="INSERT INTO articulo(ArtNombre,ArtContenido,ArtFecha,ArtReferencia,ArtImagen,sintexis)
          VALUES('".$_POST['artNombre']."','".$_POST['artreacontenido']."','".$_POST['artNombre']."','".$_POST['artreferencias']."','".$destinoF."','".$_POST['sintexis']."')";
 
-         $query2="INSERT INTO ctgarg(ArtId,CtgId)VALUES();";
-         $query3="INSERT INTO artcolaborador(ArtId,UsrId,colaboradorPermisos)VALUES('','".$_SESSION['Wusuario']."','');"
+   
+         //////////////////////////
+           $objopera = new  operaciones();
+          $objopera->insertar($query);
+          $resultado=$objopera->buscar($maxid);
+
+                  $query2="INSERT INTO ctgarg(ArtId,CtgId)VALUES('".$resultado."');";
+                  $query3="INSERT INTO artcolaborador(ArtId,UsrId,colaboradorPermisos)VALUES('".$resultado."','".$_SESSION['Wusuario']."','0');"
+
+
+
+          $objopera->insertar($query2);
+           $objopera->insertar($query3);
+
        }
-     $objopera = new  operaciones();
-     $resultado = $objopera->buscar($consulta);
+   
     if ($view->disableLayout==false)
     { 
       include_once ('cuerpo/agregar.php');//se llama el cuerpo
