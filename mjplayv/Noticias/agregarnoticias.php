@@ -21,6 +21,10 @@
      * [$view->objeto de validación]
      * @var boolean
      */
+     $resul="";
+      $objopera = new  operaciones();
+      $categorias = "SELECT * FROM categoria";
+      $resul =  $objopera->buscar($categorias);
   $destinoF="";
      if(isset($_POST['artNombre']))
        {
@@ -39,17 +43,17 @@
 
    
          //////////////////////////
-           $objopera = new  operaciones();
+          
           $objopera->insertar($query);
           $resultado=$objopera->buscar($maxid);
 
                   $query2="INSERT INTO ctgarg(ArtId,CtgId)VALUES('".$resultado."');";
-                  $query3="INSERT INTO artcolaborador(ArtId,UsrId,colaboradorPermisos)VALUES('".$resultado."','".$_SESSION['Wusuario']."','0');"
+                  $query3="INSERT INTO artcolaborador(ArtId,UsrId,colaboradorPermisos)VALUES('".$resultado."','".$_SESSION['Wusuario']."','0');";
 
 
 
-          $objopera->insertar($query2);
-           $objopera->insertar($query3);
+                 $objopera->insertar($query2);
+                  $objopera->insertar($query3);
 
        }
    
