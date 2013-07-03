@@ -1,5 +1,6 @@
 <?php 
 include_once('conexionphp.php');
+
   class operaciones extends conexionphp 
    {    var $conexion=null;
         var $datos = null;

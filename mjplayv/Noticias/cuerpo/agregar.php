@@ -12,7 +12,7 @@
 		<br>	
 		categorias <select name="categoria">
 		            <?php
-		            		while($res = $result->fetch_assoc())
+		            		while($res = $resul->fetch_assoc())
                                 {
                                 	?>
                                 		<OPTION value="<?php echo $res['CtgId']?>"><?php echo $res['CtgTipo']?></OPTION>
@@ -23,6 +23,7 @@
 						
   
 	                </select>
+	            		<br>	    
 		referencias <input name="artreferencias" value="">
 		<button name="insertar">Insertar</button>
 </form>

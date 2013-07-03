@@ -2,13 +2,6 @@
  session_start();
  include_once ('../recursos/info.php');//se llama la informacion de la pagina
 ?>
-<link rel="stylesheet" href="../css/style.css"><!--se llama el stilo-->
-<link rel="stylesheet" href="../css/stylehome.css">
-<link rel="stylesheet" href="css/sytileNoticias.css">
-<script src="../js/jquery-1.9.1.min.js"></script>
-<script src="../js/jquery-ui.js"></script>
-<script src="../script/scriptp.js"></script>
-<script src="../script/scriptpins.js"></script>
 </head>
 <body>
  <?php
@@ -25,7 +18,9 @@
       $objopera = new  operaciones();
       $categorias = "SELECT * FROM categoria";
       $resul =  $objopera->buscar($categorias);
-  $destinoF="";
+    
+
+      $destinoF="";
      if(isset($_POST['artNombre']))
        {
 
@@ -47,12 +42,12 @@
           $objopera->insertar($query);
           $resultado=$objopera->buscar($maxid);
 
-                  $query2="INSERT INTO ctgarg(ArtId,CtgId)VALUES('".$resultado."');";
+                  $query2="INSERT INTO ctgarg(ArtId,CtgId)VALUES('".$resultado."','"$_POST['categoria']"');";
                   $query3="INSERT INTO artcolaborador(ArtId,UsrId,colaboradorPermisos)VALUES('".$resultado."','".$_SESSION['Wusuario']."','0');";
 
 
 
-                 $objopera->insertar($query2);
+                  $objopera->insertar($query2);
                   $objopera->insertar($query3);
 
        }
