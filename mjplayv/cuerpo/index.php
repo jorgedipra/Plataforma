@@ -29,10 +29,10 @@ document.write('<a href="user/index.php" onclick="cerrar()" ><article id="cerrar
 </aside>
 <nav>
   <a id="Port" href="#p">Portafolio</a>
-  <a id="Face" href="#f">Facebook</a>
-  <a id="Twt" href="#t">Twitter</a>
-  <a id="Goo" href="#g">Google</a> 
-  <a id="Plus" href="#pl">Plus</a>   
+  <a id="Face" href="https://www.facebook.com/MJPlayV">Facebook</a>
+  <a id="Twt" href="https://twitter.com/MJPlayV">Twitter</a>
+  <a id="Goo" href="https://plus.google.com/u/0/117516508352548177882/posts">Google</a> 
+  <a id="Plus" href="http://www.youtube.com/user/MJVIDEOPLAY">Youtube</a>   
 </nav>
 <section>
 <div class="target">
