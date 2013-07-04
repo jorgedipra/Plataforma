@@ -43,7 +43,7 @@ document.write('<div id="barr" class="target">'+
   '<div class="glass droppable">'+ 
    '<article class="body" id="barrico" >'+
    '<a href="#"><img src="../img/ico/Tag.png" title="Tag" alter="Tag" id="Tag" /></a>'+
-   '<a href="new.php"><img src="../img/ico/Add.png" title="New" alter="New" id="new" /></a>'+
+   '<a href="agregarnoticias.php"><img src="../img/ico/Add.png" title="New" alter="New" id="new" /></a>'+
    '<a href="#"><img src="../img/ico/Edit.png" title="Edit" alter="Edit" id="Edit" /></a>'+
    '<a href="#"><img src="../img/ico/Drafts.png" title="Drafts" alter="Drafts" id="Drafts" /></a>'+
    '<a href="#"><img src="../img/ico/Books.png" title="Books" alter="Books" id="Books" /></a>'+
@@ -92,33 +92,32 @@ document.write('<div id="barr" class="target">'+
 <div id="noticia" class="target">
   <div class="glass droppable"> 
     <article class="body" >
-
-        <h2 id="Nottit">Titulo</h2>      
+      <?php 
+      while($res =  $ultNoticia->fetch_assoc())
+           {
+            ?>
+        
+        <h2 id="Nottit"><?php echo $res['ArtNombre'];?></h2>      
         <hr id="Nottithr">
         <section id="Nociart">
         <figure>
-          <img  id="Notimg" src="http://www.enter.co/custom/uploads/2012/08/cook_660-300x225.jpg">
+          <img  id="Notimg" src="<?php echo $res['ArtImagen']; ?>">
         <figure>
-        <p id="NotPP">texto1 idea principal
-        texto texto texto texto texto texto texto texto texto texto
-        texto texto texto texto texto texto texto texto texto texto
-        texto texto texto texto texto texto texto texto texto texto
-        texto texto texto texto texto texto texto texto texto texto
-        texto texto texto texto texto texto texto texto texto texto
+        <p id="NotPP">
+          <?php echo $res['ArtResumen'];?>
        </p>
        <p id="NotPt">texto2
-        texto texto texto texto texto texto texto texto texto texto
-        texto texto texto texto texto texto texto texto texto texto
-        texto texto texto texto texto texto texto texto texto texto
-        texto texto texto texto texto texto texto texto texto texto
-        texto texto texto texto texto texto texto texto texto texto
+             <?php echo $res['ArtContenido'];?>
        </p>
        <div id="Notuser">
-        <div id="Notfecha">fecha</div>
-        <a href="#" id="NotuserNo">nombre</a>
-        <a href="#" ><img id="Notuserimg" src="../img/userdefaul.png"></a>
+        <div id="Notfecha"> <?php echo $res['ArtFecha'];?></div>
+        <a href="#" id="NotuserNo"><?php echo $res['UsrAlias'];?> </a>
+        <a href="#" ><img id="Notuserimg" src="<?php echo $res['UsrImagen'];?>"></a>
        </div>
       </section>
+      <?php
+           }
+          ?>
     </article>  
     </div>   
   </div>

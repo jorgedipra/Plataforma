@@ -27,8 +27,11 @@
      * @var boolean
      */
      $consulta = "SELECT ArtNombre,ArtResumen,ArtContenido,ArtFecha,ArtReferencias,ArtImagen,UsrAlias,UsrImagen FROM (articulo INNER JOIN artcolaborador)INNER JOIN usuario WHERE articulo.ArtId = artcolaborador.ArtId and artcolaborador.UsrId = usuario.UsrId ORDER BY(ArtFecha)desc";
+     $ultimanoticia = "SELECT ArtNombre,ArtResumen,ArtContenido,ArtFecha,ArtReferencias,ArtImagen,UsrAlias,UsrImagen FROM (articulo INNER JOIN artcolaborador)INNER JOIN usuario WHERE articulo.ArtId = artcolaborador.ArtId and artcolaborador.UsrId = usuario.UsrId and articulo.ArtId = (SELECT MAX(ArtId) FROM articulo) ORDER BY(ArtFecha)desc;";
+
      $objopera = new  operaciones();
      $resultado = $objopera->buscar($consulta);
+     $ultNoticia =$objopera->buscar($ultimanoticia);
     if ($view->disableLayout==false)
     {
       include_once ('cuerpo/index.php');//se llama el cuerpo
