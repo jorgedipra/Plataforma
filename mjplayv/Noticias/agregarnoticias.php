@@ -34,23 +34,23 @@
         $maxid ="SELECT MAX(ArtId) as maxid FROM articulo";
 
          $query="INSERT INTO articulo(ArtNombre,ArtContenido,ArtFecha,ArtReferencias,ArtImagen,sintexis)
-         VALUES('".$_POST['artNombre']."','".$_POST['artreacontenido']."',SELECT SYSDATE() ,'".$_POST['artNombre']."','".$_POST['artreferencias']."','".$destinoF."','".$_POST['artsintexis']."')";
-         echo $query;
+         VALUES('".$_POST['artNombre']."','".$_POST['artreacontenido']."',SYSDATE() ,'".$_POST['artreferencias']."','".$destinoF."','".$_POST['artsintexis']."')";
+echo $query;
          //////////////////////////
           
           $objopera->insertar($query);
           $resultado = $objopera->buscar($maxid);
           $res= $resultado->fetch_object()->maxid;
-          echo $res;
+
 
                  $query2="INSERT INTO 
                   ctgarg(ArtId,CtgId)VALUES
                   ('".$res."','".$_POST['categoria']."');";
-                  echo $query2;
-
+               
+                
                 $query3="INSERT INTO artcolaborador(ArtId,UsrId,colaboradorPermiso)
                 VALUES('".$res."','".$_SESSION['Wusuario']."','0');";
-                echo $query3;
+          
 
 
                  $objopera->insertar($query2);
