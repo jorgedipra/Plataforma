@@ -26,9 +26,9 @@
      * [$view->objeto de validación]
      * @var boolean
      */
-     $consulta = "SELECT ArtNombre,ArtResumen,ArtContenido,ArtFecha,ArtReferencias,ArtImagen,UsrAlias,UsrImagen FROM (articulo INNER JOIN artcolaborador)INNER JOIN usuario WHERE articulo.ArtId = artcolaborador.ArtId and artcolaborador.UsrId = usuario.UsrId ORDER BY(ArtFecha)desc";
-     $ultimanoticia = "SELECT ArtNombre,ArtResumen,ArtContenido,ArtFecha,ArtReferencias,ArtImagen,UsrAlias,UsrImagen FROM (articulo INNER JOIN artcolaborador)INNER JOIN usuario WHERE articulo.ArtId = artcolaborador.ArtId and artcolaborador.UsrId = usuario.UsrId and articulo.ArtId = (SELECT MAX(ArtId) FROM articulo) ORDER BY(ArtFecha)desc;";
-
+     $consulta = "  SELECT articulo.ArtId,ArtNombre,ArtResumen,ArtContenido,ArtFecha,ArtReferencias,ArtImagen,UsrAlias,UsrImagen FROM (articulo INNER JOIN artcolaborador)INNER JOIN usuario WHERE articulo.ArtId = artcolaborador.ArtId and artcolaborador.UsrId = usuario.UsrId  and articulo.ArtId between (SELECT MAX(ArtId-3) FROM articulo) and (SELECT MAX(ArtId) FROM articulo)  ORDER BY(articulo.ArtId)desc;";
+     $ultimanoticia = "SELECT articulo.ArtId,ArtNombre,ArtResumen,ArtContenido,ArtFecha,ArtReferencias,ArtImagen,UsrAlias,UsrImagen FROM (articulo INNER JOIN artcolaborador)INNER JOIN usuario WHERE articulo.ArtId = artcolaborador.ArtId and artcolaborador.UsrId = usuario.UsrId and articulo.ArtId = (SELECT MAX(ArtId) FROM articulo) ORDER BY(ArtFecha)desc;";
+     
      $objopera = new  operaciones();
      $resultado = $objopera->buscar($consulta);
      $ultNoticia =$objopera->buscar($ultimanoticia);

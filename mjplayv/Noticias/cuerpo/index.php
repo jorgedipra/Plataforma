@@ -38,13 +38,14 @@ document.write('<a href="../user/index.php" onclick="cerrar()" ><article id="cer
 </nav>
 <section>
 <script>
+
 if(localStorage.getItem('UEstado')=='On'){
 document.write('<div id="barr" class="target">'+
   '<div class="glass droppable">'+ 
    '<article class="body" id="barrico" >'+
    '<a href="#"><img src="../img/ico/Tag.png" title="Tag" alter="Tag" id="Tag" /></a>'+
    '<a href="agregarnoticias.php"><img src="../img/ico/Add.png" title="New" alter="New" id="new" /></a>'+
-   '<a href="#"><img src="../img/ico/Edit.png" title="Edit" alter="Edit" id="Edit" /></a>'+
+   '<a href="updateNoticias.php"><img src="../img/ico/Edit.png" title="Edit" alter="Edit" id="Edit" /></a>'+
    '<a href="#"><img src="../img/ico/Drafts.png" title="Drafts" alter="Drafts" id="Drafts" /></a>'+
    '<a href="#"><img src="../img/ico/Books.png" title="Books" alter="Books" id="Books" /></a>'+
    '<a href="#"><img src="../img/ico/Search.png" title="Search" alter="Search" id="Search" /></a>'+
@@ -96,7 +97,7 @@ document.write('<div id="barr" class="target">'+
       while($res =  $ultNoticia->fetch_assoc())
            {
             ?>
-        
+        <input id="idarticulo" type="hidden" value="<?php echo $res['ArtId'];?>">
         <h2 id="Nottit"><?php echo $res['ArtNombre'];?></h2>      
         <hr id="Nottithr">
         <section id="Nociart">
@@ -106,7 +107,7 @@ document.write('<div id="barr" class="target">'+
         <p id="NotPP">
           <?php echo $res['ArtResumen'];?>
        </p>
-       <p id="NotPt">texto2
+       <p id="NotPt">
              <?php echo $res['ArtContenido'];?>
        </p>
        <div id="Notuser">
@@ -131,6 +132,7 @@ document.write('<div id="barr" class="target">'+
 $i=1;      
       while($res =  $resultado->fetch_assoc()){
          ?>
+            <input id="minidarticulo<?php echo$i; ?>"type="hidden" value="<?php echo $res['ArtId'];?>">
             <section class="miniNot draggable" id="p<?php echo$i; ?>">
         <div class="minNotfech" id="minNotfech<?php echo$i; ?>">
           <?php echo $res['ArtFecha']; ?>

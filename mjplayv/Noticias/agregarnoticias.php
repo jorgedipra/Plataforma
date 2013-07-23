@@ -33,9 +33,9 @@
 
         $maxid ="SELECT MAX(ArtId) as maxid FROM articulo";
 
-         $query="INSERT INTO articulo(ArtNombre,ArtContenido,ArtFecha,ArtReferencias,ArtImagen,sintexis)
-         VALUES('".$_POST['artNombre']."','".$_POST['artreacontenido']."',SYSDATE() ,'".$_POST['artreferencias']."','".$destinoF."','".$_POST['artsintexis']."')";
-echo $query;
+         $query="INSERT INTO articulo(ArtNombre,ArtResumen,ArtContenido,ArtFecha,ArtReferencias,ArtImagen,sintexis)
+         VALUES('".$_POST['artNombre']."','".$_POST['artresumen']."','".$_POST['artreacontenido']."',SYSDATE() ,'".$_POST['artreferencias']."','".$destinoF."','".$_POST['artsintexis']."')";
+
          //////////////////////////
           
           $objopera->insertar($query);
@@ -49,13 +49,13 @@ echo $query;
                
                 
                 $query3="INSERT INTO artcolaborador(ArtId,UsrId,colaboradorPermiso)
-                VALUES('".$res."','".$_SESSION['Wusuario']."','0');";
+                VALUES('".$res."','".$_SESSION['Wusuario']."','".$_POST['permisos']."');";
           
 
 
                  $objopera->insertar($query2);
                 $objopera->insertar($query3);
-
+               header('Location: index.php');
        }
    
     if ($view->disableLayout==false)

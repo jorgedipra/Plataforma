@@ -23,6 +23,7 @@ $( "#p<?php echo$i; ?>" ).draggable();
           	.html($(".NTexto<?php echo$i; ?>").val());
           $("#Nottit").html($(".NTitulo<?php echo$i; ?>").val()); 
           $("#NotPt").html($(".NTextoT<?php echo$i; ?>").val()); 
+          $("#idarticulo").val($("#minidarticulo<?php echo$i; ?>").val()); 
  		      $("#Notfecha").html($("#minNotfech<?php echo$i; ?>").html()); 
 		      $("#NotuserNo").html($("#miniNotNam<?php echo$i; ?>").html()); 
           $("#Notimg").attr({

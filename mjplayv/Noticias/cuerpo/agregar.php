@@ -23,8 +23,13 @@
 						
   
 	                </select>
-	            		<br>	    
+	            		<br>	
+
 		referencias <input name="artreferencias" value="">
+		<br>
+	    permisos del articuco <select name="permisos"> <option value="0">Todos Editan</option>
+	                                   <option value="1">Soy el unico que Edita</option>
+	                                 </select>
 		<button name="insertar">Insertar</button>
 </form>
 
