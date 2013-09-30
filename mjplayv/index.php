@@ -18,7 +18,7 @@
 <script src="js/jquery-ui.js"></script>
 <script src="script/script.js"></script>
 <script src="script/scriptpins.js"></script>
-<title>MJplayV</title>
+<title>MJplayV | Tu Sitio WEB</title>
 </head>
 <body>
  <?php

@@ -7,12 +7,12 @@
   </div>
 </div>
   <a id="h1" href="#h">
-    <img src="img/h1.png">
+    <img src="img/h1.png" alt="MJplayV">
     <h1>MJPLay-V</h1>
   </a>  
 </div>  
 <header id="login">
-   <a href="#"><img name="user" id="img" src="img/userdefaul.png"/></a>
+   <a href="#"><img name="user" id="img" src="img/userdefaul.png" alt="usuariomjplay"/></a>
    <a href="#"><span>::welcome::</span><br><sup id="US">Temp</sup><p id="Myuse">User</p><hr></a>
 <form  name="onf" action="index.php" method="post">   
 <input type="hidden" name="temp" value="On" /> 
@@ -35,15 +35,78 @@ document.write('<a href="user/index.php" onclick="cerrar()" ><article id="cerrar
   <a id="Plus" href="http://www.youtube.com/user/MJVIDEOPLAY">Youtube</a>   
 </nav>
 <section>
-<div class="target">
-<div class="glass"></div>  
-      <article class="body">
-        <center>    		 
-              <article class="body" style="left: 0px; margin: 150px; position: absolute; top: 0px;">
-  <button onclick="location='http://mjplayv.hol.es/'" class="btn" id="btn" name="sub2" style="background-color: rgba(0, 0, 0, 0.498039); border-width: 4px 30px; border-style: solid; border-color: rgb(230, 95, 0) rgb(230, 95, 0) rgba(250, 250, 250, 0.498039) rgba(250, 250, 250, 0.498039); border-top-left-radius: 0px; border-top-right-radius: 120px; border-bottom-right-radius: 0px; border-bottom-left-radius: 120px; color: rgb(250, 250, 250); cursor: pointer; font-size: 30px; left: 20px; position: relative; width: 160px; height: 160px; font-weight: bold; line-height: 180px; text-shadow: rgba(250, 250, 250, 0.498039) 0px 0px 10px, rgba(250, 250, 250, 0.498039) 0px 0px 20px, rgba(250, 250, 250, 0.498039) 0px 0px 30px, rgba(230, 95, 0, 0.498039) 0px 0px 40px, rgba(230, 95, 0, 0.498039) 0px 0px 70px, rgba(230, 95, 0, 0.498039) 0px 0px 80px, rgba(230, 95, 0, 0.498039) 0px 0px 100px, rgba(230, 95, 0, 0.498039) 0px 0px 150px; top: 5px;" type="button" >Entrar</button>
+  <article id="nave">
+     
+  </article>
+  <div id="nana">
+    <span class='st_fbsub_vcount' displayText='Facebook Subscribe' st_username='MJPlayV'></span>
+<span class='st_twitterfollow_vcount' displayText='Twitter Follow' st_username='Mjplayv'></span>
+<span class='st_plusone_vcount' displayText='Google +1'></span> 
+
+
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript">stLight.options({publisher: "98a0c813-783d-461a-a536-cc46a03f65ee", doNotHash: true, doNotCopy: false, hashAddressBar: false});</script>
+  </div>
+<article id="tabs">
+  <ul id="selectable">
+    <li class="seltab" ><a href="#tabs-1"> :: Escritorio MJplayV          >> </a></li>
+    <li class="seltab" ><a href="#tabs-2"> :: Editor HTML/CSS/JavaScript  >>  </a></li>
+    <li class="seltab" ><a href="#tabs-3"> :: Home A (Proyecto 3)         >>  </a></li>
+    <li class="seltab" ><a href="#tabs-4"> :: Home B (Proyecto 2)         >> </a></li>
+    <li class="seltab" ><a href="#tabs-5"> :: Tecnologia y mas            >>  </a></li>
+    <li class="seltab" ><a href="#tabs-6"> :: Videos web [Aprende]        >>  </a></li>
+    <li class="seltab" ><a href="#tabs-7"> :: Codigo Libre (Compartelo)   >> </a></li>
+  </ul>
+
+
+  <div id="tabs-1" class="imgtab">  
+  <img src="img/home/esc.png" atl="MJPlayV">
+   <a href="http://mjplayv.hol.es/Escritorio/iniciarsecion.html">
+    <article class="entrar">Entrar al Escritorio <em>AQUI</em></article>
+  </a>
+  </div>
+  <div id="tabs-2" class="imgtab"> 
+  <img src="img/home/edit.png" atl="MJPlayV">
+ <a href="http://mjplayv.hol.es/recursos/editor-all.html">
+    <article class="entrar">Entrar al  Editor <em>AQUI</em></article>
+  </a> 
+  </div>
+  <div id="tabs-3" class="imgtab">
+    
+  <img src="img/home/hA.png" atl="MJPlayV">
+ <a href="http://mjplayv.hol.es/">
+    <article class="entrar">Entrar a Home A <em>AQUI</em></article>
+  </a>
+   
+  </div>
+  <div id="tabs-4" class="imgtab">
+  <img src="img/home/hB.png" atl="MJPlayV">
+    <a href="http://mjplayv.hol.es/home2.html">
+    <article class="entrar">Entrar al Home B <em>AQUI</em></article>
+  </a> 
+
+   
+  </div>
+  <div id="tabs-5" class="imgtab">
+   <img src="img/home/hA.png" atl="MJPlayV">
+ <a href="#">
+    <article class="entrar">Entrar a Tecnologia <em>AQUI</em></article>
+  </a>
+   
+  </div>
+  <div id="tabs-6" class="imgtab">
+   <img src="img/home/hA.png" atl="MJPlayV">
+    <a href="#">
+    <article class="entrar">Entrar a VideoWeb <em>AQUI</em></article>
+  </a>
+  </div>
+  <div id="tabs-7" class="imgtab">
+ <img src="img/home/hA.png" atl="MJPlayV">
+    <a href="#">
+    <article class="entrar">Entrar a Codigo Libre<em>AQUI</em></article>
+  </a>
+ </div>
 </article>
-       </center>       				
-      </article>    
-</div>
-</div>
+<div id="space-invader"></div>
+<div id="jorge">@jorgedipra<br>@kractos26<br>@LaMaGa_93</div>
 </section>
